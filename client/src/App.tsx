@@ -1,5 +1,5 @@
 function App() {
-  return <h1>react typescript</h1>;
+  return <h1>app</h1>;
 }
 
 export default App;
