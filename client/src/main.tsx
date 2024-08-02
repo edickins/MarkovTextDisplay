@@ -4,20 +4,24 @@ import App from './App';
 import './index.css';
 import worker from './mocks/browser';
 
-if (import.meta.env.DEV) {
-  worker.start({
-    onUnhandledRequest: 'warn',
-    serviceWorker: {
-      url: '/mockServiceWorker.js',
-      options: { scope: '/' }
-    }
-  });
+async function enableMocking() {
+  if (import.meta.env.DEV) {
+    await worker.start({
+      onUnhandledRequest: 'warn',
+      serviceWorker: {
+        url: '/mockServiceWorker.js',
+        options: { scope: '/' }
+      }
+    });
 
-  worker.listHandlers();
+    worker.listHandlers();
+  }
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+enableMocking().then(() => {
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+});

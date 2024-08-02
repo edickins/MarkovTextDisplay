@@ -15,6 +15,7 @@ type TextResponse = {
 };
 
 // Type guard for runtime type checking
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function isTextResponse(data: any): data is TextResponse {
   return data && typeof data.text === 'string';
 }
@@ -31,12 +32,15 @@ const fetchText = async (
       return response.data.text;
     }
     throw new Error('Invalid response structure from API');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any | Error) {
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 500) {
         throw error;
       } else if (error.name === 'CanceledError') {
-        console.log('Request canceled:', error.message);
+        if (import.meta.env.DEV) {
+          console.log('Request canceled:', error.message);
+        }
         throw error;
       } else {
         console.log(
