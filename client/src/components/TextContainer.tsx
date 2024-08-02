@@ -1,10 +1,10 @@
 import { createRef, useEffect, useState } from 'react';
-import { useGetTerminalText } from '../hooks/useGetTerminalText';
 import { nanoid } from 'nanoid';
 import typingEffect from 'typing-effect';
+import { useGetTerminalText } from '../hooks/useGetTerminalText';
 import TerminalText from './TerminalText';
 
-const TextContainer = () => {
+function TextContainer() {
   const [terminalTexts, setTerminalTexts] = useState<React.ReactElement[]>([]);
   const { text, getNewText } = useGetTerminalText();
 
@@ -17,7 +17,7 @@ const TextContainer = () => {
         <TerminalText text={text} key={nanoid()} ref={ref} />,
       ]);
     }
-  });
+  }, [text]);
 
   // side effect to start typing-effect on the text in the new TerminalText component
   useEffect(() => {
@@ -28,9 +28,9 @@ const TextContainer = () => {
         console.log('animation finished');
       });
     }
-  });
+  }, []);
 
   return <div>{terminalTexts}</div>;
-};
+}
 
 export default TextContainer;

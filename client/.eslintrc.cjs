@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+const tsConfig = require('./tsconfig.json');
+
 module.exports = {
   env: {
     browser: true,
@@ -5,11 +9,10 @@ module.exports = {
   },
   extends: [
     'airbnb',
-    'airbnb/recommended',
+    'airbnb-typescript',
+    'airbnb/hooks',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
   overrides: [],
@@ -17,7 +20,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: path.resolve(__dirname, './tsconfig.json'),
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {

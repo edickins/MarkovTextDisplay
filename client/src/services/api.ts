@@ -37,6 +37,7 @@ export const fetchText = async (
       if (error.response?.status === 500) {
         throw error;
       } else if (error.name === 'CanceledError') {
+        console.log('Request canceled:', error.message);
         throw error;
       } else {
         console.log(

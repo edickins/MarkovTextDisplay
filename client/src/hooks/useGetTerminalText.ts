@@ -15,7 +15,7 @@ export const useGetTerminalText = () => {
 
     // cleanup function
     return () => controller.abort();
-  }, [text, fetchText]);
+  }, []);
 
   const getNewText = async () => {
     const controller = new AbortController();
