@@ -1,14 +1,20 @@
-import axios, { isAxiosError } from 'axios';
+import axios, { AxiosInstance } from 'axios';
+
+// Get the protocol and domain from environment variables
 const protocol = import.meta.env.VITE_API_PROTOCOL;
 const domain = import.meta.env.VITE_API_DOMAIN;
-
 const baseURL = `${protocol}://${domain}`;
+
+const instance: AxiosInstance = axios.create({
+  baseURL,
+  timeout: 5000,
+});
 
 type TextResponse = {
   text: string;
 };
 
-// runtime type safeguarding
+// Type guard for runtime type checking
 function isTextResponse(data: any): data is TextResponse {
   return data && typeof data.text === 'string';
 }
@@ -18,29 +24,27 @@ export const fetchText = async (
   controller: AbortController,
 ): Promise<string> => {
   try {
-    const response: any = await axios.get<{ text: string }>(
-      `${baseURL}/${endpoint}`,
-      {
-        signal: controller.signal,
-      },
-    );
+    const response = await instance.get<TextResponse>(endpoint, {
+      signal: controller.signal,
+    });
     if (isTextResponse(response.data)) {
       return response.data.text;
     } else {
-      throw new Error('Invalid response structure from api');
+      throw new Error('Invalid response structure from API');
     }
-  } catch (error: any) {
-    if (isAxiosError(error)) {
+  } catch (error: any | Error) {
+    if (axios.isAxiosError(error)) {
       if (error.response?.status === 500) {
         throw error;
-      } else if (error.name === 'CancelledError') {
+      } else if (error.name === 'Cancel') {
         throw error;
       } else {
-        // Something happened in setting up the request that triggered an Error
-        console.log('Error', error.message);
+        console.log(
+          `Error fetching data from ${baseURL}/${endpoint}:`,
+          error.message,
+        );
       }
     }
-
     throw error;
   }
 };
