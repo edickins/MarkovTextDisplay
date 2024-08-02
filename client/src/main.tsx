@@ -1,15 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
+import App from './App';
 import './index.css';
-import { worker } from './mocks/browser.ts';
+import worker from './mocks/browser';
 
 if (import.meta.env.DEV) {
-  worker.start();
+  worker.start({
+    onUnhandledRequest: 'warn',
+    serviceWorker: {
+      url: '/mockServiceWorker.js',
+      options: { scope: '/' }
+    }
+  });
+
+  worker.listHandlers();
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

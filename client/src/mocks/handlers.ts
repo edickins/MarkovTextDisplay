@@ -1,10 +1,14 @@
-import { HttpResponse, http, delay } from 'msw';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { HttpResponse, http } from 'msw';
 import { LoremIpsum } from 'lorem-ipsum';
 
 const protocol = import.meta.env.VITE_API_PROTOCOL;
 const domain = import.meta.env.VITE_API_DOMAIN;
+
+console.log(`Protocol: ${protocol}, Domain: ${domain}`);
+
 const lorem = new LoremIpsum({
-  wordsPerSentence: { max: 5, min: 1 },
+  wordsPerSentence: { max: 5, min: 1 }
 });
 
 type TextResponseObject = {
@@ -12,14 +16,14 @@ type TextResponseObject = {
 };
 
 const handlers = [
-  http.get<{}, TextResponseObject>(
-    `${protocol}://${domain}/markovText`,
-    (req) => {
+  http.get<Record<string, never>, TextResponseObject>(
+    `${protocol}://${domain}/markovtext`,
+    () => {
       return HttpResponse.json({
-        text: `${lorem.generateWords()} the quick brown fox jumped over the lazy dog ${lorem.generateWords()}`,
+        text: `${lorem.generateWords()} the quick brown fox jumped over the lazy dog ${lorem.generateWords()}`
       });
-    },
-  ),
+    }
+  )
 ];
 
-export { handlers };
+export default handlers;

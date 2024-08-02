@@ -1,31 +1,42 @@
-import { useState, useEffect } from 'react';
-import { fetchText } from '../services/api';
+import axios from 'axios';
+import { useState, useEffect, useCallback } from 'react';
+import fetchText from '../services/api';
 
-export const useGetTerminalText = () => {
+const useGetTerminalText = () => {
   const [text, setText] = useState<string | undefined>();
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const fetchData = useCallback(async (controller: AbortController) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const newText = await fetchText('markovtext', controller);
+      setText(newText);
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setError(err.message);
+      } else {
+        setError('An unexpected error occurred');
+      }
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     const controller = new AbortController();
-    const fetchData = async () => {
-      const newText = await fetchText('markovText', controller);
-      setText(newText);
-    };
+    fetchData(controller);
 
-    fetchData();
-
-    // cleanup function
     return () => controller.abort();
-  }, []);
+  }, [fetchData]);
 
   const getNewText = async () => {
     const controller = new AbortController();
-    try {
-      const newText = await fetchText('markovText', controller);
-      setText(newText);
-    } finally {
-      controller.abort();
-    }
+    await fetchData(controller);
   };
 
-  return { text, getNewText };
+  return { text, getNewText, loading, error };
 };
+
+export default useGetTerminalText;

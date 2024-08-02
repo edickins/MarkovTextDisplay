@@ -7,7 +7,7 @@ const baseURL = `${protocol}://${domain}`;
 
 const instance: AxiosInstance = axios.create({
   baseURL,
-  timeout: 5000,
+  timeout: 5000
 });
 
 type TextResponse = {
@@ -19,19 +19,18 @@ function isTextResponse(data: any): data is TextResponse {
   return data && typeof data.text === 'string';
 }
 
-export const fetchText = async (
+const fetchText = async (
   endpoint: string,
-  controller: AbortController,
+  controller: AbortController
 ): Promise<string> => {
   try {
     const response = await instance.get<TextResponse>(endpoint, {
-      signal: controller.signal,
+      signal: controller.signal
     });
     if (isTextResponse(response.data)) {
       return response.data.text;
-    } else {
-      throw new Error('Invalid response structure from API');
     }
+    throw new Error('Invalid response structure from API');
   } catch (error: any | Error) {
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 500) {
@@ -42,10 +41,12 @@ export const fetchText = async (
       } else {
         console.log(
           `Error fetching data from ${baseURL}/${endpoint}:`,
-          error.message,
+          error.message
         );
       }
     }
     throw error;
   }
 };
+
+export default fetchText;
