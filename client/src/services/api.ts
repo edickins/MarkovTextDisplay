@@ -36,7 +36,7 @@ export const fetchText = async (
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 500) {
         throw error;
-      } else if (error.name === 'Cancel') {
+      } else if (error.name === 'CanceledError') {
         throw error;
       } else {
         console.log(
