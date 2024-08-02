@@ -1,5 +1,7 @@
+import TextContainer from './components/TextContainer';
+
 function App() {
-  return <h1>app</h1>;
+  return <TextContainer />;
 }
 
 export default App;

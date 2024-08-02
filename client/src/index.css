@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  [data-typing-effect] {
+    visibility: hidden;
+  }
+}

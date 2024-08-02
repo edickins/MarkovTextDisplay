@@ -1,15 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import '@testing-library/jest-dom';
-import { Server } from './mocks/server';
+import { server } from './mocks/server';
 
 beforeAll(() => {
-  Server.listen();
+  server.listen();
 });
 
 afterEach(() => {
-  Server.resetHandlers();
+  server.resetHandlers();
 });
 
 afterAll(() => {
-  Server.close();
+  server.close();
 });

@@ -12,11 +12,14 @@ type TextResponseObject = {
 };
 
 const handlers = [
-  http.get<{}, TextResponseObject>(`${protocol}://${domain}/markovText`, () => {
-    return HttpResponse.json({
-      text: `${lorem.generateWords()} the quick brown fox jumped over the lazy dog ${lorem.generateWords()}`,
-    });
-  }),
+  http.get<{}, TextResponseObject>(
+    `${protocol}://${domain}/markovText`,
+    (req) => {
+      return HttpResponse.json({
+        text: `${lorem.generateWords()} the quick brown fox jumped over the lazy dog ${lorem.generateWords()}`,
+      });
+    },
+  ),
 ];
 
 export { handlers };
