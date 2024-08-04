@@ -6,7 +6,7 @@ describe('TextContainer', () => {
     render(<TextContainer />);
     const terminalText = await screen.findByText(
       'the quick brown fox jumped over the lazy dog',
-      { exact: false },
+      { exact: false }
     );
   });
 });

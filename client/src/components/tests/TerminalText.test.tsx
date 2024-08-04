@@ -4,7 +4,7 @@ import TerminalText from '../TerminalText';
 
 describe('TerminalText', () => {
   test('Displays text', () => {
-    const mockText = 'a quick brown fox jumped over the lazy dog';
+    const mockText = 'a';
     const mockKey = 'terminalText1';
     const mockRef = createRef<HTMLDivElement>();
 
