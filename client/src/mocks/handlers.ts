@@ -5,8 +5,6 @@ import { LoremIpsum } from 'lorem-ipsum';
 const protocol = import.meta.env.VITE_API_PROTOCOL;
 const domain = import.meta.env.VITE_API_DOMAIN;
 
-console.log(`Protocol: ${protocol}, Domain: ${domain}`);
-
 const lorem = new LoremIpsum({
   wordsPerSentence: { max: 5, min: 1 }
 });
