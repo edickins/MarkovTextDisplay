@@ -9,16 +9,28 @@ function TerminalText({ text, removeMe }: Props) {
   const localRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (localRef.current === null) return;
-    const rect = localRef.current.getBoundingClientRect();
-    if (rect.top > -500) {
-      removeMe();
-    }
+    const handleScroll = () => {
+      if (localRef.current) {
+        const rect = localRef.current.getBoundingClientRect();
+        console.log(`rect.top ${rect.top}`);
+        console.log(`window.innerHeight ${window.innerHeight}`);
+        console.log(`rect.bottom ${rect.bottom}`);
+        if (rect.top > window.innerHeight || rect.bottom < 0) {
+          // Clip is off-screen
+          removeMe();
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [removeMe]);
 
   return (
-    <div data-typing-effect className='text-3xl' ref={localRef}>
-      {text}
+    <div data-typing-effect className='text-3xl bg-white' ref={localRef}>
+      <p className='bg-blue-400'>{text}</p>
     </div>
   );
 }
