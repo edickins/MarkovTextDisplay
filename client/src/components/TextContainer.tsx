@@ -6,7 +6,6 @@ import TerminalText from './TerminalText';
 
 function TextContainer() {
   const [terminalTexts, setTerminalTexts] = useState<React.ReactNode[]>([]);
-  const [isTyping, setIsTyping] = useState<boolean>(false);
   const [isWaitingForAnimation, setIsWaitingForAnimation] =
     useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -22,7 +21,7 @@ function TextContainer() {
 
   // Side effect for when a new text arrives from the API
   useEffect(() => {
-    if (text && !isTyping && !isWaitingForAnimation) {
+    if (text && !isWaitingForAnimation) {
       setIsWaitingForAnimation(true);
       setTerminalTexts((prev) => [
         ...prev,
@@ -33,32 +32,24 @@ function TextContainer() {
         />
       ]);
     }
-  }, [
-    text,
-    isTyping,
-    terminalTexts,
-    removeTerminalTextItem,
-    isWaitingForAnimation
-  ]);
+  }, [text, terminalTexts, removeTerminalTextItem, isWaitingForAnimation]);
 
   // Side effect to start typing-effect on the text in the new TerminalText component
   useEffect(() => {
     const textElementToAnimate = document.querySelector('[data-typing-effect]');
-    if (textElementToAnimate && !isTyping) {
-      setIsTyping(true);
-      setIsWaitingForAnimation(false);
+    if (textElementToAnimate) {
       typingEffect(textElementToAnimate).then(() => {
         setTimeout(() => {
-          getNewText().then(() => setIsTyping(false));
-        }, 1000);
+          getNewText().then(() => setIsWaitingForAnimation(false));
+        }, 1500);
       });
     }
-  }, [isTyping, text, getNewText]);
+  }, [text, getNewText]);
 
   return (
     <div
       id='container-scroller'
-      className='flex flex-col  overflow-auto  relative h-full bottom-0 bg-red-400'
+      className='flex flex-col  overflow-auto  relative h-full bottom-0 p-12 bg-red-400'
       ref={containerRef}
     >
       {terminalTexts}

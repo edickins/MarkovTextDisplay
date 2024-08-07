@@ -5,7 +5,7 @@ function App() {
     <div className='flex justify-center items-center h-full bg-blue-400'>
       <div
         id='container-terminal'
-        className='border border-gray-300 h-full p-4 overflow-hidden'
+        className='border border-gray-300 h-full w-full p-12 overflow-hidden'
       >
         <TextContainer />
       </div>

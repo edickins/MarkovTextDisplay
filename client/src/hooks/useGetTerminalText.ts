@@ -24,6 +24,7 @@ const useGetTerminalText = () => {
     }
   }, []);
 
+  // set the initial 'text' value so there is something to return when the hook is used
   useEffect(() => {
     const controller = new AbortController();
     fetchData(controller);
@@ -31,6 +32,7 @@ const useGetTerminalText = () => {
     return () => controller.abort();
   }, [fetchData]);
 
+  // exported function that sets 'text'
   const getNewText = async () => {
     const controller = new AbortController();
     await fetchData(controller);
