@@ -65,7 +65,7 @@ function TextContainer() {
   return (
     <div
       id='container-scroller'
-      className='grid overflow-hidden relative max-h-full  p-12 bg-red-400'
+      className='grid overflow-hidden relative max-h-full  p-12'
       style={{
         gridAutoRows: 'minmax(0, auto)', // Allow items to size themselves
         gap: '0.5rem', // Add some spacing between rows

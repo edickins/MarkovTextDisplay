@@ -30,8 +30,8 @@ function TerminalText({ text, removeMe }: Props) {
   }, [removeMe]);
 
   return (
-    <div data-typing-effect className='text-3xl bg-white' ref={localRef}>
-      <p className='bg-blue-400'>{text}</p>
+    <div data-typing-effect className='text-xl text-green-300' ref={localRef}>
+      <p className=''>{text}</p>
     </div>
   );
 }

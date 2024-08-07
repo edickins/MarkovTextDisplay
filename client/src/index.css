@@ -2,8 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'inconsolata';
+  src: url('./fonts/Inconsolata-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
+  body {
+    background-color: black;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+
+  body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  }
+
   [data-typing-effect] {
-    visibility: hidden;
+    /* visibility: hidden; */
+  }
+
+  .radiantGreenBg {
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
   }
 }
