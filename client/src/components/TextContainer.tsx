@@ -9,9 +9,29 @@ function TextContainer() {
   const [toBeRemovedIndexes, setToBeRemovedIndexes] = useState<number[]>([]);
   const [isWaitingForAnimation, setIsWaitingForAnimation] =
     useState<boolean>(false);
+  const [isTyping, setIsTyping] = useState(false);
 
   const { text, getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isTyping) {
+      // Assuming you have an array of <span> elements
+      const spans = document.querySelectorAll('span');
+
+      if (spans && spans.length > 0) {
+        // Get the last <span> (which is the most recently displayed one)
+        const lastSpan = spans[spans.length - 2];
+
+        // Create a pseudo-element for the cursor
+        const cursor = document.createElement('span');
+        cursor.classList.add('cursor'); // You can style this class in your CSS
+
+        // Append the cursor to the last <span>
+        lastSpan.appendChild(cursor);
+      }
+    }
+  }, [isTyping]);
 
   // scroll container to the bottom of the screen
   useEffect(() => {
@@ -42,7 +62,6 @@ function TextContainer() {
           text={text}
           key={nanoid()}
           removeMe={() => {
-            console.log('remove me');
             setToBeRemovedIndexes((prev) => [...prev, prevTexts.length]);
           }}
         />
@@ -54,9 +73,16 @@ function TextContainer() {
   useEffect(() => {
     const textElementToAnimate = document.querySelector('[data-typing-effect]');
     if (textElementToAnimate) {
-      typingEffect(textElementToAnimate).then(() => {
+      setIsTyping(true);
+      typingEffect(textElementToAnimate, {
+        speed: 100,
+        reset: true
+      }).then(() => {
         setTimeout(() => {
-          getNewText().then(() => setIsWaitingForAnimation(false));
+          getNewText().then(() => {
+            setIsTyping(false);
+            setIsWaitingForAnimation(false);
+          });
         }, 1500);
       });
     }

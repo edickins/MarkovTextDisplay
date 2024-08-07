@@ -38,4 +38,18 @@
   .radiantGreenBg {
     background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
   }
+
+  .cursor::after {
+    content: '|'; /* You can use any character you like for the cursor */
+    animation: blink 0.5s infinite alternate; /*Blinking animation */
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }
