@@ -12,9 +12,6 @@ function TerminalText({ text, removeMe }: Props) {
     const handleScroll = () => {
       if (localRef.current) {
         const rect = localRef.current.getBoundingClientRect();
-        console.log(`rect.top ${rect.top}`);
-        console.log(`window.innerHeight ${window.innerHeight}`);
-        console.log(`rect.bottom ${rect.bottom}`);
         if (rect.top > window.innerHeight || rect.bottom < 0) {
           // Clip is off-screen
           removeMe();
@@ -22,9 +19,13 @@ function TerminalText({ text, removeMe }: Props) {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Attach the scroll event listener to the container-scroller
+    const containerScroller = document.getElementById('container-scroller');
+    containerScroller?.addEventListener('scroll', handleScroll);
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      // Clean up the event listener when the component unmounts
+      containerScroller?.removeEventListener('scroll', handleScroll);
     };
   }, [removeMe]);
 
