@@ -10,7 +10,6 @@ function TerminalText({ text, removeMe }: Props) {
 
   useEffect(() => {
     if (localRef.current === null) return;
-
     const rect = localRef.current.getBoundingClientRect();
     if (rect.top > -500) {
       removeMe();
@@ -18,7 +17,7 @@ function TerminalText({ text, removeMe }: Props) {
   }, [removeMe]);
 
   return (
-    <div data-typing-effect ref={localRef}>
+    <div data-typing-effect className='text-3xl' ref={localRef}>
       {text}
     </div>
   );

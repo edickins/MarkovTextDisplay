@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useRef } from 'react';
 import { nanoid } from 'nanoid';
 import typingEffect from 'typing-effect';
 import useGetTerminalText from '../hooks/useGetTerminalText';
@@ -7,6 +7,10 @@ import TerminalText from './TerminalText';
 function TextContainer() {
   const [terminalTexts, setTerminalTexts] = useState<React.ReactNode[]>([]);
   const [isTyping, setIsTyping] = useState<boolean>(false);
+  const [isWaitingForAnimation, setIsWaitingForAnimation] =
+    useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const { text, getNewText } = useGetTerminalText();
 
   const removeTerminalTextItem = useCallback(
@@ -18,7 +22,8 @@ function TextContainer() {
 
   // Side effect for when a new text arrives from the API
   useEffect(() => {
-    if (text && !isTyping) {
+    if (text && !isTyping && !isWaitingForAnimation) {
+      setIsWaitingForAnimation(true);
       setTerminalTexts((prev) => [
         ...prev,
         <TerminalText
@@ -28,27 +33,33 @@ function TextContainer() {
         />
       ]);
     }
-  }, [text, isTyping, terminalTexts, removeTerminalTextItem]);
+  }, [
+    text,
+    isTyping,
+    terminalTexts,
+    removeTerminalTextItem,
+    isWaitingForAnimation
+  ]);
 
   // Side effect to start typing-effect on the text in the new TerminalText component
   useEffect(() => {
     const textElementToAnimate = document.querySelector('[data-typing-effect]');
-
     if (textElementToAnimate && !isTyping) {
       setIsTyping(true);
+      setIsWaitingForAnimation(false);
       typingEffect(textElementToAnimate).then(() => {
         setTimeout(() => {
-          setIsTyping(false);
-          getNewText();
+          getNewText().then(() => setIsTyping(false));
         }, 1000);
       });
     }
-  }, [isTyping, getNewText]);
+  }, [isTyping, text, getNewText]);
 
   return (
     <div
       id='container-scroller'
-      className='flex flex-col h-screen relative bottom-0 bg-red-400'
+      className='flex flex-col  overflow-auto  relative h-full bottom-0 bg-red-400'
+      ref={containerRef}
     >
       {terminalTexts}
     </div>
