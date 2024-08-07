@@ -45,12 +45,11 @@ function TextContainer() {
   useEffect(() => {
     const textElementToAnimate = document.querySelector('[data-typing-effect]');
     if (textElementToAnimate && !isTyping) {
-      getNewText();
       setIsTyping(true);
       setIsWaitingForAnimation(false);
       typingEffect(textElementToAnimate).then(() => {
         setTimeout(() => {
-          setIsTyping(false);
+          getNewText().then(() => setIsTyping(false));
         }, 1000);
       });
     }
