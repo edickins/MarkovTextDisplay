@@ -29,13 +29,23 @@ const _getText = async reqQuery => {
     console.log(`randomSeriousFile ${randomSeriousFile}`);
     console.log(`randomFunFile ${randomFunFile}`);
 
-    const trainingTexts = [];
-    trainingTexts.push(
+    const seriousFiles = readFilesFromFolder(seriousFolder);
+    const funFiles = readFilesFromFolder(funFolder);
+
+    const trainingTexts = [
+      ...seriousFiles.map(file => {
+        return MarkovChain.trainTxt(path.join(seriousFolder, file), '\n');
+      }),
+      ...funFiles.map(file => {
+        return MarkovChain.trainTxt(path.join(funFolder, file), '\n');
+      })
+    ];
+    /* trainingTexts.push(
       MarkovChain.trainTxt(path.join(seriousFolder, randomSeriousFile), '\n')
     );
     trainingTexts.push(
       MarkovChain.trainTxt(path.join(funFolder, randomFunFile), '\n')
-    );
+    ); */
 
     Promise.all(trainingTexts).then(() => {
       resolve({ data: _getTextToLength(MAX_TEXT_LENGTH) });
