@@ -11,9 +11,8 @@ const MarkovText = require('../models/MarkovText');
 exports.getMarkovText = async (req, res, next) => {
   try {
     const reqQuery = { ...req.query };
-    console.log(reqQuery);
-    const results = await generator.getText(reqQuery);
-    res.status(200).json({ success: true, text: results.data[0].txt });
+    const result = await generator.getText(reqQuery);
+    res.status(200).json({ success: true, text: result.data });
   } catch (error) {
     res.status(400).json({ success: false });
   }
