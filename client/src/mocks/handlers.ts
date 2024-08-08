@@ -12,9 +12,10 @@ type TextResponseObject = {
 
 const handlers = [
   http.get<Record<string, never>, TextResponseObject>(
-    `http://localhost:5010/markovtext`,
+    `http://localhost:5000/api/v1/markovtext`,
     () => {
       return HttpResponse.json({
+        success: true,
         text: `${lorem.generateWords()} the quick brown fox jumped over the lazy dog ${lorem.generateWords()}`
       });
     }

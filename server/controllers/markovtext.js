@@ -9,65 +9,65 @@ const MarkovText = require('../models/MarkovText');
 // @route   GET /api/v1/markovtext
 // @access  public
 exports.getMarkovText = async (req, res, next) => {
-	try {
-		const reqQuery = { ...req.query };
-		console.log(reqQuery);
-		const results = await generator.getText(reqQuery);
-		res.status(200).json({ success: true, data: results.data });
-	} catch (error) {
-		res.status(400).json({ success: false });
-	}
+  try {
+    const reqQuery = { ...req.query };
+    console.log(reqQuery);
+    const results = await generator.getText(reqQuery);
+    res.status(200).json({ success: true, text: results.data[0].txt });
+  } catch (error) {
+    res.status(400).json({ success: false });
+  }
 };
 
 exports.addMarkovText = async (req, res, next) => {
-	//connect to database
-	const conn = await connectDB();
+  //connect to database
+  const conn = await connectDB();
 
-	fsExtra.emptyDir('./uploads', err => {
-		if (err) {
-			res.status(500).json({ success: false, err: err });
-			return;
-		}
+  fsExtra.emptyDir('./uploads', err => {
+    if (err) {
+      res.status(500).json({ success: false, err: err });
+      return;
+    }
 
-		try {
-			const form = formidable({
-				uploadDir: './uploads',
-				multiples: true,
-				keepExtensions: true,
-			});
+    try {
+      const form = formidable({
+        uploadDir: './uploads',
+        multiples: true,
+        keepExtensions: true
+      });
 
-			//@err - Error object
-			//@fields - Object - Any fields uploaded in the formData
-			//@files - Object - Any files uploaded with the formData
-			form.parse(req, (err, fields, files) => {
-				if (err !== null) {
-					res.status(500).json({ success: false, err: err });
-				}
+      //@err - Error object
+      //@fields - Object - Any fields uploaded in the formData
+      //@files - Object - Any files uploaded with the formData
+      form.parse(req, (err, fields, files) => {
+        if (err !== null) {
+          res.status(500).json({ success: false, err: err });
+        }
 
-				const fileObj = {
-					name: fields.name,
-					description: fields.description,
-					tags: fields.tags,
-					newFilename: files.file.newFilename,
-					createdAt: new Date(),
-					isDefault: fields.isDefault,
-				};
+        const fileObj = {
+          name: fields.name,
+          description: fields.description,
+          tags: fields.tags,
+          newFilename: files.file.newFilename,
+          createdAt: new Date(),
+          isDefault: fields.isDefault
+        };
 
-				const documentsObj = processFileUpload(fileObj);
+        const documentsObj = processFileUpload(fileObj);
 
-				MarkovText.create(documentsObj, function (err) {
-					if (err) return handleError(err);
-				});
+        MarkovText.create(documentsObj, function (err) {
+          if (err) return handleError(err);
+        });
 
-				res.status(201).json({
-					success: true,
-					msg: `files uploaded to database`,
-					files: files,
-					fields: fields,
-				});
-			});
-		} catch (err) {
-			res.status(500).json({ sucess: false, error: err });
-		}
-	});
+        res.status(201).json({
+          success: true,
+          msg: `files uploaded to database`,
+          files: files,
+          fields: fields
+        });
+      });
+    } catch (err) {
+      res.status(500).json({ sucess: false, error: err });
+    }
+  });
 };

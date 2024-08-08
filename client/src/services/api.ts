@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 
 // Get the protocol and domain from environment variables
-const baseURL = `http://localhost:5010`;
+const baseURL = `http://localhost:5000`;
 
 const instance: AxiosInstance = axios.create({
   baseURL,
