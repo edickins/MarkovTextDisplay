@@ -1,9 +1,32 @@
-const generator = require('../modules/markovTextGenerator.js');
+const MarkovTextGenerator = require('../modules/MarkovTextGenerator');
+
 const fsExtra = require('fs-extra');
 const formidable = require('formidable');
 const connectDB = require('../config/db');
 const processFileUploads = require('../modules/processFileUploads');
 const MarkovText = require('../models/MarkovText');
+
+const aiGenerator = new MarkovTextGenerator(['ai']);
+aiGenerator.init();
+
+const funGenerator = new MarkovTextGenerator(['fun']);
+funGenerator.init();
+
+const seriousGenerator = new MarkovTextGenerator(['serious']);
+seriousGenerator.init();
+
+const funSeriousGenerator = new MarkovTextGenerator(['serious', 'fun']);
+funSeriousGenerator.init();
+
+const everythingGenerator = new MarkovTextGenerator(['serious', 'fun', 'ai']);
+everythingGenerator.init();
+
+const generators = [aiGenerator, funSeriousGenerator, everythingGenerator];
+
+function getRandomGenerator() {
+  const generatorIndex = Math.floor(Math.random() * generators.length);
+  return generators[generatorIndex];
+}
 
 // @desc    return text generated from the default markov text sources
 // @route   GET /api/v1/markovtext
@@ -11,7 +34,7 @@ const MarkovText = require('../models/MarkovText');
 exports.getMarkovText = async (req, res, next) => {
   try {
     const reqQuery = { ...req.query };
-    const result = await generator.getText(reqQuery);
+    const result = await getRandomGenerator().getText(reqQuery);
     res.status(200).json({ success: true, text: result.data });
   } catch (error) {
     res.status(400).json({ success: false });
