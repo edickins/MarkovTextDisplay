@@ -1,110 +1,3 @@
-Dream Yoga And The Practice Of Natural Light
-
-
-
-Dream Yoga And The Practice Of Natural Light
-
-
-Table of Contents
-
-Dream Yoga And The Practice Of Natural Light .1
-
-Preface .2
-
-Acknowledgements .3
-
-Editor’s Introduction. .4
-
-Science And Dream Phenomena .7
-
-Dreams And Depth Psychology. .8
-
-Dreamwork In Traditional Cultures. .10
-
-Developing Dream Awareness .13
-
-Notes To The Introduction .15
-
-1. THE NATURE AND CLASSES OF DREAMS. .18
-
-Notes To Chapter One .20
-
-2. THE PRACTICE OF THE NIGHT. .22
-
-Notes To Chapter Two. .33
-
-3 THE PILGRIMAGE TO MARATIKA. .38
-
-Notes To Chapter Three. .43
-
-4 AN INTERVIEW WITH NORBU RINPOCHE .47
-
-Notes To Chapter Four. .58
-
-5 THE BUDDHA NO FURTHER THAN ONES’S PALM .60
-
-The Quintessential Instructions of Mind: The Buddha No Further Than One’s Palm .60
-
-Notes To Chapter Five .61
-
-6 BRIEF BIOGRAPHY OF NAMKHAI NORBII .63
-
-BIBLIOGRAPHY..65
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dream Yoga And The Practice Of Natural Light
-
-By Namkhai Norbu
-
-Edited and introduced by Michael Katz
-Snow Lion Publications Ithaca, New York USA
-Library of Congress Cataloging in Publication Data
-Namkhai Norbu, 1938-
-Dream yoga and the practice of natural light
-By Namkhai Norbu; edited by Michael Katz. — 1st ed.
-
-Includes bibliographical references. ISBN 1-55939-007-7
-1. Rdzogs-chen (Rnih-ma-pa)
-
-2. Dreams—Religious aspects—Buddhism. I. Katz, Michael, 1951—
-
-BQ7622.4.N335 1992
-294.3’4446-dc20
-
-This edition: converted to PDF by Alex Sumner, 2003
-
-We would like to dedicate this book to the memory of master teachers Khyentse Rinpoche, Dudjom
-Rinpoche and Lama Gompo Tseden. May their work and aspirations be fulfilled.
-
-
-Dream Yoga And The Practice Of Natural Light
-
-
-1
-
-
-
-Preface
-
 
 Knowing the importance and the necessity of the “Practice of the Night” I have explained many
 aspects of dreams in this book edited by my student Michael Katz. It is my hope that those
@@ -113,21 +6,10 @@ will because of reading this become deeper in their knowledge. For those people 
 have real experience with their dreams, I hope that this book will provide the cause for their knowing
 the importance of dreams and dreamwork.
 
-Merigar, March 10, 1991
+Merigar, March ,
 
-Iron Sheep Year, 1st month, 25th day
+Iron Sheep Year, st month, th day
 
-Chogyal Namkhai Norbu
-
-
-Preface
-
-
-2
-
-
-
-Acknowledgements
 
 We would especially like to thank the following individuals for their assistance in completing this
 project.
@@ -170,17 +52,8 @@ Steinberg, Marianna Swolo, Jim Valby, and members of the Dzogchen community who 
 helped with translation and preparation of manuscripts.
 
 
-Acknowledgements
 
-
-3
-
-
-
-Editor’s Introduction
-
-
-On a dark night in the 1950s I raced from my bed and huddled at the door to my parents’ room,
+On a dark night in the s I raced from my bed and huddled at the door to my parents’ room,
 frightened and still half asleep. I was perhaps five years old, and the vivid imagery of a nightmare
 was still fresh. It seemed real enough: a snake coiled in my bed—and my parents’ reassurances that
 it was just a dream were little consolation.
@@ -197,7 +70,7 @@ Archetypal material, personal anxieties and concerns, foretelling of the future,
 other dimensions of beings are all possibilities within dream, according to the masters of dreamwork.
 Nevertheless, this statement should be qualified by saying that few encounter this range of dream
 experience. For most, dreaming is simply a rehashing of the impressions of the day, within the
-context of the dreamer’s wishes, fears and personality. In the 1950s, despite the presence of a few
+context of the dreamer’s wishes, fears and personality. In the s, despite the presence of a few
 philosophers and contemporary thinkers for whom dreaming held renewed interest, most Americans,
 myself included, viewed dreams as having little significance. This blithe state of affairs was soon
 changed by the upheaval of the sixties. From the crucible of collective and personal crises resulting
@@ -206,7 +79,7 @@ forms, the awareness of dreams began to reassert itself in the general culture, 
 
 My memories of dreams from early childhood to college are little more than a blur. The vivid
 imagery and sharp recollections of childhood faded into fleeting images or no memory at all. But in
-1978, my experience and understanding of the dream condition was radically transformed. I traveled
+, my experience and understanding of the dream condition was radically transformed. I traveled
 to France to study with a renowned Tibetan lama, Dudjom Rinpoche. Among the topics he taught
 was dream yoga. Rinpoche spoke clearly about the need to strive for awareness even within the
 sleeping state. He compared the current sleeping state of mankind with the unconscious sleep of an
@@ -228,15 +101,6 @@ yogic dreaming that was exciting and transformative. After two weeks had elapsed
 deepened considerably. Each night I followed Dudjom Rinpoche’s instructions for developing the
 capacity for dream yoga. The intensive meditation practice extended to ten hours a day, and my mind
 
-
-Editor’s Introduction
-
-
-4
-
-
-
-Dream Yoga And The Practice Of Natural Light
 
 became stronger. I was fascinated to be able to remember as many as eight dreams a night.
 
@@ -290,14 +154,8 @@ increased clarity, dreams might come to be something like a United Nations confe
 dream snake have been a “delegate”? For it is Norbu’s contention that there are many classes of
 
 
-Editor’s Introduction
 
 
-5
-
-
-
-Dream Yoga And The Practice Of Natural Light
 beings with whom it is possible to communicate within the dream state.
 
 Countless theories have been developed to account for the universally shared set of experiences we
@@ -325,7 +183,7 @@ a sacrifice for purification, the dream seeker would sometimes drink potions to 
 experience. Depending on the culture, the ingredients for these potions might include a variety of
 psychotropic drugs.I The sacred places were often selected through the esoteric science of geomancy
 or through a priest’s psychic revelation. The site of these temples was particularly important to the
-ancient Greeks, for example, because their chthonic deities 1 were believed to reside in special
+ancient Greeks, for example, because their chthonic deities were believed to reside in special
 locations.
 
 All aspects of the temples themselves were designed to mobilize and heighten the workings of the
@@ -336,7 +194,7 @@ man or as an animal, and in many instances the individual would awaken cured. At
 their popularity, these Aesclepian centers for dream incubation numbered in the hundreds.
 
 Instances of healing through rituals such as this are also widespread in contemporary shamanic
-cultures.4 For example, Richard Grossinger, author of numerous books on dream ethnography, cites
+cultures.For example, Richard Grossinger, author of numerous books on dream ethnography, cites
 Native American sources from among the Crow, Blackfoot, Kwakiutl and Winnebago tribes
 recounting dreams in which an animal or bird, such as a snake or loon, appeared and taught cures
 which when applied in waking life were found to have healing power.
@@ -344,21 +202,14 @@ which when applied in waking life were found to have healing power.
 Dreams have also inspired important scientific advances. Perhaps the most celebrated of these is the
 discovery of the molecular structure of benzene by Kekule. His account:
 
-My mind was elsewhere.. .1 turned the chair to the fireplace, and fell half asleep.
+My mind was elsewhere.. .turned the chair to the fireplace, and fell half asleep.
 
 Again the atoms gamboled in front of my eyes. Smaller groups this time kept mostly in
 the background. My mind’s eye, trained by repeated visions of the same sort, now
 distinguished larger formations of various shapes. Long chains., .everything in
 
 
-Editor’s Introduction
 
-
-6
-
-
-
-Dream Yoga And The Practice Of Natural Light
 
 movement, twisting and turning like snakes. And look what was that? One snake
 grabbed its own tail, and mockingly the shape whirled before my eyes. I awoke as if
@@ -379,7 +230,7 @@ and religion.
 
 Science And Dream Phenomena
 
-The modern scientific description of dream phenomena has followed upon the discoveries in 1952 of
+The modern scientific description of dream phenomena has followed upon the discoveries in of
 Kleitman and his students that dreaming is accompanied by rapid eye movements. Other facts about
 dreaming have emerged through more recent experimentation. For example, we know that all people
 dream and that approximately twenty-five percent of sleep is dream time. Dreams are crucial for
@@ -396,14 +247,14 @@ dismissed but now scientifically verified, reports of lucid dreaming have existe
 thousands of years. For example, Aristotle made the following statement: “.. .for often when one is
 asleep there is something in consciousness which declares that what presents itself is but a dream.
 
-In the early 1900s a Dutch psychiatrist by the name of Van Eeden studied this phenomenon in a
+In the early s a Dutch psychiatrist by the name of Van Eeden studied this phenomenon in a
 systematic fashion and coined the term “lucid dreaming” to describe it. Before him, the Marquis
-d’Hervey de Saint Denys had investigated dream phenomena and published his findings in 1867 in
+d’Hervey de Saint Denys had investigated dream phenomena and published his findings in in
 the book Dreams and How to Guide Them. In this book Saint Denys described his ability to awaken
 within his dreams as well as to direct them.
 
 Steven Laberge, a modem researcher of dream phenomena, developed a methodology that utilizes
-the rapid eye movements (R.E.M.) that accompany dreaming, in order to train lucidity.6 In one study
+the rapid eye movements (R.E.M.) that accompany dreaming, in order to train lucidity.In one study
 subjects listened to a recording that repeated the phrase “this is a dream” every few seconds. This
 was played after the beginning of each R.E.M. period. He then asked his sleeping subjects to signal
 their lucidity by moving their eyes in a prearranged pattern. Approximately twenty percent of his
@@ -412,14 +263,8 @@ Laberge has invented a “dream light” device which is worn on the face like a
 rapid eye movements that are associated with dreaming. The rapid eye movements trigger a
 
 
-Science And Dream Phenomena
 
 
-7
-
-
-
-Dream Yoga And The Practice Of Natural Light
 
 
 low-intensity pulsing red light which can cue the dreamer that he or she is dreaming.
@@ -430,7 +275,7 @@ phenomenon of being awake or lucid within a drea
 M:
 
 
-On Wednesday morning, January 13, 1988,1 became aware that I was dreaming; and
+On Wednesday morning, January , ,became aware that I was dreaming; and
 I decided that the best thing to do would be to fly in the sky. I hitched myself to a jet
 and we went very high into the stratosphere. I then had the jet reverse course so I
 could hang from it and see the world. I looked down and saw the earth as a great
@@ -477,11 +322,11 @@ for healing the weary, confused soul.
 Dreams And Depth Psychology
 
 
-8
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 Sigmund Freud, the founder of modern western psychology, called dream work the “royal road to the
 unconscious,” and helped reawaken interest in dreaming. Freud’s seminal work, The Interpretation
@@ -499,13 +344,13 @@ recognized is Freud’s acknowledgement of the existence of telepathy within the
 
 o
 
-was published in his lectures on psychoanalysis in 1916-
+was published in his lectures on psychoanalysis in -
 
 Carl Jung was perhaps the first Western psychologist to be interested in Buddhism - and Eastern
 religion. Jung, once a close student of Freud, later broke away from his mentor. Jung explained that
 he could not accept Freud’s overwhelming emphasis on a sexual root for all repressions, nor his
 narrow, anti-religious views. Jung considered libido to be a universal psychic energy whereas for
-Freud it was simply sexual energy .12
+Freud it was simply sexual energy .
 
 Jung also postulated the existence of a deep, encompassing cultural memory accessible through
 powerful dreams. He labeled this memory the “collective unconscious” and considered it to be a rich
@@ -540,11 +385,11 @@ an unresolved issue in her life.
 Dreams And Depth Psychology
 
 
-9
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 
 Another school of contemporary psychology which respects the dream experience is that represented
@@ -603,11 +448,11 @@ lucidity, telepathy, and precognitive dreams.
 Dreamwork In Traditional Cultures
 
 
-10
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 The Australian Aborigines believe in the existence of ancestral beings who are more powerful than
 most humans, and are considered to have other-than-human physical counterparts such as rocks,
@@ -663,14 +508,14 @@ the buddhas of past eras to both human and nonhuman beings.
 Dreamwork In Traditional Cultures
 
 
-11
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 Consider, for example, the extraordinary dream experience Namkhai Norbu Rinpoche had while on
-retreat in Massachusetts in the summer of 1990. On night after night a woman whom Rinpoche
+retreat in Massachusetts in the summer of . On night after night a woman whom Rinpoche
 considered to be a clakini appeared in his dream and taught him a complex series of dances with
 intricate steps for up to thirty-six dancers. Day after day Rinpoche transcribed the lessons from the
 dreams of the night before. He also taught a group of his students parts of this dance, which
@@ -686,7 +531,7 @@ it, she noted its similarity to the Native American Ghost Dance.
 The following series of dreams related by Norbu Rinpoche may serve to illustrate the human
 potential within the dream state as awareness develops.
 
-In 1959 I had already fled Tibet to the country of Sik-kim. The situation within Tibet
+In I had already fled Tibet to the country of Sik-kim. The situation within Tibet
 was deteriorating rapidly. As the news of killings and destruction reached us I became
 increasingly worried about the members of my family who remained in Tibet. Many
 of us prayed to Tara asking for her help. It was during this period that I had the
@@ -723,11 +568,11 @@ completely. He asked me, “Did you see the speaking Tara?”
 Dreamwork In Traditional Cultures
 
 
-12
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 I replied that I had not yet seen the speaking Tara, but that I would like to. The man
 then led me to a room with statues. As he turned towards the door to leave, he said,
@@ -738,7 +583,7 @@ top of the column was a statue of Green Tara. She was represented as a child of
 perhaps seven or eight years. It was a nice statue, but I didn’t hear it speak, and
 subsequently I awakened.
 
-The next chapter in this story was not a dream at all. In 1984 I was traveling in
+The next chapter in this story was not a dream at all. In I was traveling in
 northern Nepal heading towards Tolu Monastery, when I recognized the field where
 in my dream the girl had given me the flower and prayer. I looked ahead and there
 was the temple. When I arrived, everything was exactly the same as in my dream. I
@@ -759,7 +604,7 @@ have fueled the advance of mankind’s cultural and religious progress. These dr
 Rinpoche refers to as clarity dreams, seem to arise out of intense mental concentration upon a
 particular problem or subject, as well as through meditation and ritual. Startling, creative or
 transcendent outcomes often emerge from these special dreams, some of which may be channeled. In
-a dream awareness seminar I conducted in 1989, a participant recounted the following drea
+a dream awareness seminar I conducted in , a participant recounted the following drea
 
 M: “When I was a young child I used to have a recurring dream of being threatened by an old ugly
 dwarf who was terrifying to me. Each time he would appear I would either run away in that
@@ -785,11 +630,11 @@ somehow available in the present. Within Tibetan Buddhist, Bonpo, and other trad
 Developing Dream Awareness
 
 
-13
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 beings are considered to have the capacity to see the past, present, and future.
 
 If there is indeed significant evidence of a class of higher order dreams, questions arise concerning
@@ -845,11 +690,11 @@ there has still been relatively little that would serve to bring dream work into
 Developing Dream Awareness
 
 
-14
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 
 Buddhist, Bonpo and Taoist teachers have acknowledged to me that this situation has influenced
@@ -870,21 +715,21 @@ master Namkhai Norbu Rinpoche.
 
 Michael Katz
 New York City
-April 23, 1991
+April ,
 
 Notes To The Introduction
 
-1. Psychotropic drugs affect the mind, sometimes inducing visions or hallucinations. Used by
+. Psychotropic drugs affect the mind, sometimes inducing visions or hallucinations. Used by
 shamans in native cultures to make contact with the spirit world, the drugs are frequently
 employed to assist in rituals for healing. Examples of such drugs are peyote and certain types
 of mushroom and cactus.
 
-2. Chthonic deities were considered to live below the earth and were associated with agriculture
+. Chthonic deities were considered to live below the earth and were associated with agriculture
 and the fertility of the land. They were worshipped by the pre-Greek speaking people who
 were of a matriarchal culture. These deities may be related to the local guardians whom the
 Tibetans believe reside in specific locations.
 
-3. Aesclepius (called Aesculapius by the Romans) was considered to be a son of Apollo and
+. Aesclepius (called Aesculapius by the Romans) was considered to be a son of Apollo and
 was raised by the immortal centaur Chiron in his cave. Aesclepius became a great physician
 and left Chiron’s cave to help the people of Greece. As he was a remarkable healer, the
 Greeks ultimately worshipped him as a god and built temples to honor him. Inside these
@@ -896,14 +741,14 @@ explained what was causing the ailment, and from this information he could offer
 Priests continued to invoke him after his death, and he continued to appear in dreams of those
 who were ill, offering them healing advice.
 
-4. The word shaman is a Siberian term deriving from the classical form of shamanism in North
+. The word shaman is a Siberian term deriving from the classical form of shamanism in North
 Asia. Through rituals, chanting, drumming and psychotropic drugs, shamans go into trance
 for the purposes of healing and of divination.
 
-5. From The Works of Aristotle Translated into English, ed. W.D. Ross (Oxford: Clarendon
-Press, 1931), Vol. 1, Chapter 1, “De Divinatione Per Somnum,” p.462a.
+. From The Works of Aristotle Translated into English, ed. W.D. Ross (Oxford: Clarendon
+Press, ), Vol. , Chapter , “De Divinatione Per Somnum,” p.a.
 
-6. The descriptions of lucid dream experience as awesome and liberating or, alternatively,
+. The descriptions of lucid dream experience as awesome and liberating or, alternatively,
 Keizer’s lucid dream experience of being in prison, which served to remind him of the need
 to work to attain “that fullness of mental expression to which I aspire,” seem to echo themes
 within Plato’s “Allegory of the Cave.”
@@ -914,11 +759,11 @@ In this classic of philosophy, Plato described cave dwellers who have become acc
 Notes To The Introduction
 
 
-15
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 the shadowy muted reality of life within a cave. The inhabitants are unaware of the
 possibility of a more vibrant, spectacular reality, and doubt the probability of the sun.
@@ -927,14 +772,14 @@ sense impressions may suggest a “taste of enlightenment.” Perhaps the dreame
 momentarily broken the habitual conditioned modes which typically govern perception,
 referred to within the allegory as living within a cave.
 
-7. In addition, there is support for the contention that Freud knew about lucid dreaming and
+. In addition, there is support for the contention that Freud knew about lucid dreaming and
 made reference to types of lucid dream experience. See “Introductory Lectures on
 Psychoanalysis” in The Complete Psychological Works of Sigmund Freud , standard edition
-(New York: Hogarth Press, 1916), Vol.15, p.222. This evidence is summarized by Bol
-Rooksby and Sybe Tenwee in their historical article published in Lucidity Letter, 9 (2) 1990,
+(New York: Hogarth Press, ), Vol., p.. This evidence is summarized by Bol
+Rooksby and Sybe Tenwee in their historical article published in Lucidity Letter, () ,
 Edmonton, Alberta.
 
-8. Jung’s interest in Buddhism and eastern philosophy was great enough for him to have written
+. Jung’s interest in Buddhism and eastern philosophy was great enough for him to have written
 the foreword for the first translation of the classic Tibetan Buddhist book of the dead, the
 Bardo Thodol. Unfortunately, due to mistranslations within the original publication of the
 Tibetan Book of Great Liberation by Evans Wentz, Jung never had a clear understanding of
@@ -946,11 +791,11 @@ Jung subsequently misinterpreted “the one mind” as referring to the unconsci
 does not. The pure nature of mind was a reference to the pinnacle teaching of Buddhism,
 Dzogchen. The flavor of Dzogchen practice is later described in this book by Namkhai
 Norbu, and also within an original text by the Tibetan meditation master Mipham
-(1846-1914). For a thorough discussion of the aforementioned misunderstanding, the reader
+(-). For a thorough discussion of the aforementioned misunderstanding, the reader
 is referred to the recent retranslation of the Tibetan Book of the Great Liberation by John
 Reynolds.
 
-9. It is unclear to what extent Jung was influenced in his conception of universal psychic energy
+. It is unclear to what extent Jung was influenced in his conception of universal psychic energy
 by Tantric Buddhist and Taoist theories of internal energy, called “lung”, “prana” and “chi”
 in Tibetan Buddhism, Hinduism and Taoism, respectively. Within the Tantric system of Anu
 Yoga, “lung” or internal airs are said to circulate through internal channels or meridians
@@ -959,14 +804,14 @@ called “tsa”. According to Norbu Rinpoche and other lamas within the Dzogche
 achieving these ends are elaborate breathing exercises and physical exercises. Collectively,
 these exercises are called Yantra Yoga, or Tsa Lung.
 
-10. It is now clear that there are many so-called primitive peoples with sophisticated ways of
+. It is now clear that there are many so-called primitive peoples with sophisticated ways of
 interpreting and manipulating dreams. What seems likely is that for thousands of years a few
 initiates in widely diverse cultures have practiced dream manipulation, lucid dreaming and
 more, while most of the population—then as now—slept unconsciously.
 
-11. Krippner, S., Dreamtime andDreamwork, Preface to Chapter 5, pages 171-174.
+. Krippner, S., Dreamtime andDreamwork, Preface to Chapter , pages -.
 
-12. Bonpo/Yung-drung Bon: The teachings found in the Bonpo school derived from the Buddha
+. Bonpo/Yung-drung Bon: The teachings found in the Bonpo school derived from the Buddha
 Tenpa Shenrab, who appeared in prehistoric times in central Asia. Bon means teaching or
 dharma, and Yung-drung means the eternal or the indestructible. Yung-drung is often
 symbolized by a leftward spinning swastika. The leftward direction is representative of the
@@ -983,36 +828,36 @@ stages of the development of Bon. The first stage is the most ancient “Old Bon
 Notes To The Introduction
 
 
-16
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 “Primitive Bon,” which is similar to North Asian shamanism. The second stage is
 Yung-drung Bon with its roots in the teachings of Buddha Tenpa Shenrab.
 
 Tenzin Namdak was born in Eastern Tibet and educated at Menri, the leading Bonpo
-Monastery in Central Tibet. In 1959 he became a Lopon, head of academic studies, and led
+Monastery in Central Tibet. In he became a Lopon, head of academic studies, and led
 an exodus of Bonpo monks from Tibet to India to escape the Communist Chinese. In the
-early 1960s he organized the Bonpo community in Dolangi, Himachal Pradesh, and built a
+early s he organized the Bonpo community in Dolangi, Himachal Pradesh, and built a
 monastery and a lama college there. He currently resides there as the head teacher and is the
 foremost native Bonpo scholar amongst Tibetans in exile. Lopon Tenzin Namdak was the
 informant for David Snellgrove’s Nine Ways of Bon. Lopon lived in England for three years
-in the 1960s and speaks fluent English.
+in the s and speaks fluent English.
 
-13. Lopon Tenzin Namdak, a meditation master who heads the Yung-drung Bon sect of the
+. Lopon Tenzin Namdak, a meditation master who heads the Yung-drung Bon sect of the
 Bonpo religion, claims that the Bonpo spiritual tradition—including its dream awareness
-practices—may be traced back 18,000 years to an area that includes western Iran and western
+practices—may be traced back ,years to an area that includes western Iran and western
 Tibet.
 
 According to the Bonpo history, a superhuman being, Tenpa Shenrab, who incarnated at that
 time, was the originator of their religious system. For comparison, archeologists cite evidence
-of religious activity—burying the dead with objects— from 30,000 B.C. Further perspective
+of religious activity—burying the dead with objects— from ,B.C. Further perspective
 may be gained by noting that the archeological remains of Cro Magnon man, which have
-been found throughout Africa, Europe, and from Iran to Asia, date from 100,000 B.C.
+been found throughout Africa, Europe, and from Iran to Asia, date from ,B.C.
 
-14. Dakini: Tibetan, Khadro. Kha means space, sky; dm means to go. Thus the term indicates a
+. Dakini: Tibetan, Khadro. Kha means space, sky; dm means to go. Thus the term indicates a
 sky/space goer. The dakini is understood to be the embodiment of wisdom, and is ultimately
 beyond sexual distinction but is perceived in female form. There are many classes of dakinis
 including wisdom dakinis, who are enlightened. Examples of these are Man-darava, Yeshe
@@ -1020,9 +865,9 @@ Tsogel and Vajra Yogini. There are also flesh-eating dakinis, as well as worldly
 embody worldly female energy. Dakinis represent the energy that allows teachings to be
 taught.
 
-15. Included later within this book are a series of dreams by Namkhai Norbu Rinpoche which he
+. Included later within this book are a series of dreams by Namkhai Norbu Rinpoche which he
 recorded while making pilgrimage to Maratika Cave in Nepal. On the pilgrimage, Norbu
-Rinpoche dreamed of a text more than 100 pages long, which included instructions for
+Rinpoche dreamed of a text more than pages long, which included instructions for
 advanced meditation practices. Spectacularly creative dreams such as these are subsequently
 referred to as dreams of clarity.
 
@@ -1030,11 +875,11 @@ referred to as dreams of clarity.
 Notes To The Introduction
 
 
-17
 
 
 
-1. THE NATURE AND CLASSES OF DREAMS
+
+. THE NATURE AND CLASSES OF DREAMS
 
 
 In a sutra Buddha Shakyamunil describes the phenomenal world that we generally consider to be
@@ -1087,14 +932,14 @@ previous life. In this kind of dream, unfamiliar things may appear which the per
 experienced in this life, such as visions of another country or strange peoples who have unfamiliar
 
 
-1. THE NATURE AND CLASSES OF DREAMS
-
-
-18
+. THE NATURE AND CLASSES OF DREAMS
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 
 customs or language. These dreams may repeat so often that the dreamer becomes knowledgeable of
@@ -1150,14 +995,14 @@ karma can reawaken. Depending on the dreamer’s capacity, it might be possible 
 life in its entirety. One hundred or even a hundred thousand lives can be remembered in a dream. We
 
 
-1. THE NATURE AND CLASSES OF DREAMS
-
-
-19
+. THE NATURE AND CLASSES OF DREAMS
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 can read about these extraordinary dreams appearing through unobstructed clarity in accounts of the
 lives of bodhisattvas and arhats.
@@ -1177,7 +1022,7 @@ These are the types of clarity dreams. They are a continuation and development o
 of dream and arise primarily for practitioners who already have some experience working with their
 dreams or who have experience of maintaining lucidity and awareness within the dream. They are
 
-'7
+'
 
 the type of dreams that manifests through the clarity of one’s state of mind, or rigpa.-
 
@@ -1202,50 +1047,50 @@ realization, we have the possibility of ultimately becoming enlightened.
 
 Notes To Chapter One
 
-1. Shakyamuni is the historical Buddha who, born as Prince Siddhartha, renounced his royal
+. Shakyamuni is the historical Buddha who, born as Prince Siddhartha, renounced his royal
 birthright upon perceiving the suffering of the world, and attained final enlightenment.
 
-2. Dharmas: The truth, laws, and basic realities. This term is used in the singular to describe the
+. Dharmas: The truth, laws, and basic realities. This term is used in the singular to describe the
 path towards enlightenment.
 
-3. Karmic traces: According to the doctrine of karma, all actions are followed by inevitable, but
+. Karmic traces: According to the doctrine of karma, all actions are followed by inevitable, but
 not necessarily immediate, consequences. The term “karmic traces” refers to the “seeds”
 which exist as unmanifest potentials and which ripen when the necessary secondary
 conditions are present.
 
-4. Chakras: Non-material psychic centers located within the body at specific locations.
+. Chakras: Non-material psychic centers located within the body at specific locations.
 According to Buddhist metaphysics, major chakras are found at the crown of the head, the
 
 
 Notes To Chapter One
 
 
-20
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 throat, the heart, the navel, and the genitals.
 
-5. Channels: Non-material meridians through which the internal airs called prana flow through
+. Channels: Non-material meridians through which the internal airs called prana flow through
 the body.
 
-6. Prana: Internal airs which, according to Norbu Rinpoche, flow within the body and may be
+. Prana: Internal airs which, according to Norbu Rinpoche, flow within the body and may be
 directed so as to increase energy, circulation and concentration by advanced practitioners of
 Yantra Yoga.
 
-7. Rigpa: Awareness or pure presence of natural self-perfected mind. For additional
+. Rigpa: Awareness or pure presence of natural self-perfected mind. For additional
 commentary, see The Cycle of Day and Night by Namkhai Norbu.
 
 
 Notes To Chapter One
 
 
-21
 
 
 
-2. THE PRACTICE OF THE NIGHT
+
+. THE PRACTICE OF THE NIGHT
 
 
 The night is very important for people because half our lives pass during it; but often we quietly
@@ -1300,15 +1145,15 @@ In Tantric initiation, there are four sub-initiations, and the last of them is c
 word. If you have understood, at that time the master gives a kind of introduction to natural mind.l
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-22
+. THE PRACTICE OF THE NIGHT
 
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 Even if you have not realized natural mind but you have a lot of participation, commitment, and
 faith, and you practice with devotion, it is sometimes possible that in the moment of the last
@@ -1316,7 +1161,7 @@ awakening of consciousness there will come a flash of recognition of natural min
 easy, but if you have really had knowledge, it is possible. As you are passing or moving through,
 there is a series of the development of lights, for which there are many explanations.
 
-In the Dzogchen teaching, the last of these phases, the fifth light, is spoken of as lhundrub, 5 - the state
+In the Dzogchen teaching, the last of these phases, the fifth light, is spoken of as lhundrub, - the state
 of self-perfectedness. In that moment you have a reawakening of consciousness. It is possible for
 you to recognize that which has been transmitted to you through direct introduction by the teacher.
 The experience of that transmission is what we call the experience of wisdom. Let us use the analogy
@@ -1362,14 +1207,14 @@ To repeat: With the beginning of the bardo of existence, the functioning or work
 what is called the mental body, also begins. This is equal to the arising of the state of dreams. In the
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-23
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 
 practice we do, there has to be an awareness of, or mastery of, the state of natural light. When one
@@ -1422,14 +1267,14 @@ correspond in your mind to the sound Ahhh. It is important that when you see tha
 automatically know what its sound is.
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-24
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 If you do not succeed in concentrating and seeing this at first, it may be that you do not know how to
 visualize. Try writing an “A” on a piece of paper, put it in front of you, and stare at it for a while.
@@ -1484,14 +1329,14 @@ dream whatever one wishes or one can pick up a desired theme. One can continue f
 left off dreaming on a previous occasion.
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-25
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 Within the tantric system, the specific dream yoga practice is oriented towards preparing the
 practitioner for the bardo after the time of death. This is not the case in the Dzogchen system. In the
@@ -1546,18 +1391,18 @@ capacity for correct breathing and also balance your energies as an aid to sleep
 are Tibetan medicines to assist a person who has difficulty sleeping. Unlike sleeping pills they do not
 cause dependence or other side effects.
 
-These medicines, such as Agar 35 and Vimala,^ can be used for one or two months—as long as you
+These medicines, such as Agar and Vimala,^ can be used for one or two months—as long as you
 need, really—and will not cause any negative side effects. Rather, they will help your health and
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-26
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 
 coordinate your energy. When you do not need the medicine anymore, you can stop without
@@ -1565,7 +1410,7 @@ withdrawal symptoms or negative effects. That is the benefit of these Tibetan me
 
 If you have become habituated to Western sleeping pills, you can initially alternate them withTibetan
 pills in order to lessen the dependency. One night you use Western medicine, and the next night you
-use Agar 35. After one or two weeks of alternating, you will be able to stop taking the Western
+use Agar . After one or two weeks of alternating, you will be able to stop taking the Western
 medicine without a problem.
 
 You must not think only of Tibetan medicine when it comes to assuring a good night’s sleep. You
@@ -1574,7 +1419,7 @@ should also work with breathing in the manner previously mentioned, as this is v
 Sometimes you cannot sleep because one of your three humors!! is disturbed. When the wind humor
 is disturbed one has particular trouble sleeping. Wind is linked with prana or energy. When prana is
 disturbed it is difficult to sleep. For more information on this you can consult books on Tibetan
-medicine. In a book I wrote 12 on the topic there is an explanation of the three humors and of how to
+medicine. In a book I wrote on the topic there is an explanation of the three humors and of how to
 overcome problems. For example, to overcome problems related to wind disease, it is helpful to go
 to bed earlier in the evening, to sleep with warm clothes, and to have something like soup to eat just
 before going to bed. If you are not sleeping at night, and instead of relaxing you work hard until late
@@ -1603,21 +1448,21 @@ progress.
 
 Let us discuss this in greater detail. As previously mentioned, there are preparations for dreamwork
 as well as the actual practice. In regards to preparation, it would be advisable for one to conduct a
-retreat to first practice concentration on the six syllables 13 and their purification.
+retreat to first practice concentration on the six syllables and their purification.
 
 After doing this practice for some time, many disordered dreams may appear. The arising of
 numerous disordered dreams is a sign that preparation is complete and then one can proceed to the
 practice.
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-27
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 
 In regards to practice there are three essential points. The first is to examine the dream; the second to
@@ -1670,14 +1515,14 @@ places will influence your dreams. Later, you can extend the voyages to paradise
 causing it to actually appear in the dream.
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-28
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 If you concentrate a great deal during the day, imagining that you are living a dream, then during the
 night the dream itself will also seem less real. The subject, that which experiences the dream, is the
@@ -1732,14 +1577,14 @@ awareness. For example, a meditator who penetrates to the nature of “vision”
 existence) finds it void. This perception of the emptiness of vision can then be transferred into the
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-29
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 dream. If, while dreaming, you are not only aware of dreaming, but also conscious that all vision is
 an illusion, you penetrate to the Void at its heart. Thus a dream can be transformed into knowledge
@@ -1793,14 +1638,14 @@ else sleeping, it is enough that you exhale with “Ah,” as long as you can he
 presence of that white “A”. This is a method of guru yoga. It is not necessary to say many words or
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-30
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 prayers; simply having the presence of the white “A” and recognizing that the “A” is the unification
 of the mind of all your gurus is sufficient. Then you integrate in a state of contemplation or rigpa.
@@ -1856,16 +1701,16 @@ And he asked, “What practice have you been doing?”
 I explained that I had been doing my best to take into daily life the practice of trechod _
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-31
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
 
-21
+
+
+
+
+
 
 “You haven’t been doing any of the practice of togel— ’?” he continued.
 
@@ -1922,14 +1767,14 @@ cave. Coming close, I looked inside this rather large cave. At the very center, 
 white boulder, hard and like granite. It was not a tiny stone; it was a big boulder. Sitting on this rock
 
 
-2. THE PRACTICE OF THE NIGHT
-
-
-32
+. THE PRACTICE OF THE NIGHT
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 was a little boy. I’m sure that he wasn’t more than seven or eight years old. I looked around. There
 was nobody else in there. I said to myself, “This is pretty strange. Jigme Lingpa lived a long time
@@ -1968,7 +1813,7 @@ practice of the nighttime.
 
 Notes To Chapter Two
 
-1. . Bardo: literally, “intermediate state”. There are six bardos:
+. . Bardo: literally, “intermediate state”. There are six bardos:
 
 The first is the bardo of the ordinary waking state (Tibetan, kye ne bardo). It is the
 experience of the awake and conscious reality as we know it.
@@ -1990,11 +1835,11 @@ surroundings were falling apart.
 Notes To Chapter Two
 
 
-33
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 Secondly the element of water dissolves into the element fire. Inwardly the dying person sees
 white and outwardly feels as though his or her surroundings were flooded with water. At this
@@ -2028,13 +1873,13 @@ Buddhist philosophy, all that the disincarnate being sees are the sexual organs 
 parents-to-be. This is perhaps the most basic foundation of what we call the Oedipus
 complex.
 
-2. . Tantra: literally, “continuation”, in the sense that although all phenomena are void,
+. . Tantra: literally, “continuation”, in the sense that although all phenomena are void,
 nevertheless phenomena continue to manifest. All tantric methods work with the principle of
-transforming deluded thought to pure perception. See Crystal and the Way of Light, p. 30.
+transforming deluded thought to pure perception. See Crystal and the Way of Light, p. .
 
 The word tantra also refers to the texts within which these methods are described.
 
-3. . Mother Light: In Dzogchen, one practices dream yoga or the practice of the Clear Light at
+. . Mother Light: In Dzogchen, one practices dream yoga or the practice of the Clear Light at
 the moment of falling asleep and before the arising of the dream state. The experience of
 Clear Light is known as the “son” experience. If, through correct meditative practice or
 contemplation, the Clear Light has been clearly recognized during life, then at death the
@@ -2042,29 +1887,29 @@ practitioner once more recognizes and integrates with the “mother” Clear Lig
 known as the joining of the “son” and the “mother”. The mother Clear Light is the natural,
 innate luminosity as it appears in its fullest expression in the after-death state. See John
 Reynolds, Self-Liberation Through Seeing with Naked Awareness (Barrytown, N.Y.: Station
-Hill Press, 1989), p. 153, note 63.
+Hill Press, ), p. , note .
 
-4. . Introduction to natural mind: In the various methods of introducing one’s natural mind, the
+. . Introduction to natural mind: In the various methods of introducing one’s natural mind, the
 master is assisting the student in developing awareness, also called rigpa or the intrinsic
 awareness of one’s natural state, referring to pure presence.
 
-5. . Lhundrup: literally, “self-perfection.” This refers to one’s state or existence which is perfect
+. . Lhundrup: literally, “self-perfection.” This refers to one’s state or existence which is perfect
 from the beginning, and all that manifests. These manifestations or reflections arise
 spontaneously, and are complete within themselves. Lhundrup specifically refers to the innate
 clarity of the self-perfected state.
 
-6. . Body of Light: Tibetan, ja-lus. Also known as the “rainbow body.” Certain realized beings
+. . Body of Light: Tibetan, ja-lus. Also known as the “rainbow body.” Certain realized beings
 (practitioners of Longde and Managede levels of Dzogchen) achieve the transformation of
 
 
 Notes To Chapter Two
 
 
-34
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 their ordinary bodies into a Body of Light at the time of death. In this process the physical
 body dissolves into its natural state, which is that of Clear Light. As the elements of the body
@@ -2076,37 +1921,37 @@ Body of Light include the teachers and family members of Namkhai Norbu Rinpoche�
 example, his uncle Urgyen Danzin (Togden), his two teachers Changchub Dorje and Ayu
 Khandro, and Changchub Dorje’s master, Nyala Pema Dendul.
 
-7. Solar and lunar channels: Within the esoteric tsa-lung treatises found in Anu-Yoga texts of
+. Solar and lunar channels: Within the esoteric tsa-lung treatises found in Anu-Yoga texts of
 Tibetan Buddhism, there are elaborate explanations of the channels (Tibetan tsa) in which
 internal winds travel. The solar and lunar channels are considered to be located on either side
 of the central channel ( uma ), which parallels the spinal cord. These solar and lunar channels
 represent masculine and feminine energy. Their colors-red and white—as well as their
 placement on the right and left side differ amongst various Tantras.
 
-8. Nine-fold purification breathing: Tibetan, lungro salwa : A breath exercise performed before
+. Nine-fold purification breathing: Tibetan, lungro salwa : A breath exercise performed before
 a session of meditation (tun), or before practicing Yantra Yoga. In these exercises one
 visualizes oneself inhaling purified air and exhaling negativities and impurities. It is used as a
 practice preliminary to meditation to balance the energy and settle the mind.
 
-9. The eight movements: Tibetan, lung sang: Yogic exercises to purify the prana or breath. The
+. The eight movements: Tibetan, lung sang: Yogic exercises to purify the prana or breath. The
 eight movements are described within the Yantra Yoga text, “The Unification of the Solar
 and Lunar” (Tibetan, Trulkor Nyida Khajor ), written in the eighth century by the master
 Vairocana. See Namkhai Norbu, Yantra Yoga, edited by Oliver Leick (Gleisdorf: Edition
-Tsaparang, 1988), p.33.
+Tsaparang, ), p..
 
-10. Agar 35 and Vimala: Tibetan herbal medicines. Agar 35 is made of thirty-five natural
-ingredients; both Agar 35 and Vimala are taken for insomnia and to balance “lung”, a
+. Agar and Vimala: Tibetan herbal medicines. Agar is made of thirty-five natural
+ingredients; both Agar and Vimala are taken for insomnia and to balance “lung”, a
 disordered wind condition. These preparations can be purchased through the Tibetan Medical
-and Astrological Institute, Khara Danda Road, Dharamsala, Dist. Kangra, H.P. 176215, India.
+and Astrological Institute, Khara Danda Road, Dharamsala, Dist. Kangra, H.P. , India.
 
-11. Three humors: lung (air or wind), dripa (bile), and bad-kan (phlegm). The correct balance of
+. Three humors: lung (air or wind), dripa (bile), and bad-kan (phlegm). The correct balance of
 these three humors is considered essential for health. An imbalance will lead to one of the
 myriad diseases to which humans are prone.
 
-12. Namkhai Norbu, On Birth and Life: A Treatise on Tibetan Medicine (Arcidosso:
-Shang-Shung Editzioni, 1983).
+. Namkhai Norbu, On Birth and Life: A Treatise on Tibetan Medicine (Arcidosso:
+Shang-Shung Editzioni, ).
 
-13. Concentration on the six syllables and their purification: The six syllables—A, Aaah, Ha,
+. Concentration on the six syllables and their purification: The six syllables—A, Aaah, Ha,
 
 Sha, Sa, Ma—are each symbolic of a realm of existence, including those of the gods,
 demigods, humans, animals, hungry ghosts, and hell beings. Karmic tendencies to be reborn
@@ -2116,10 +1961,10 @@ these tendencies. The specific practice of concentration on the syllables employ
 visualization and mantra directed at specific points of the body where these propensities are
 believed to concentrate.
 
-14. Vajrayogini: A meditational deity in sambhogakaya form, representing the feminine aspect of
+. Vajrayogini: A meditational deity in sambhogakaya form, representing the feminine aspect of
 primordial wisdom.
 
-15. Guru yoga: Unification with the mind of the guru (one’s master teacher), who is seen as a
+. Guru yoga: Unification with the mind of the guru (one’s master teacher), who is seen as a
 manifestation of the minds of all enlightened beings. The mind of the guru is considered the
 same as one’s intrinsic awareness. Through the practice of guru yoga one receives blessings
 from the guru, thus enabling one to rest in the primordial state. There are elaborate and
@@ -2132,11 +1977,11 @@ One of the forms of guru yoga taught most frequently by Namkhai Norbu Rinpoche e
 Notes To Chapter Two
 
 
-35
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 
 a white
@@ -2147,22 +1992,22 @@ a Tibetan “A” The “A” is visualized in the center of one’s body as the
 masters. By sounding “Aaa.. .h” and feeling the blessings of the teachers, one may enter into
 a state of union with their enlightened awareness.
 
-16. Vajradhara: A male meditational deity, the form through which Shakyamuni Buddha reveals
+. Vajradhara: A male meditational deity, the form through which Shakyamuni Buddha reveals
 the teachings of secret mantra.
 
-17. Longde: One of the three series of Dzogchen teachings. The three series are: “Managede”, or
+. Longde: One of the three series of Dzogchen teachings. The three series are: “Managede”, or
 essential series, the “Longde”, or the series of space, and the “Semde”, the series of mind.
 These series of Dzogchen instruction ultimately have the same goal, that of bringing the
 practitioner into absolute contemplation. The Longde series works specifically with symbolic
 introduction and is widely known for practices that bring one to contemplation through
 assuming specialpositions of the body and holding pressure points. See Norbu, The Crystal
-and the Way of Light, p. 80.
+and the Way of Light, p. .
 
-18. Dark Retreat, also called Yangtik. A highly advanced Dzogchen meditation technique
+. Dark Retreat, also called Yangtik. A highly advanced Dzogchen meditation technique
 practiced in complete darkness. Through the Yangtik practice, an initiate who is already
 capable of maintaining contemplation may proceed swiftly to total realization.
 
-19. Changchub Dorje: The principal master of Namkhai Norbu Rinpoche. Changchub Dorje was
+. Changchub Dorje: The principal master of Namkhai Norbu Rinpoche. Changchub Dorje was
 a terton and master of Dzogchen. He was the master whom Namkhai Norbu Rinpoche credits
 as having truly introduced him to the state of Dzogchen. He also gave Na mk hai Norbu
 Rinpoche transmission on Semde, Longde, and Managede. Though an extraordinary master,
@@ -2172,40 +2017,40 @@ practitioners. In addition to being a lama, he was an adept physician. People wo
 from distant places to receive both Dharma teachings and medical consultations. Namkhai
 Norbu Rinpoche acted as a scribe and secretary for this master and assisted him in his
 medical consultations. At the end of his life Changchub Dorje attained the Rainbow Body of
-Light. See The Crystal and the Way of Light, p. 108.
+Light. See The Crystal and the Way of Light, p. .
 
-20. Trechod: Literally “cutting through”, this term refers to the experience of total relaxation.
+. Trechod: Literally “cutting through”, this term refers to the experience of total relaxation.
 Trechod is the method of maintaining one’s state of rigpa throughout all situations. Trechod
 is the ability to cut through discursive and dualistic thought at any moment, bringing oneself
 to pure presence.
 
-21. Togel: “Surpassing the uppermost” or “leaping over.” After perfectly succeeding with one’s
+. Togel: “Surpassing the uppermost” or “leaping over.” After perfectly succeeding with one’s
 practice of trechod, one practices togel. Togel is useless without a perfected practice of
 trechod and is hence secret until that time. Togel is considered the fastest of methods for
 achieving total realization. Togel practice brings about the union of vision and emptiness.
 One continues to develop meditative contemplation through vision until the Body of Light is
-manifest. See Crystal and the Way of Light, p. 101 and John Reynolds, Self-Liberation
-Through Seeing With Naked Awareness, p. 136, note 33.
+manifest. See Crystal and the Way of Light, p. and John Reynolds, Self-Liberation
+Through Seeing With Naked Awareness, p. , note .
 
-22. Jigme Lingpa (1729-1798): A reincarnation of Vimalamitra, Jigme Lingpa was a great
+. Jigme Lingpa (-): A reincarnation of Vimalamitra, Jigme Lingpa was a great
 Nyingmapa Dzogchen Master from East Tibet. He was a great scholar and compiled and
 edited the Longchen Nyingthig, the compiled teachings of Longchenpa. Jigme Lingpa also
 wrote extensively on Tibetan medicine and Tibetan history, and worked for the development
 of the non-sectarian “Rimed” school of Tibetan Buddhism before achieving the Body of
 Light.
 
-23. The one-hundred-syllable mantra of Vajrasattva: One purifies negative karma and
+. The one-hundred-syllable mantra of Vajrasattva: One purifies negative karma and
 obscurations through recitation of this mantra, one of the most renowned within Tibetan
 
 
 Notes To Chapter Two
 
 
-36
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 
 Buddhism.
@@ -2214,14 +2059,14 @@ Buddhism.
 Notes To Chapter Two
 
 
-37
 
 
 
-3 THE PILGRIMAGE TO MARATIKA
+
+THE PILGRIMAGE TO MARATIKA
 
 
-In 1984, Norbu Rinpoche traveled to northern Nepal on a pilgrimage to the monastery of Tolu, and
+In , Norbu Rinpoche traveled to northern Nepal on a pilgrimage to the monastery of Tolu, and
 to the cave of Maratika- where the great Mahasiddha- Padmasambhava- did a retreat with his
 consort Mandarava.t The following is an account of a series of remarkable dreams he had on this
 trip, beginning with a dream he had two days after reaching the monastery.
@@ -2235,7 +2080,7 @@ important dream.
 In this dream I was at the cave of Tolu, and even the people who had actually accompanied me on
 the trip were there. As I was teaching my students, we were joined by my uncle. I should tell you that
 this man who joined us was not only my uncle, he was also one of my principal teachers, and an
-extraordinary practitioner and terton.2
+extraordinary practitioner and terton.
 
 I will tell you a short story which will illustrate the remarkable quality of my uncle’s life.
 
@@ -2258,7 +2103,7 @@ mi lk I had offered, and when it had finished began to run, and as it did so it 
 Insofar as the area was quite long it was able to run a long distance. It ran clear to the end of the
 garden, and then half way back; then it stopped and the metal piece, an iron rod, dropped from its
 wing. The very moment the iron piece fell out, the vulture flew away, heading due East in the
-direction of a large mountain called Sitang. The famous Dzogchen Monastery 2 is behind that
+direction of a large mountain called Sitang. The famous Dzogchen Monastery is behind that
 mountain. It was also on that mountain that my uncle normally lived in a cave.
 
 We examined the iron that had Men from the vulture’s wing. It was quite long. The top that had been
@@ -2270,14 +2115,14 @@ So, on that occasion at Tolu, my uncle manifested within my dream. In the dream 
 than fourteen or fifteen years old. He said to me that he was very pleased that I was giving such a
 
 
-3 THE PILGRIMAGE TO MARATIKA
-
-
-38
+THE PILGRIMAGE TO MARATIKA
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 beautiful teaching, and that it was useful to everyone. I asked him if he had really been listening. He
 replied that he had heard every word. In the dream I had been teaching the Thik Sum Nedek,! the
@@ -2332,14 +2177,14 @@ three or four times. Due to interruptions I awoke frequently. But each time I wo
 and begin with Samaya and all the rest, and then the text would go on.
 
 
-3 THE PILGRIMAGE TO MARATIKA
-
-
-39
+THE PILGRIMAGE TO MARATIKA
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 Suddenly the voice said, “You are now in the next state.” What distinguished this state from the
 previous one was that now the few words which had not been completely clear appeared to occupy
@@ -2394,14 +2239,14 @@ observed while looking at him was that the lower part of his body was that of a 
 that perhaps this was Rahula,l£ one of the guardians, but when I looked at his face this seemed
 
 
-3 THE PILGRIMAGE TO MARATIKA
-
-
-40
+THE PILGRIMAGE TO MARATIKA
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 unlikely. I then thought that perhaps it was, or represented, someone that I knew. I looked again—his
 face was dragon-like in appearance. His body was white. Suddenly he placed something into my
@@ -2455,14 +2300,14 @@ impressions were still turning. That was how I conducted the initiation, and the
 day I decided to do a retreat inside the cave. Many of the students who accompanied me on this
 
 
-3 THE PILGRIMAGE TO MARATIKA
-
-
-41
+THE PILGRIMAGE TO MARATIKA
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 pilgrimage joined me to do the practice of Pema Dendul in the cave of Mandarava.
 
 The next day I had yet another special dream. Although many of our people had not actually arrived
@@ -2502,11 +2347,11 @@ Maratika, and sat down.
 
 I had almost begun when the student arrived with a black notebook and a red pen. With these I
 started writing. It was as if I was starting off a letter. I headed it Maratika, along with the hour and
-the day. It was 9:15 in the morning. While I was writing, various people from my group came over.
+the day. It was :in the morning. While I was writing, various people from my group came over.
 Some of them didn’t know what I was doing. As they came over to greet me I tried to get rid of
 them.
 
-Despite interruptions, I finished writing at 12:15. When I had finished I had used up the last page,
+Despite interruptions, I finished writing at :. When I had finished I had used up the last page,
 right up to the last line of the notebook. It almost seemed as if it had been deliberately planned. I
 reflected to myself that this was a good sign.
 
@@ -2516,14 +2361,14 @@ compared with the first in order to confirm its authenticity. This would be proo
 genuine, and not merely my intellect at play.
 
 
-3 THE PILGRIMAGE TO MARATIKA
-
-
-42
+THE PILGRIMAGE TO MARATIKA
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 Two days passed. On the third day, I had a dream indicating that the time had come to write and
 make some clarifications. After completing morning practice I again sat down to write, and
@@ -2543,18 +2388,18 @@ transmission of the mantras.
 
 Notes To Chapter Three
 
-1. Mandarava’s Cave at Maratika: In Northern Nepal, where Norbu Rinpoche did a retreat in
-1984, there are two sacred caves. The larger one is associated with Padmasambhava, and the
+. Mandarava’s Cave at Maratika: In Northern Nepal, where Norbu Rinpoche did a retreat in
+, there are two sacred caves. The larger one is associated with Padmasambhava, and the
 smaller one with Mandarava. In the seventh century, Mandarava—together with Guru
 Padmasambhava—practiced and attained immortality in this cave, which has consequently
 become known as the Cave of Long Life.
 
-2. Mahasiddha: Sanskrit, literally “Great Adept”. Maha means great, while siddha is one who
+. Mahasiddha: Sanskrit, literally “Great Adept”. Maha means great, while siddha is one who
 has attained siddhi— psychic and spiritual powers. In Tibetan Buddhism there is the example
 of the Eighty-four Mahasiddhas who were men and women with supernatural powers. These
 tantric practitioners lived in India and Nepal during the eighth century.
 
-3. Guru Padmasambhava: Sanskrit, from padma (lotus) and sambhava (born). An Indian
+. Guru Padmasambhava: Sanskrit, from padma (lotus) and sambhava (born). An Indian
 Buddhist master of Tantra and Dzogchen from Oddiyana. He is known as the “lotus bom”
 because of his miraculous birth. Guru Padmasambhava is said to have spontaneously
 manifested as an eight-year-old boy sitting on a lotus flower in the middle of a lake at
@@ -2562,35 +2407,35 @@ Oddiyana. He brought Buddhism to Tibet from India in the eighth century. With hi
 extraordinary powers, Guru Padmasambhava overcame obstacles that had prevented
 Buddhism from taking root in Tibetan soil.
 
-4. Mandarava: This Indian princess from Mandi was one of the principal consorts of
+. Mandarava: This Indian princess from Mandi was one of the principal consorts of
 Padmasambhava. She left the royal life in order to practice the Dharma. She is most
 renowned for mastering the long life practice with Padmasambhava. She is invoked in certain
 Tantric rituals which aim to extend life.
 
-5. Terton: One who discovers terma, or Dharma texts that were hidden with the purpose of
+. Terton: One who discovers terma, or Dharma texts that were hidden with the purpose of
 being discovered at a later date. Termas are believed to be hidden in trees, lakes, the earth,
 and even the sky.
 
-6. Dzogchen Monastery: In the seventeenth century, in Kham (East Tibet) the Dzogchen
+. Dzogchen Monastery: In the seventeenth century, in Kham (East Tibet) the Dzogchen
 Monastery was founded by the first Dzogchen Rinpoche, Pema Rigzin. This became the
 largest Nyingma monastery. The monastery was considered one of the twenty-five great
 pilgrimage places in East Tibet. Close by the monastery is a sacred cave of Padmasambhava
 and three sacred lakes. Many famous scholars of all four schools of Tibetan Buddhism and
 from the Bon tradition studied at Dzogchen Monastery. These include Patrul Rinpoche and
-Mipham. In 1959 Dzogchen Monastery was destroyed by the Chinese. The monastery is
+Mipham. In Dzogchen Monastery was destroyed by the Chinese. The monastery is
 currently being rebuilt in Mysore, South India.
 
 
 Notes To Chapter Three
 
 
-43
 
 
 
-Dream Yoga And The Practice Of Natural Light
 
-7. Thik Sum Nedek: The Three Statements of Garab Dorje. This text summarizes Dzogchen
+
+
+. Thik Sum Nedek: The Three Statements of Garab Dorje. This text summarizes Dzogchen
 teachings in three essential points:
 
 i. The direct introduction of the primordial state from teacher to student.
@@ -2599,9 +2444,9 @@ ii. The practitioner does not remain in doubt in reference to what the primordia
 
 iii. The practitioner continues in the state of primordial awareness until total realization.
 
-8. Garab Dorje: According to traditional Nyingmapa sources, Garab Dorje lived 166 years after
-the parinirvana of the Buddha, dated in Tibetan sources as 881 B.C. Western scholars say it
-occurred 200 years later. It is said that Garab Dorje was immaculately conceived by the
+. Garab Dorje: According to traditional Nyingmapa sources, Garab Dorje lived years after
+the parinirvana of the Buddha, dated in Tibetan sources as B.C. Western scholars say it
+occurred years later. It is said that Garab Dorje was immaculately conceived by the
 nun-princess daughter of a minor king of Oddiyana. This nun had been practicing on an
 island in the middle of a lake when she had a dream. She dreamt of a handsome, white man
 holding a crystal vase with mantras engraved on it. This man bestowed initiation on the nun,
@@ -2615,10 +2460,10 @@ of Oddiyana. He also had human disciples, one of whom was Manjushrimita, who org
 his Garab Dorje teachings on Semde, Longde, and Managede. For further information on
 Garab Dorje see John Reynold’s The Golden Letters , Station Hill Press, forthcoming.
 
-9. Gomter: “mind terma”, a terma discovered in the mind stream of a terton (one who discovers
+. Gomter: “mind terma”, a terma discovered in the mind stream of a terton (one who discovers
 terma).
 
-10. Namkha: A method of practice to balance one’s bodily elements. A namkha is made in
+. Namkha: A method of practice to balance one’s bodily elements. A namkha is made in
 accordance with one’s astrological birth chart. It is formed by two pieces of wood and five
 colors of string, each representing a different element: white, metal; green, wood/air; red,
 fire; yellow, earth; and blue, water. The colored string is wrapped around the wood in a
@@ -2626,27 +2471,27 @@ pattern that functions to harmonize one’s elements. The namkhas are empowered 
 and the practitioner is given meditation instruction on a ceremony, which, if practiced
 together with the namkha, can balance one’s elements.
 
-11. Bonpo: A practitioner of the Bon religion. Bon is the ancient and indigenous religion of
+. Bonpo: A practitioner of the Bon religion. Bon is the ancient and indigenous religion of
 Tibet, whose origins far predate the advent of Buddhism in Tibet. According to Lopon
-Tenzin Namdak, the Bon religion in Tibet dates as far back as 18,000 B.C.E. Bon is divided
+Tenzin Namdak, the Bon religion in Tibet dates as far back as ,B.C.E. Bon is divided
 into two categories: Old Bon and New or “Yung-drung” Bon. Old Bon was characterized by
 animistic and shamanistic practices, whereas Yung-drung Bon shares many similarities with
 Buddhism, which came to Tibet in the eighth century A.D. from India. According to
 Namkhai Norbu Rinpoche and Lopon Tenzin Namdak, Dzogchen is part of the ancient
 tradition of Bon, and was practiced in Tibet long before the arrival of Buddhism.
 
-12. Twenty-fifth day: The twenty-fifth day of the lunar month (Tibetan calendar), when the
+. Twenty-fifth day: The twenty-fifth day of the lunar month (Tibetan calendar), when the
 moon is waning, is known as Dakini Day. Dakini Day is associated with enlightened
 feminine energy. Therefore, many Tibetan lamas do practices associated with feminine
 energy at this time. Dakini Day is an auspicious time to do Ghana Puja (Tantric Feast
 Offering).
 
-13. Samaya: Although the term samaya is often translated as “commitment”, and frequently
+. Samaya: Although the term samaya is often translated as “commitment”, and frequently
 pertains to the commitment to maintain a meditation practice or vow in a pure way, the
 dreams’ meaning of this term is idiosyncratic. In Norbu Rinpoche’s dream, the terms Samaya
 and Dharmadhatu refer to successively deepening levels of relaxation.
 
-14. Contemplation: The primary practice of Dzogchen in which one remains continually in a
+. Contemplation: The primary practice of Dzogchen in which one remains continually in a
 state of self-liberation. In this state one is beyond all concepts of the ordinary dualistic mind,
 yet one is fully capable of using the intellect and rational mind. Contemplation does not
 involve trying to find experiences of calmness or clarity, nor does it involve avoiding
@@ -2655,21 +2500,21 @@ involve trying to find experiences of calmness or clarity, nor does it involve a
 Notes To Chapter Three
 
 
-44
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 distractions. In contemplation, when a thought arises it is neither suppressed nor followed,
 but is spontaneously self-liberated and dissolves. It is this practice of liberating all that arises
 which a Dzogchen master introduces when he gives explanations on the nature of mind.
 
-15. Dharmadhatu: This term normally refers to the ultimate ground of being, and the dimension
+. Dharmadhatu: This term normally refers to the ultimate ground of being, and the dimension
 of reality as it is. However, in this dream it refers specifically to the deepest level of
 relaxation.
 
-16. Tigle: There are different definitions of tigle. On one level it is defined as something without
+. Tigle: There are different definitions of tigle. On one level it is defined as something without
 any corners or angles, a circle or perfect sphere, like the Sanskrit bindu (drop), for example.
 Tigle is also defined as the dimension inside a sphere. Tigle Chenbo (Great Sphere), meaning
 “that which embraces everything”, is another term for Dzogchen. Tigle is also known as “the
@@ -2679,9 +2524,9 @@ Yantra Yoga, tigle is defined as the most essential form of the body’s subtle 
 known as Kundalini in Sanskrit. Tigles are also tiny spheres of rainbow light that may arise
 with the beginnings of vision in togel practice.
 
-17. Snang-ba-gi-ger-shar: The spontaneous arising of letters.
+. Snang-ba-gi-ger-shar: The spontaneous arising of letters.
 
-18. Initiation: Initiation, transmission, and empowerment of body, speech, and mind. Human
+. Initiation: Initiation, transmission, and empowerment of body, speech, and mind. Human
 existence is made up of body, speech and mind. First, there is the dimension of “body,”
 which is the dynamic interrelationship between one’s body and the physical environment.
 There are two different Tibetan terms for “body.” Lu refers to the gross body of an ordinary
@@ -2699,24 +2544,24 @@ introduction, which may be elaborate or non-elaborate, is used to introduce one 
 of one’s mind. For information on direct introduction see John Reynolds, The Golden Letters ,
 Station Hill Press, forthcoming.
 
-19. Rahula: A principal guardian of the Dzogchen teachings. Rahula manifests in a terrifying and
+. Rahula: A principal guardian of the Dzogchen teachings. Rahula manifests in a terrifying and
 ferocious form. He has extreme power and, according to Namkhai Norbu Rinpoche, if not
 respected can cause considerable harm.
 
-20. Mantra: Literally, “mind protector.” Mantra is the sounding of sacred syllables. Different
+. Mantra: Literally, “mind protector.” Mantra is the sounding of sacred syllables. Different
 mantras have different functions: some are used to stir up and activate one’s energy while
 others create a calming and pacifying effect. Ultimately the goal of mantra is to help the
 practitioner to transcend dualistic thought. Many mantras are associated with particular
 deities, and within Tantric ceremony they are repeated until one has attained the same
 enlightened qualities as the deity.
 
-21. Mala: In the Buddhist tradition a mala or rosary is a string of 108 beads used for counting
+. Mala: In the Buddhist tradition a mala or rosary is a string of beads used for counting
 mantra.
 
-22. Ekajati: Ekajati is the principal guardian of the Dzogchen teachings. Enlightened from the
+. Ekajati: Ekajati is the principal guardian of the Dzogchen teachings. Enlightened from the
 very beginning, Ekajati is a direct emanation ( trulpa ) of primordial wisdom, Samantabhadri,
 who is the feminine aspect of the primordial Buddha Samantabhadra. As the primordially
-enlightened one, Samantabhadri Ekajati has all-knowing wisdom regarding the 84 million
+enlightened one, Samantabhadri Ekajati has all-knowing wisdom regarding the million
 teachings of Dzogchen. Ekajati visibly manifests in a particularly wrathful form in order to
 subjugate the very powerful and potentially destructive class of beings called Mamos.
 
@@ -2724,11 +2569,11 @@ subjugate the very powerful and potentially destructive class of beings called M
 Notes To Chapter Three
 
 
-45
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 
 “Ekajati” means “one-eye”, which is symbolic of wisdom. What is unique about her physical
 form is that it is one-eyed, one-toothed, and one-breasted. These features symbolize
@@ -2738,9 +2583,9 @@ Norbu Rinpoche received a sadhana from Ekajati as part of this gomter of the Man
 practice. The sadhana is an invocation, within which the practitioner asks that Mandarava
 clear all obstacles to total realization and provide protection on the path.
 
-23. Cedrub Gondus : “The Union of Primordial Essences”, the long life practice Norbu Rinpoche
+. Cedrub Gondus : “The Union of Primordial Essences”, the long life practice Norbu Rinpoche
 brought to Maratika. This long life practice was a terma of the root master of Chang-chub
-Dorje, Nyala Pema Dendul (1816-1872). The practice was originally transmitted directly
+Dorje, Nyala Pema Dendul (-). The practice was originally transmitted directly
 from Buddha Amitayus to Guru Padmasambhava. Together as consorts, in the sacred cave of
 Maratika in North Nepal, Dakini Mandarava and Guru Padmasambhava practiced and
 mastered the Union of Primordial Essences, thus attaining immortality. In the eighth century,
@@ -2749,8 +2594,8 @@ it as a hidden treasure within a rock in East Tibet. Approximately one thousand 
 the nineteenth century, Nyala Pema Dendul rediscovered this “hidden treasure” or terma. For
 several years he practiced this long life terma intensively. At his life’s end he attained the
 rainbow body of light. Nyala Pema Dendul transmitted the practice to Changchub Dorje and
-Ayu Khandro, who both practiced it and subsequently lived unusually long lives—137 years
-and 116 years respectively. They also attained the body of light. Namkhai Norbu Rinpoche
+Ayu Khandro, who both practiced it and subsequently lived unusually long lives—years
+and years respectively. They also attained the body of light. Namkhai Norbu Rinpoche
 received transmission of this terma from both Changchub Dorje and Ayu Khandro, and
 presently gives transmission on the practice for the benefit of his students.
 
@@ -2758,11 +2603,11 @@ presently gives transmission on the practice for the benefit of his students.
 Notes To Chapter Three
 
 
-46
 
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
+
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 Michael: I would like to ask you a few questions about dreams. First of all, what is the history of the
@@ -2814,14 +2659,14 @@ special meaning for our lives. It may indicate many things.
 M: Is this true also for someone who practices dream yoga?
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-47
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 N: If you are a practitioner of dream yoga, dreams arising out of clarity will develop and increase.
 Nevertheless, dreams linked with clarity do exist for everyone. Everyone has innate clarity.
@@ -2876,14 +2721,14 @@ N: Such a dream is also a type of dream linked with clarity. In this type of dre
 things, such as study, read, or learn.
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-48
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 M: Can you give us some examples of dream symbols that Tibetans believe are important?
 
@@ -2906,7 +2751,7 @@ With the proper secondary conditions, manifestations such as dreams of the futur
 may find many examples of these manifestations in the biographies of meditation masters.
 
 We ourselves can also have dreams like this, dreams that enable us to see or understand something.
-That is an aspect of a dream of clarity. For example, many years ago, in 1960, when I had been in
+That is an aspect of a dream of clarity. For example, many years ago, in , when I had been in
 Italy for only about one year, I had a dream where I was talking to someone, but I did not know who
 it was. This someone explained to me how the political situation would be after some time.
 
@@ -2937,14 +2782,14 @@ clarity; the dream proves out in a real situation.
 A principal way for practitioners to develop clarity in dreams is to succeed in doing the practice of
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-49
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 the natural light. Through this, dream awareness comes. But not only awareness. By doing this
 practice we continue to develop dreams of clarity and diminish our ordinary dreams of bhakshas.
@@ -2998,14 +2843,14 @@ They were in the hospital, but it was not serious. I still intended to go to Chi
 was to go to Rome. But that morning I had another negative dream. I half woke up. In this state
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-50
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 between dream and wakefulness someone told me very clearly, “You must not travel.” It was very
 clear. Then I woke up. I had thought someone was really talking, but I discovered the voice was a
@@ -3059,14 +2904,14 @@ existence. Such a return means that once again we will be reborn and have the fu
 and the consciousness of the senses, both very similar to their counterparts within the dream state.
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-51
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 The difference is that within the dream state our functions of consciousness are not dependent on the
 material body and its sense organs. For this reason we have seven times the amount of clarity in the
@@ -3120,14 +2965,14 @@ this state. We can have more experiences in dreamtime than daytime. So this is t
 practice to night experience.
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-52
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 M: Is it the same for Tantra?
 
@@ -3159,7 +3004,7 @@ M: So transmission itself does not lessen one’s karma or create merit?
 
 N: Everything is relative.
 
-M: Rinpoche, there is a Dzogchen text by Mipham [Chapter 5 of this book] that explains the practice
+M: Rinpoche, there is a Dzogchen text by Mipham [Chapter of this book] that explains the practice
 of awareness and contemplation. How can one deeply understand this text and apply it day and
 night?
 
@@ -3180,14 +3025,14 @@ in the Dzogchen view.
 M: Is it important to be aware that you are receiving a transmission?
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-53
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 
 N: It depends on who it is that receives the transmission. If someone is really prepared and has the
@@ -3242,20 +3087,20 @@ subject.
 M: For a lama or a strong practitioner, is there any difference between dreaming and waking
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-54
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 experience in an absolute sense?
 
 N: Maybe if one can integrate one’s experience completely, one can find the same principle and the
 same condition in both states. Then life really is a dream.
 
-6 7
+
 
 M: What relationship does the mayic- body, which is discussed in the Six Yogas ofNaropa,- have to
 do with dreaming?
@@ -3306,14 +3151,14 @@ time many, many years ago in east Tibet there was—and still is today—a provi
 families who lived there, and they were related. One of the families had a daughter. Every day she
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-55
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 went to a mountain called Gundron.
 
 Gundron is the home of an important guardian of this area. There is a particular rock on this
@@ -3366,14 +3211,14 @@ The next example occurred quite recently. I decided to go visit the place of the
 kings in Tibet. We had been traveling by cars, but just before arriving, we left our cars and arranged
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-56
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 to go on by horse and yak. At the place where we stopped were some ancient mins, for older than the
 ones destroyed during the Cultural Revolution. We put up our tents amidst these ruins. Many ruined
@@ -3416,7 +3261,7 @@ dream. I had to dig out the earth, breaking my fingernails in the process. When 
 almost up to my shoulder I felt something. I pulled out this object. It was a metal garuda, just as in
 my dream. It was very old. You can see a photo of it in the film we made of our journey in Tibet.
 
-This event occurred near Mount Kailash— in Tibet during the summer of 1988. It is an example of
+This event occurred near Mount Kailash— in Tibet during the summer of . It is an example of
 how a dream relates to something concrete.
 
 M: What are the ultimate results of doing the dream work?
@@ -3428,28 +3273,28 @@ and positive.
 M: Rinpoche, are you always lucid in your dreams?
 
 
-4 AN INTERVIEW WITH NORBU RINPOCHE
-
-
-57
+AN INTERVIEW WITH NORBU RINPOCHE
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 N: Not always. It depends on the circumstances.
 
 Notes To Chapter Four
 
-1. Oddiyana: The location and existence of this country has long been debated by scholars. It
+. Oddiyana: The location and existence of this country has long been debated by scholars. It
 has been variously placed in the Swat valley of Pakistan, Afghanistan, and western Tibet.
 Oddiyana is the reputed origin of both the Anuttara Tantras and the Tantras of Dzogchen, and
 is considered to be the birthplace of Padmasambhava.
 
-2. “A” Norbu Rinpoche describes practices that utilize the Tibetan syllable in Chapter two
+. “A” Norbu Rinpoche describes practices that utilize the Tibetan syllable in Chapter two
 
 of this book.
 
-3. Secondary conditions: The way in which primary conditions, or karmic seeds, might interact
+. Secondary conditions: The way in which primary conditions, or karmic seeds, might interact
 with secondary conditions to manifest a dream which seems to predict the future is explained
 below in a fictional example.
 
@@ -3473,68 +3318,68 @@ remembering his dreams are secondary conditions that help manifest the dream of 
 have occurred. In the case of a very advanced practitioner of meditation, the secondary
 conditions may fall into the realm of what is ordinarily considered miraculous.
 
-4. Shitro or Kar-gling-zhi-tro, a terma of Karma Lingpa. The practice of the 58 wrathful and
-the 42 peaceful deities which may arise as visions during the chonyid bardo. Shitro, which is
+. Shitro or Kar-gling-zhi-tro, a terma of Karma Lingpa. The practice of the wrathful and
+the peaceful deities which may arise as visions during the chonyid bardo. Shitro, which is
 associated with the dying process, brings clarity to those who practice it and prepares them to
 overcome obstacles at death. It is also practiced by the living for the benefit of those who
 have recently died. The texts of this terma have become incorrectly known in the West as the
 Tibetan Book of the Dead , due to the mistranslations by Evans Wentz. (See John Reynolds’
-Self-Liberation Through Seeing with Naked Awareness , p. 132, note 2.) The correct name of
+Self-Liberation Through Seeing with Naked Awareness , p. , note .) The correct name of
 the two main texts is The Bardo Thodrol and Liberation Through Hearing in the Intermediate
 State. Ultimately there are six bardos or “intermediate states” corresponding to experiences
 from death to rebirth, including the after-death experience, all of which are described within
 the Shitro Terma.
 
-5. Karmic vision: According to the Buddhist theory of karma, our very perception is the result
+. Karmic vision: According to the Buddhist theory of karma, our very perception is the result
 of previous actions which lead to incarnation in a realm where there is a shared “reality”.
 Indeed, the same environment may be perceived differently depending on one’s “vision”.
 According to a classic Buddhist example, a river which to a human being is seen as
 refreshing might be viewed as a river of molten lava by a hell dweller, while to a fish it is
 seen as its very atmosphere.
 
-6. Mayic body: The illusory body, developed through practicing one of the Six Yogas of
+. Mayic body: The illusory body, developed through practicing one of the Six Yogas of
 Naropa.
 
 
 Notes To Chapter Four
 
 
-58
 
 
 
-Dream Yoga And The Practice Of Natural Light
 
 
-7. The Six Yogas of Naropa: These yogas were compiled by Naropa, a Mahasiddha of the
+
+
+. The Six Yogas of Naropa: These yogas were compiled by Naropa, a Mahasiddha of the
 Kagyud tradition, and include the following: The Yoga of Dumo (heat), the Yoga of the
 Mayic or illusory body, the Yoga of Milam (dreams), the Yoga of Light, the Yoga of the
 Bardo, and the Yoga of Phowa (transference of consciousness).
 
-8. Nyen: A class of Dharma Protectors, often associated with a particular location such as a
+. Nyen: A class of Dharma Protectors, often associated with a particular location such as a
 particular mountain or lake.
 
-9. Kapala: Ritual container often made from a human skull. The kapala is a ritual object from
+. Kapala: Ritual container often made from a human skull. The kapala is a ritual object from
 the Anuttaratantra. It represents compassion, as the blood of all sentient beings is
 symbolically carried inside of it.
 
-10. Guru Padmasambhava’s twenty-five disciples: The chief Tibetan disciples of the great
+. Guru Padmasambhava’s twenty-five disciples: The chief Tibetan disciples of the great
 Master Padmasambhava during the time he taught the Dharma in Tibet. Each of the
 twenty-five disciples took a vow to take future rebirths in human form in order to discover
 Terma for the benefit of future practitioners. It is important to note that not all Termas come
 from Guru Padmasambhava; some also come from Vimalamitra, for example.
 
-11. Chorten, also called stupa: A monument whose design reflects the stages of the path to
+. Chorten, also called stupa: A monument whose design reflects the stages of the path to
 enlightenment. The interior of the chorten is often filled with religious relics.
 
-12. Garuda (Sanskrit) or khyung in Tibetan: A mythical bird resembling an eagle. In Tibet the
+. Garuda (Sanskrit) or khyung in Tibetan: A mythical bird resembling an eagle. In Tibet the
 garuda represents the fire element. It is also a manifestation of lightning. The garuda subdues
 the class of nagas (snake beings). The garuda or khyung is especially invoked to heal disease
 provoked by the nagas, such as skin diseases and different types of cancer. In the Hindu
 tradition the garuda is half human and half bird and is also the vehicle of the deity Vishnu.
 The garuda is related to the Thunder Bird or Fire Bird in other mythologies.
 
-13. Mt. Kailash: Located in West Tibet, Mount Kailash is the mountain most sacred to Tibetan
+. Mt. Kailash: Located in West Tibet, Mount Kailash is the mountain most sacred to Tibetan
 Buddhists. It is considered an archetypal manifestation of the sacred mountain at the center of
 the world. It is also highly revered by Bonpos, Hindus and Jains.
 
@@ -3542,16 +3387,16 @@ the world. It is also highly revered by Bonpos, Hindus and Jains.
 Notes To Chapter Four
 
 
-59
 
 
 
-5 THE BUDDHA NO FURTHER THAN ONES’S
+
+THE BUDDHA NO FURTHER THAN ONES’S
 PALM
 
 
 Editor’s note: The following is a previously untranslated text on the Dzogchen path. The author, the
-great Nyingma meditation master Mipham Rinpoche (1846-1914), has attempted to point out the
+great Nyingma meditation master Mipham Rinpoche (-), has attempted to point out the
 “true nature of mind. ”
 
 The Quintessential Instructions of Mind; The Buddha No
@@ -3610,14 +3455,14 @@ meanderings. How sad!
 What will be obtained by grasping after a mirage? What is the purpose of following after these
 
 
-5 THE BUDDHA NO FURTHER THAN ONES’S PALM
-
-
-60
+THE BUDDHA NO FURTHER THAN ONES’S PALM
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 
 varied dreams?
@@ -3680,56 +3525,56 @@ Dongyal, Deborah Lockwood, Michael Katz
 
 Notes To Chapter Five
 
-1. Manjushri: the Bodhisattva of Wisdom. According to Buddhist mythology Manjushri was in
+. Manjushri: the Bodhisattva of Wisdom. According to Buddhist mythology Manjushri was in
 a previous incarnation King Amba, who vowed to become a bodhisattva for the benefit of all
 sentient beings.
 
-2. Pith instruction: The lama’s heart instruction. Condensed essential instruction for meditation
+. Pith instruction: The lama’s heart instruction. Condensed essential instruction for meditation
 presented by the lama to his heart disciples.
 
-3. Unfabricated state: The awareness arising at the instant of perception; pure presence arising
+. Unfabricated state: The awareness arising at the instant of perception; pure presence arising
 without correction, and uncreated by causes. For additional information, see The Cycle of
 
 
 Notes To Chapter Five
 
 
-61
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
 Day and Night by Namkhai Norbu.
 
-4. Dharmakaya: Dharma means the whole of existence; kaya means the dimension of that. The
+. Dharmakaya: Dharma means the whole of existence; kaya means the dimension of that. The
 essential ground of being whose essence is clarity and luminosity and within which all
 phenomena are seen to be empty of inherent existence.
 
-5. Meditative experience arising through non-activity: The meditation of Dzogchen is
+. Meditative experience arising through non-activity: The meditation of Dzogchen is
 non-conceptual and only accomplished by the effortless recognition of one’s true
 unconditional nature. Activity or efforts to accomplish meditation are contrary to the relaxed
 presence of Dzogchen practice.
 
-6. Going, staying, eating, or sleeping: The all-inclusive four activities within which a Dzogchen
+. Going, staying, eating, or sleeping: The all-inclusive four activities within which a Dzogchen
 practitioner strives to maintain awareness.
 
-7. Samsara: Cyclic existence marked by birth, old age, sickness, death, and rebirth. Governed
+. Samsara: Cyclic existence marked by birth, old age, sickness, death, and rebirth. Governed
 by desire, hatred, and ignorance, sentient beings continue to migrate throughout the six
 realms of samsara the realms of the gods, demi-gods, humans, animals, hungry ghosts, and
 hell beings according to their karma.
 
-8. Self-arising qualities: As a natural consequence of Dzogchen meditation advanced
+. Self-arising qualities: As a natural consequence of Dzogchen meditation advanced
 practitioners may develop transcendent qualities such as great wisdom, compassion,
 clairvoyance, etc.
 
-9. The two accumulations: The accumulation of merit through good deeds and the accumulation
+. The two accumulations: The accumulation of merit through good deeds and the accumulation
 of wisdom through contemplation. Though both are important on the path of the Dharma, the
 Buddha said that if one could maintain the state of contemplation the accumulation of
 wisdom for the time it takes an ant to walk from the tip of one’s nose to one’s forehead, this
 would be more beneficial than a lifetime of accumulation of good merit through virtuous
 action and generosity.
 
-10. Mipham Rinpoche: the famous nineteenth-century Tibetan Buddhist master and scholar,
+. Mipham Rinpoche: the famous nineteenth-century Tibetan Buddhist master and scholar,
 originally a student of Patrul Rinpoche Mipham, who wrote original commentaries on
 Dzogchen and other important Buddhist scriptures.
 
@@ -3737,15 +3582,15 @@ Dzogchen and other important Buddhist scriptures.
 Notes To Chapter Five
 
 
-62
 
 
 
-6 BRIEF BIOGRAPHY OF NAMKHAI NORBU
+
+BRIEF BIOGRAPHY OF NAMKHAI NORBU
 
 
 Namkhai Norbu Rinpoche was born in East Tibet, on the eighth day of the tenth month of the
-Earth-Tiger year 1938. His father was a member of a noble family and sometime official with the
+Earth-Tiger year . His father was a member of a noble family and sometime official with the
 government.
 
 When he was two years old, he was recognized by two meditation masters as the reincarnation of
@@ -3753,20 +3598,20 @@ Adzom Drugpa. Adzom Drugpa, one of the great Dzogchen masters of the early part 
 was the disciple of the first Khyentse Rinpoche and also the disciple of Patrul Rinpoche. Both of
 these illustrious teachers were leaders of the Rimed or non-sectarian movement in
 nineteenth-century eastern Tibet. Adzom Drugpa became a terton, or discoverer of hidden treasure
-texts, having received visions directly from the incomparable Jigme Lingpa 1730-1798 when the
+texts, having received visions directly from the incomparable Jigme Lingpa -when the
 former was thirty. Adzom Drugpa subsequently became the master of many contemporary teachers
 of Dzogchen. Among them was Norbu Rinpoche’s paternal uncle, Togdan, who became Norbu’s
 first Dzogchen teacher.
 
 When he was eight years old, Norbu Rinpoche was additionally recognized by both the sixteenth
 Karmapa and the then Situ Rinpoche to be a reincarnation of the illustrious Drugpa Kagyu master
-Padma Karpo 1527-1592, the historical founder of the state of Bhutan. From the time he was eight
+Padma Karpo -, the historical founder of the state of Bhutan. From the time he was eight
 years old until he was fourteen, Norbu Rinpoche attended monastic college, made retreats, and
-studied with renowned teachers including the woman master Ayu Khandro 1838-1953. At this time
+studied with renowned teachers including the woman master Ayu Khandro -. At this time
 she was already one hundred and thirteen years old and had been in a dark retreat for some fifty-six
 years. Norbu Rinpoche received numerous transmissions from her which he subsequently practiced
-in intensive retreat. In 1954 he was invited to visit the People’s Republic of China as a representative
-of Tibetan youth. From 1954 he was an instructor in Tibetan language at the Southwestern
+in intensive retreat. In he was invited to visit the People’s Republic of China as a representative
+of Tibetan youth. From he was an instructor in Tibetan language at the Southwestern
 University of Minor Nationalities at Chengdu, Sichuan, China. While living in China he acquired
 proficiency in the Chinese and Mongolian languages.
 
@@ -3782,25 +3627,25 @@ practice and serving as his scribe and secretary.
 After this, Norbu Rinpoche set out on a prolonged pilgrimage to Central Tibet, Nepal, India, and
 Bhutan. Returning to Derge, the land of his birth, he found that deteriorating political conditions had
 led to the eruption of violence. Traveling on, first to Central Tibet, he finally emerged in Si kk im.
-From 1958 to 1960 he lived in Gangtok, Sikkim, employed as an author and editor of Tibetan
-textbooks for the Development Office of the Government of Sikkim. In 1960, when he was
+From to he lived in Gangtok, Sikkim, employed as an author and editor of Tibetan
+textbooks for the Development Office of the Government of Sikkim. In , when he was
 twenty-two years old, at the invitation of Professor Giuseppe Tucci, he went to Italy and resided for
 several years in Rome.
 
-From 1964 to the present, Norbu Rinpoche has been a professor at the Istituto Orientale, University
+From to the present, Norbu Rinpoche has been a professor at the Istituto Orientale, University
 of Naples, where he teaches Tibetan language, Mongolian language, and Tibetan cultural history. He
 has done extensive research into the historical origins of Tibetan culture, investigating little-known
-literary sources from the Bonpo tradition. In 1983, Norbu Rinpoche hosted the first International
+literary sources from the Bonpo tradition. In , Norbu Rinpoche hosted the first International
 
 
-6 BRIEF BIOGRAPHY OF NAMKHAI NORBU
-
-
-63
+BRIEF BIOGRAPHY OF NAMKHAI NORBU
 
 
 
-Dream Yoga And The Practice Of Natural Light
+
+
+
+
 
 
 Convention on Tibetan Medicine, held in Venice, Italy. Although still actively teaching at the
@@ -3814,13 +3659,13 @@ The above information was largely extracted by John Reynolds from a biography in
 andrevised by the editor.
 
 
-6 BRIEF BIOGRAPHY OF NAMKHAI NORBU
-
-
-64
+BRIEF BIOGRAPHY OF NAMKHAI NORBU
 
 
 
-66
+
+
+
+
 
 

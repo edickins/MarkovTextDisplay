@@ -4,6 +4,54 @@ const path = require('path');
 const MAX_TEXT_LENGTH = 160;
 const DEFAULT_TEXT_LENGTH = 80;
 
+let trainingComplete = false;
+
+function init() {
+  // Load files from the "serious" and "fun" folders
+  const dataFolder = path.join(__dirname, '..', 'data', 'text');
+  const seriousFolder = path.join(dataFolder, 'serious');
+  const funFolder = path.join(dataFolder, 'fun');
+  const aiFolder = path.join(dataFolder, 'ai');
+
+  // Select random files
+  const randomSeriousFile = getRandomFile(readFilesFromFolder(seriousFolder));
+  const randomFunFile = getRandomFile(readFilesFromFolder(funFolder));
+
+  console.log(`randomSeriousFile ${randomSeriousFile}`);
+  console.log(`randomFunFile ${randomFunFile}`);
+
+  const seriousFiles = readFilesFromFolder(seriousFolder);
+  const funFiles = readFilesFromFolder(funFolder);
+  const aiFiles = readFilesFromFolder(aiFolder);
+
+  // train the Markov chain with all files in both "serios" and "fun" folders
+  const trainingTexts = [
+    ...seriousFiles.map(file => {
+      return MarkovChain.trainTxt(path.join(seriousFolder, file), '\n');
+    }),
+    ...funFiles.map(file => {
+      return MarkovChain.trainTxt(path.join(funFolder, file), '\n');
+    }),
+    ...aiFiles.map(file => {
+      return MarkovChain.trainTxt(path.join(aiFolder, file), '\n');
+    })
+  ];
+
+  // train the Markov chain on two random sources
+  /* trainingTexts.push(
+    MarkovChain.trainTxt(path.join(seriousFolder, randomSeriousFile), '\n')
+  );
+  trainingTexts.push(
+    MarkovChain.trainTxt(path.join(funFolder, randomFunFile), '\n')
+  ); */
+
+  Promise.all(trainingTexts).then(() => {
+    trainingComplete = true;
+  });
+}
+
+init();
+
 // Function to read files from a folder
 function readFilesFromFolder(folderPath) {
   return fs.readdirSync(folderPath);
@@ -16,45 +64,11 @@ function getRandomFile(filesArray) {
 }
 
 const _getText = async reqQuery => {
-  return new Promise((resolve, reject) => {
-    // Load files from the "serious" and "fun" folders
-    const dataFolder = path.join(__dirname, '..', 'data', 'text');
-    const seriousFolder = path.join(dataFolder, 'serious');
-    const funFolder = path.join(dataFolder, 'fun');
-
-    // Select random files
-    const randomSeriousFile = getRandomFile(readFilesFromFolder(seriousFolder));
-    const randomFunFile = getRandomFile(readFilesFromFolder(funFolder));
-
-    console.log(`randomSeriousFile ${randomSeriousFile}`);
-    console.log(`randomFunFile ${randomFunFile}`);
-
-    const seriousFiles = readFilesFromFolder(seriousFolder);
-    const funFiles = readFilesFromFolder(funFolder);
-
-    const trainingTexts = [
-      ...seriousFiles.map(file => {
-        return MarkovChain.trainTxt(path.join(seriousFolder, file), '\n');
-      }),
-      ...funFiles.map(file => {
-        return MarkovChain.trainTxt(path.join(funFolder, file), '\n');
-      })
-    ];
-    /* trainingTexts.push(
-      MarkovChain.trainTxt(path.join(seriousFolder, randomSeriousFile), '\n')
-    );
-    trainingTexts.push(
-      MarkovChain.trainTxt(path.join(funFolder, randomFunFile), '\n')
-    ); */
-
-    Promise.all(trainingTexts).then(() => {
-      resolve({ data: _getTextToLength(MAX_TEXT_LENGTH) });
-    });
-  });
-};
-
-let generator = {
-  getText: _getText
+  if (!trainingComplete) {
+    // Wait for init() to complete before generating text
+    await init();
+  }
+  return { data: _getTextToLength(MAX_TEXT_LENGTH) };
 };
 
 function _getTextToLength(textLength) {
@@ -90,4 +104,8 @@ function _joinTexts(text, newText) {
   }
   return returnText;
 }
+
+let generator = {
+  getText: _getText
+};
 module.exports = generator;
