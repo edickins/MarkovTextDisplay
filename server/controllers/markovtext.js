@@ -27,7 +27,11 @@ const generators = [
   aiGenerator,
   aiGenerator,
   aiGenerator,
+  aiGenerator,
+  aiGenerator,
+  aiGenerator,
   funSeriousGenerator,
+  seriousGenerator,
   everythingGenerator
 ];
 
