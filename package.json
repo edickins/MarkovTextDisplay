@@ -1,0 +1,16 @@
+{
+  "name": "bleepbloop.net",
+  "version": "1.0.0",
+  "description": "client and server for a simulated computer terminal",
+  "main": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "ecdickins",
+  "license": "MIT"
+}
