@@ -21,7 +21,15 @@ funSeriousGenerator.init();
 const everythingGenerator = new MarkovTextGenerator(['serious', 'fun', 'ai']);
 everythingGenerator.init();
 
-const generators = [aiGenerator, funSeriousGenerator, everythingGenerator];
+const generators = [
+  aiGenerator,
+  aiGenerator,
+  aiGenerator,
+  aiGenerator,
+  aiGenerator,
+  funSeriousGenerator,
+  everythingGenerator
+];
 
 function getRandomGenerator() {
   const generatorIndex = Math.floor(Math.random() * generators.length);

@@ -1,7 +1,8 @@
 Git index format
 ================
 == The Git index file has the following format
-  All binary numbers are in network byte order. Version 2 is described
+  All binary numbers are in network byte order
+Version 2 is described
   here unless stated otherwise.
    - A 12-byte header consisting of
      4-byte signature:
@@ -11,10 +12,12 @@ Git index format
      32-bit number of index entries.
    - A number of sorted index entries (see below).
    - Extensions
-     Extensions are identified by signature. Optional extensions can
+     Extensions are identified by signature
+Optional extensions can
      be ignored if Git does not understand them.
      Git currently supports cached tree and resolve undo extensions.
-     4-byte extension signature. If the first byte is 'A'..'Z' the
+     4-byte extension signature
+If the first byte is 'A'..'Z' the
      extension is optional and can be ignored.
      32-bit size of the extension
      Extension data
@@ -22,8 +25,10 @@ Git index format
      checksum.
 == Index entry
   Index entries are sorted in ascending order on the name field,
-  interpreted as a string of unsigned bytes (i.e. memcmp() order, no
-  localization, no special casing of directory separator '/'). Entries
+  interpreted as a string of unsigned bytes (i.e
+memcmp() order, no
+  localization, no special casing of directory separator '/')
+Entries
   with the same name are sorted by their stage field.
   32-bit ctime seconds, the last time a file's metadata changed
     this is stat(2) data
@@ -42,7 +47,8 @@ Git index format
       valid values in binary are 1000 (regular file), 1010 (symbolic link)
       and 1110 (gitlink)
     3-bit unused
-    9-bit unix permission. Only 0755 and 0644 are valid for regular files.
+    9-bit unix permission
+Only 0755 and 0644 are valid for regular files.
     Symbolic links and gitlinks have value 0 in this field.
   32-bit uid
     this is stat(2) data
@@ -64,7 +70,8 @@ Git index format
     1-bit intent-to-add flag (used by "git add -N")
     13-bit unused, must be zero
   Entry path name (variable length) relative to top level directory
-    (without leading slash). '/' is used as path separator. The special
+    (without leading slash). '/' is used as path separator
+The special
     path components ".", ".." and ".git" (without quotes) are disallowed.
     Trailing slash is also disallowed.
     The exact encoding is undefined, but the '.' and '/' characters
@@ -84,11 +91,13 @@ Git index format
   (Version 4) In version 4, the padding after the pathname does not
   exist.
   Interpretation of index entries in split index mode is completely
-  different. See below for details.
+  different
+See below for details.
 == Extensions
 === Cached tree
   Cached tree extension contains pre-computed hashes for trees that can
-  be derived from the index. It helps speed up tree object generation
+  be derived from the index
+It helps speed up tree object generation
   from index for a new commit.
   When a path is updated in index, the path must be invalidated and
   removed from tree cache.
@@ -105,7 +114,8 @@ Git index format
   - 160-bit object name for the object that would result from writing
     this span of index as a tree.
   An entry can be in an invalidated state and is represented by having
-  a negative number in the entry_count field. In this case, there is no
+  a negative number in the entry_count field
+In this case, there is no
   object name and the next entry starts immediately after the newline.
   When writing an invalid entry, -1 should always be used as entry_count.
   The entries are written out in the top-down, depth-first order.  The
@@ -115,18 +125,21 @@ Git index format
   its name relative to A), ...
 === Resolve undo
   A conflict is represented in the index as a set of higher stage entries.
-  When a conflict is resolved (e.g. with "git add path"), these higher
+  When a conflict is resolved (e.g
+with "git add path"), these higher
   stage entries will be removed and a stage-0 entry with proper resolution
   is added.
   When these higher stage entries are removed, they are saved in the
-  resolve undo extension, so that conflicts can be recreated (e.g. with
+  resolve undo extension, so that conflicts can be recreated (e.g
+with
   "git checkout -m"), in case users want to redo a conflict resolution
   from scratch.
   The signature for this extension is { 'R', 'E', 'U', 'C' }.
   A series of entries fill the entire extension; each of which
   consists of:
   - NUL-terminated pathname the entry describes (relative to the root of
-    the repository, i.e. full pathname);
+    the repository, i.e
+full pathname);
   - Three NUL-terminated ASCII octal numbers, entry mode of entries in
     stage 1 to 3 (a missing stage is represented by "0" in this field);
     and
@@ -134,49 +147,65 @@ Git index format
     (nothing is written for a missing stage).
 === Split index
   In split index mode, the majority of index entries could be stored
-  in a separate file. This extension records the changes to be made on
+  in a separate file
+This extension records the changes to be made on
   top of that to produce the final index.
   The signature for this extension is { 'l', 'i', 'n', 'k' }.
   The extension consists of:
-  - 160-bit SHA-1 of the shared index file. The shared index file path
-    is $GIT_DIR/sharedindex.<SHA-1>. If all 160 bits are zero, the
+  - 160-bit SHA-1 of the shared index file
+The shared index file path
+    is $GIT_DIR/sharedindex.<SHA-1>
+If all 160 bits are zero, the
     index does not require a shared index file.
   - An ewah-encoded delete bitmap, each bit represents an entry in the
-    shared index. If a bit is set, its corresponding entry in the
+    shared index
+If a bit is set, its corresponding entry in the
     shared index will be removed from the final index.  Note, because
     a delete operation changes index entry positions, but we do need
     original positions in replace phase, it's best to just mark
     entries for removal, then do a mass deletion after replacement.
   - An ewah-encoded replace bitmap, each bit represents an entry in
-    the shared index. If a bit is set, its corresponding entry in the
+    the shared index
+If a bit is set, its corresponding entry in the
     shared index will be replaced with an entry in this index
-    file. All replaced entries are stored in sorted order in this
-    index. The first "1" bit in the replace bitmap corresponds to the
+    file
+All replaced entries are stored in sorted order in this
+    index
+The first "1" bit in the replace bitmap corresponds to the
     first index entry, the second "1" bit to the second entry and so
-    on. Replaced entries may have empty path names to save space.
+    on
+Replaced entries may have empty path names to save space.
   The remaining index entries after replaced ones will be added to the
-  final index. These added entries are also sorted by entry name then
+  final index
+These added entries are also sorted by entry name then
   stage.
 == Untracked cache
   Untracked cache saves the untracked file list and necessary data to
-  verify the cache. The signature for this extension is { 'U', 'N',
+  verify the cache
+The signature for this extension is { 'U', 'N',
   'T', 'R' }.
   The extension starts with
   - A sequence of NUL-terminated strings, preceded by the size of the
-    sequence in variable width encoding. Each string describes the
+    sequence in variable width encoding
+Each string describes the
     environment where the cache can be used.
-  - Stat data of $GIT_DIR/info/exclude. See "Index entry" section from
+  - Stat data of $GIT_DIR/info/exclude
+See "Index entry" section from
     ctime field until "file size".
   - Stat data of core.excludesfile
   - 32-bit dir_flags (see struct dir_struct)
-  - 160-bit SHA-1 of $GIT_DIR/info/exclude. Null SHA-1 means the file
+  - 160-bit SHA-1 of $GIT_DIR/info/exclude
+Null SHA-1 means the file
     does not exist.
-  - 160-bit SHA-1 of core.excludesfile. Null SHA-1 means the file does
+  - 160-bit SHA-1 of core.excludesfile
+Null SHA-1 means the file does
     not exist.
-  - NUL-terminated string of per-dir exclude file name. This usually
+  - NUL-terminated string of per-dir exclude file name
+This usually
     is ".gitignore".
   - The number of following directory blocks, variable width
-    encoding. If this number is zero, the extension ends here with a
+    encoding
+If this number is zero, the extension ends here with a
     following NUL.
   - A number of directory blocks in depth-first-search order, each
     consists of
@@ -191,9 +220,11 @@ The remaining data of each directory block is grouped by type:
     read_directory_recursive() for the n-th directory.
   - An ewah bitmap, the n-th bit indicates whether SHA-1 and stat data
     is valid for the n-th directory and exists in the next data.
-  - An array of stat data. The n-th data corresponds with the n-th
+  - An array of stat data
+The n-th data corresponds with the n-th
     "one" bit in the previous ewah bitmap.
-  - An array of SHA-1. The n-th SHA-1 corresponds with the n-th "one" bit
+  - An array of SHA-1
+The n-th SHA-1 corresponds with the n-th "one" bit
     in the previous ewah bitmap.
   - One NUL.
   ##
@@ -206,19 +237,23 @@ The remaining data of each directory block is grouped by type:
 # the directives.
 # Do NOT simply read the instructions in here without understanding
 # what they do.  They're here only as hints or reminders.  If you are unsure
-# consult the online docs. You have been warned.
+# consult the online docs
+You have been warned.
 # After this file is processed, the server will look for and process
 # /usr/local/apache_t3.1/conf/srm.conf and then /usr/local/apache_t3.1/conf/access.conf
 # unless you have overridden these with ResourceConfig and/or
 # AccessConfig directives here.
 # The configuration directives are grouped into three basic sections:
-#  1. Directives that control the operation of the Apache server process as a
+#  1
+Directives that control the operation of the Apache server process as a
 #     whole (the 'global environment').
-#  2. Directives that define the parameters of the 'main' or 'default' server,
+#  2
+Directives that define the parameters of the 'main' or 'default' server,
 #     which responds to requests that aren't handled by a virtual host.
 #     These directives also provide default values for the settings
 #     of all virtual hosts.
-#  3. Settings for virtual hosts, which allow Web requests to be sent to
+#  3
+Settings for virtual hosts, which allow Web requests to be sent to
 #     different IP addresses or hostnames and have them handled by the
 #     same Apache server process.
 # Configuration and logfile names: If the filenames you specify for many
@@ -244,10 +279,13 @@ ServerType standalone
 ServerRoot "/usr/local/apache_t3.1"
 # The LockFile directive sets the path to the lockfile used when Apache
 # is compiled with either USE_FCNTL_SERIALIZED_ACCEPT or
-# USE_FLOCK_SERIALIZED_ACCEPT. This directive should normally be left at
-# its default value. The main reason for changing it is if the logs
+# USE_FLOCK_SERIALIZED_ACCEPT
+This directive should normally be left at
+# its default value
+The main reason for changing it is if the logs
 # directory is NFS mounted, since the lockfile MUST BE STORED ON A LOCAL
-# DISK. The PID of the main server process is automatically appended to
+# DISK
+The PID of the main server process is automatically appended to
 # the filename.
 LockFile /usr/local/apache_t3.1/logs/httpd.lock
 # PidFile: The file in which the server should record its process
@@ -270,10 +308,12 @@ ScoreBoardFile /usr/local/apache_t3.1/logs/httpd.scoreboard
 # Timeout: The number of seconds before receives and sends time out.
 Timeout 300
 # KeepAlive: Whether or not to allow persistent connections (more than
-# one request per connection). Set to "Off" to deactivate.
+# one request per connection)
+Set to "Off" to deactivate.
 KeepAlive On
 # MaxKeepAliveRequests: The maximum number of requests to allow
-# during a persistent connection. Set to 0 to allow an unlimited amount.
+# during a persistent connection
+Set to 0 to allow an unlimited amount.
 # We recommend you leave this number high, for maximum performance.
 MaxKeepAliveRequests 100
 # KeepAliveTimeout: Number of seconds to wait for the next request from the
@@ -305,20 +345,25 @@ MaxClients 150
 # as to avoid problems after prolonged use when Apache (and maybe the
 # libraries it uses) leak memory or other resources.  On most systems, this
 # isn't really needed, but a few (such as Solaris) do have notable leaks
-# in the libraries. For these platforms, set to something like 10000
+# in the libraries
+For these platforms, set to something like 10000
 # or so; a setting of 0 means unlimited.
 # NOTE: This value does not include keepalive requests after the initial
-#       request per connection. For example, if a child process handles
+#       request per connection
+For example, if a child process handles
 #       an initial request and 10 subsequent "keptalive" requests, it
 #       would only count as 1 request towards this limit.
 MaxRequestsPerChild 0
 # Listen: Allows you to bind Apache to specific IP addresses and/or
-# ports, in addition to the default. See also the
+# ports, in addition to the default
+See also the
 # directive.
 #Listen 3000
 #Listen 12.34.56.78:80
-# BindAddress: You can support virtual hosts with this option. This directive
-# is used to tell the server which IP address to listen to. It can either
+# BindAddress: You can support virtual hosts with this option
+This directive
+# is used to tell the server which IP address to listen to
+It can either
 # contain "*", an IP address, or a fully qualified Internet domain name.
 # See also the  and Listen directives.
 #BindAddress *
@@ -409,7 +454,8 @@ AddModule mod_setenvif.c
 AddModule mod_ssl.c
 # ExtendedStatus controls whether Apache will generate "full" status
 # information (ExtendedStatus On) or just basic information (ExtendedStatus
-# Off) when the "server-status" handler is called. The default is Off.
+# Off) when the "server-status" handler is called
+The default is Off.
 #ExtendedStatus On
 ### Section 2: 'Main' server configuration
 # The directives in this section set up the values used by the 'main'
@@ -423,7 +469,8 @@ AddModule mod_ssl.c
 # section) is set to "inetd", the next few directives don't have any
 # effect since their settings are defined by the inetd configuration.
 # Skip ahead to the ServerAdmin directive.
-# Port: The port to which the standalone server listens. For
+# Port: The port to which the standalone server listens
+For
 # ports < 1023, you will need httpd to be run as root initially.
 Port 7180
 ##
@@ -438,8 +485,10 @@ Listen 7143
 # If you wish httpd to run as a different user or group, you must run
 # httpd as root initially and it will switch.
 # User/Group: The name (or #number) of the user/group to run httpd as.
-#  . On SCO (ODT 3) use "User nouser" and "Group nogroup".
-#  . On HPUX you may not be able to use shared memory as nobody, and the
+#
+On SCO (ODT 3) use "User nouser" and "Group nogroup".
+#
+On HPUX you may not be able to use shared memory as nobody, and the
 #    suggested workaround is to create a user www and use that user.
 #  NOTE that some kernels refuse to setgid(Group) or semctl(IPC_SET)
 #  when the value of (unsigned)Group is above 60000;
@@ -453,15 +502,18 @@ ServerAdmin jkl@heechee.ccl.net
 # ServerName allows you to set a host name which is sent back to clients for
 # your server if it's different than the one the program would get (i.e., use
 # "www" instead of the host's real name).
-# Note: You cannot just invent host names and hope they work. The name you
-# define here must be a valid DNS name for your host. If you don't understand
+# Note: You cannot just invent host names and hope they work
+The name you
+# define here must be a valid DNS name for your host
+If you don't understand
 # this, ask your network administrator.
 # If your host doesn't have a registered DNS name, enter its IP address here.
 # You will have to access it by its address (e.g., http://123.45.67.89/)
 # anyway, and this will make redirections work in a sensible way.
 ServerName heechee.ccl.net
 # DocumentRoot: The directory out of which you will serve your
-# documents. By default, all requests are taken from this directory, but
+# documents
+By default, all requests are taken from this directory, but
 # symbolic links and aliases may be used to point to other locations.
 DocumentRoot "/usr/local/apache_t3.1/htdocs"
 # Each directory to which Apache has access, can be configured with respect
@@ -482,7 +534,8 @@ DocumentRoot "/usr/local/apache_t3.1/htdocs"
 # doesn't give it to you.
     Options Indexes FollowSymLinks MultiViews
 # This controls which options the .htaccess files in directories can
-# override. Can also be "All", or any combination of "Options", "FileInfo",
+# override
+Can also be "All", or any combination of "Options", "FileInfo",
 # "AuthConfig", and "Limit"
     AllowOverride Limit AuthConfig Options
 # Controls who can get stuff from this server.
@@ -516,8 +569,10 @@ AccessFileName .htaccess
     Order allow,deny
     Deny from all
 # CacheNegotiatedDocs: By default, Apache sends "Pragma: no-cache" with each
-# document that was negotiated on the basis of content. This asks proxy
-# servers not to cache the document. Uncommenting the following line disables
+# document that was negotiated on the basis of content
+This asks proxy
+# servers not to cache the document
+Uncommenting the following line disables
 # this behavior, and proxies will be allowed to cache the documents.
 #CacheNegotiatedDocs
 # UseCanonicalName:  (new for 1.3)  With this setting turned on, whenever
@@ -604,7 +659,8 @@ CustomLog /usr/local/apache_t3.1/logs/access_log common
 # Set to "EMail" to also include a mailto: link to the ServerAdmin.
 # Set to one of:  On | Off | EMail
 ServerSignature On
-# Aliases: Add here as many aliases as you need (with no limit). The format is
+# Aliases: Add here as many aliases as you need (with no limit)
+The format is
 # Alias fakename realname
     #
     # Note that if you include a trailing / on fakename then the server will
@@ -635,7 +691,8 @@ ServerSignature On
         Allow from all
 # End of aliases.
 # Redirect allows you to tell clients about documents which used to exist in
-# your server's namespace, but do not anymore. This allows you to tell the
+# your server's namespace, but do not anymore
+This allows you to tell the
 # clients where to look for the relocated document.
 # Format: Redirect old-URI new-URL
 # Directives controlling the display of server-generated directory listings.
@@ -710,14 +767,16 @@ ServerSignature On
 # Document types.
     #
     # AddEncoding allows you to have certain browsers (Mosaic/X 2.1+) uncompress
-    # information on the fly. Note: Not all browsers support this.
+    # information on the fly
+Note: Not all browsers support this.
     # Despite the name similarity, the following Add* directives have nothing
     # to do with the FancyIndexing customization directives above.
     #
     AddEncoding x-compress Z
     AddEncoding x-gzip gz tgz
     #
-    # AddLanguage allows you to specify the language of a document. You can
+    # AddLanguage allows you to specify the language of a document
+You can
     # then use content negotiation to give a browser a file in a language
     # it can understand.
     #
@@ -732,7 +791,8 @@ ServerSignature On
     # E.g. 'Danmark/dk' versus 'Danish/da'.
     #
     # Note 3: In the case of 'ltz' we violate the RFC by using a three char
-    # specifier. But there is 'work in progress' to fix this and get
+    # specifier
+But there is 'work in progress' to fix this and get
     # the reference data for rfc1766 cleaned up.
     #
     # Danish (da) - Dutch (nl) - English (en) - Estonian (ee)
@@ -763,8 +823,10 @@ ServerSignature On
     # LanguagePriority allows you to give precedence to some languages
     # in case of a tie during content negotiation.
     #
-    # Just list the languages in decreasing order of preference. We have
-    # more or less alphabetized them here. You probably want to change this.
+    # Just list the languages in decreasing order of preference
+We have
+    # more or less alphabetized them here
+You probably want to change this.
     #
         LanguagePriority en da nl et fr de el it ja pl pt pt-br ltz ca es sv
     #
@@ -784,7 +846,8 @@ ServerSignature On
     AddType application/x-tar .tgz
     #
     # AddHandler allows you to map certain file extensions to "handlers",
-    # actions unrelated to filetype. These can be either built into the server
+    # actions unrelated to filetype
+These can be either built into the server
     # or added with the Action command (see below)
     #
     # If you want to use server side includes, or CGI outside
@@ -813,12 +876,14 @@ AddHandler server-parsed .shtml
     #AddHandler type-map var
 # End of document types.
 # Action lets you define media types that will execute a script whenever
-# a matching file is called. This eliminates the need for repeated URL
+# a matching file is called
+This eliminates the need for repeated URL
 # pathnames for oft-used CGI file processors.
 # Format: Action media/type /cgi-script/location
 # Format: Action handler-name /cgi-script/location
 # MetaDir: specifies the name of the directory in which Apache can find
-# meta information files. These files contain additional HTTP headers
+# meta information files
+These files contain additional HTTP headers
 # to include when sending the document
 #MetaDir .web
 # MetaSuffix: specifies the file name suffix for the file containing the
@@ -842,7 +907,8 @@ AddHandler server-parsed .shtml
     #
     # The following directives modify normal HTTP response behavior.
     # The first directive disables keepalive for Netscape 2.x and browsers that
-    # spoof it. There are known problems with these browser implementations.
+    # spoof it
+There are known problems with these browser implementations.
     # The second directive is for Microsoft Internet Explorer 4.0b2
     # which has a broken HTTP/1.1 implementation and does not properly
     # support keepalive when it is used on 301 or 302 (redirect) responses.
@@ -877,7 +943,8 @@ AddHandler server-parsed .shtml
 # support/phf_abuse_log.cgi.
 #    Deny from all
 #    ErrorDocument 403 http://phf.apache.org/phf_abuse_log.cgi
-# Proxy Server directives. Uncomment the following lines to
+# Proxy Server directives
+Uncomment the following lines to
 # enable the proxy server:
     #ProxyRequests On
     #
@@ -964,13 +1031,18 @@ SSLSessionCacheTimeout  300
 SSLMutex  file:/usr/local/apache_t3.1/logs/ssl_mutex
 #   Pseudo Random Number Generator (PRNG):
 #   Configure one or more sources to seed the PRNG of the
-#   SSL library. The seed data should be of good random quality.
+#   SSL library
+The seed data should be of good random quality.
 #   WARNING! On some platforms /dev/random blocks if not enough entropy
-#   is available. This means you then cannot use the /dev/random device
+#   is available
+This means you then cannot use the /dev/random device
 #   because it would lead to very long connection times (as long as
-#   it requires to make more entropy available). But usually those
+#   it requires to make more entropy available)
+But usually those
 #   platforms additionally provide a /dev/urandom device which doesn't
-#   block. So, if available, use this one instead. Read the mod_ssl User
+#   block
+So, if available, use this one instead
+Read the mod_ssl User
 #   Manual for more details.
 SSLRandomSeed startup builtin
 SSLRandomSeed connect builtin
@@ -979,10 +1051,12 @@ SSLRandomSeed connect builtin
 #SSLRandomSeed connect file:/dev/random  512
 #SSLRandomSeed connect file:/dev/urandom 512
 #   Logging:
-#   The home of the dedicated SSL protocol logfile. Errors are
+#   The home of the dedicated SSL protocol logfile
+Errors are
 #   additionally duplicated in the general error log file.  Put
 #   this somewhere where it cannot be used for symlink attacks on
-#   a real server (i.e. somewhere where only root can write).
+#   a real server (i.e
+somewhere where only root can write).
 #   Log levels are (ascending order: higher ones include lower ones):
 #   none, error, warn, info, trace, debug.
 SSLLog      /usr/local/apache_t3.1/logs/ssl_engine_log
@@ -1006,9 +1080,11 @@ SSLEngine on
 #   Server Certificate:
 #   Point SSLCertificateFile at a PEM encoded certificate.  If
 #   the certificate is encrypted, then you will be prompted for a
-#   pass phrase.  Note that a kill -HUP will prompt again. A test
+#   pass phrase.  Note that a kill -HUP will prompt again
+A test
 #   certificate can be generated with `make certificate' under
-#   built time. Keep in mind that if you've both a RSA and a DSA
+#   built time
+Keep in mind that if you've both a RSA and a DSA
 #   certificate you can configure both in parallel (to also allow
 #   the use of DSA ciphers, etc.)
 SSLCertificateFile /usr/local/apache_t3.1/conf/ssl.crt/server.crt
@@ -1023,7 +1099,8 @@ SSLCertificateKeyFile /usr/local/apache_t3.1/conf/ssl.key/server.key
 #   Server Certificate Chain:
 #   Point SSLCertificateChainFile at a file containing the
 #   concatenation of PEM encoded CA certificates which form the
-#   certificate chain for the server certificate. Alternatively
+#   certificate chain for the server certificate
+Alternatively
 #   the referenced file can be the same as SSLCertificateFile
 #   when the CA certificates are directly appended to the server
 #   certificate for convinience.
@@ -1033,7 +1110,8 @@ SSLCertificateKeyFile /usr/local/apache_t3.1/conf/ssl.key/server.key
 #   certificates for client authentication or alternatively one
 #   huge file containing all of them (file must be PEM encoded)
 #   Note: Inside SSLCACertificatePath you need hash symlinks
-#         to point to the certificate files. Use the provided
+#         to point to the certificate files
+Use the provided
 #         Makefile to update the hash symlinks after changes.
 #SSLCACertificatePath /usr/local/apache_t3.1/conf/ssl.crt
 #SSLCACertificateFile /usr/local/apache_t3.1/conf/ssl.crt/ca-bundle.crt
@@ -1042,7 +1120,8 @@ SSLCertificateKeyFile /usr/local/apache_t3.1/conf/ssl.key/server.key
 #   authentication or alternatively one huge file containing all
 #   of them (file must be PEM encoded)
 #   Note: Inside SSLCARevocationPath you need hash symlinks
-#         to point to the certificate files. Use the provided
+#         to point to the certificate files
+Use the provided
 #         Makefile to update the hash symlinks after changes.
 #SSLCARevocationPath /usr/local/apache_t3.1/conf/ssl.crl
 #SSLCARevocationFile /usr/local/apache_t3.1/conf/ssl.crl/ca-bundle.crl
@@ -1071,27 +1150,33 @@ SSLCertificateKeyFile /usr/local/apache_t3.1/conf/ssl.key/server.key
 #     Translate the client X.509 into a Basic Authorisation.  This means that
 #     the standard Auth/DBMAuth methods can be used for access control.  The
 #     user name is the `one line' version of the client's X.509 certificate.
-#     Note that no password is obtained from the user. Every entry in the user
+#     Note that no password is obtained from the user
+Every entry in the user
 #     file needs this password: `xxj31ZMTZzkVA'.
 #   o ExportCertData:
 #     This exports two additional environment variables: SSL_CLIENT_CERT and
-#     SSL_SERVER_CERT. These contain the PEM-encoded certificates of the
+#     SSL_SERVER_CERT
+These contain the PEM-encoded certificates of the
 #     server (always existing) and the client (only existing when client
-#     authentication is used). This can be used to import the certificates
+#     authentication is used)
+This can be used to import the certificates
 #     into CGI scripts.
 #   o StdEnvVars:
 #     This exports the standard SSL/TLS related `SSL_*' environment variables.
 #     Per default this exportation is switched off for performance reasons,
 #     because the extraction step is an expensive operation and is usually
-#     useless for serving static content. So one usually enables the
+#     useless for serving static content
+So one usually enables the
 #     exportation for CGI and SSI requests only.
 #   o CompatEnvVars:
 #     This exports obsolete environment variables for backward compatibility
-#     to Apache-SSL 1.x, mod_ssl 2.0.x, Sioux 1.0 and Stronghold 2.x. Use this
+#     to Apache-SSL 1.x, mod_ssl 2.0.x, Sioux 1.0 and Stronghold 2.x
+Use this
 #     to provide compatibility to existing CGI scripts.
 #   o StrictRequire:
 #     This denies access when "SSLRequireSSL" or "SSLRequire" applied even
-#     under a "Satisfy any" situation, i.e. when it applies access is denied
+#     under a "Satisfy any" situation, i.e
+when it applies access is denied
 #     and no other module can change it.
 #   o OptRenegotiate:
 #     This enables optimized SSL connection renegotiation handling when SSL
@@ -1102,27 +1187,35 @@ SSLCertificateKeyFile /usr/local/apache_t3.1/conf/ssl.key/server.key
 #   SSL Protocol Adjustments:
 #   The safe and default but still SSL/TLS standard compliant shutdown
 #   approach is that mod_ssl sends the close notify alert but doesn't wait for
-#   the close notify alert from client. When you need a different shutdown
+#   the close notify alert from client
+When you need a different shutdown
 #   approach you can use one of the following variables:
 #   o ssl-unclean-shutdown:
-#     This forces an unclean shutdown when the connection is closed, i.e. no
+#     This forces an unclean shutdown when the connection is closed, i.e
+no
 #     SSL close notify alert is send or allowed to received.  This violates
-#     the SSL/TLS standard but is needed for some brain-dead browsers. Use
+#     the SSL/TLS standard but is needed for some brain-dead browsers
+Use
 #     this when you receive I/O errors because of the standard approach where
 #     mod_ssl sends the close notify alert.
 #   o ssl-accurate-shutdown:
-#     This forces an accurate shutdown when the connection is closed, i.e. a
+#     This forces an accurate shutdown when the connection is closed, i.e
+a
 #     SSL close notify alert is send and mod_ssl waits for the close notify
-#     alert of the client. This is 100% SSL/TLS standard compliant, but in
-#     practice often causes hanging connections with brain-dead browsers. Use
+#     alert of the client
+This is 100% SSL/TLS standard compliant, but in
+#     practice often causes hanging connections with brain-dead browsers
+Use
 #     this only for browsers where you know that their SSL implementation
 #     works correctly.
 #   Notice: Most problems of broken clients are also related to the HTTP
 #   keep-alive facility, so you usually additionally want to disable
-#   keep-alive for those clients, too. Use variable "nokeepalive" for this.
+#   keep-alive for those clients, too
+Use variable "nokeepalive" for this.
 SetEnvIf User-Agent ".*MSIE.*" nokeepalive ssl-unclean-shutdown
 #   Per-Server Logging:
-#   The home of a custom SSL log file. Use this when you want a
+#   The home of a custom SSL log file
+Use this when you want a
 #   compact non-error SSL logfile on a virtual host basis.
 CustomLog /usr/local/apache_t3.1/logs/ssl_request_log \
           "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
