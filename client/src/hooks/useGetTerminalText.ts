@@ -11,7 +11,7 @@ const useGetTerminalText = () => {
     setLoading(true);
     setError(null);
     try {
-      const newText = await fetchText('/api/v1/markovtext', controller);
+      const newText = await fetchText('api/v1/markovtext', controller);
       setText(newText);
     } catch (err) {
       if (axios.isAxiosError(err)) {

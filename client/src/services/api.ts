@@ -1,7 +1,8 @@
 import axios, { AxiosInstance } from 'axios';
 
+const baseURL = import.meta.env.VITE_API_RESTFUL_API_URL;
+
 // Get the protocol and domain from environment variables
-const baseURL = `http://localhost:5000/`;
 
 const instance: AxiosInstance = axios.create({
   baseURL,
