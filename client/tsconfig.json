@@ -25,7 +25,8 @@
     "vite.config.ts",
     ".eslintrc.cjs",
     "tsconfig.json",
-    "prettier.config.cjs"
+    "prettier.config.cjs",
+    "mockServiceWorker.js"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

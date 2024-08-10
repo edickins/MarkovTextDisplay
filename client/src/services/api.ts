@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 
 // Get the protocol and domain from environment variables
-const baseURL = `http://localhost:5000`;
+const baseURL = `http://localhost:5000/`;
 
 const instance: AxiosInstance = axios.create({
   baseURL,
@@ -15,7 +15,9 @@ type TextResponse = {
 // Type guard for runtime type checking
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function isTextResponse(data: any): data is TextResponse {
-  return data && typeof data.text === 'string';
+  return (
+    data && typeof data.text === 'string' && typeof data.success === `boolean`
+  );
 }
 
 const fetchText = async (
@@ -34,7 +36,7 @@ const fetchText = async (
   } catch (error: any | Error) {
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 500) {
-        throw error;
+        throw new Error('Request failed with status code 500');
       } else if (error.name === 'CanceledError') {
         if (import.meta.env.DEV) {
           console.log('Request canceled:', error.message);
@@ -45,6 +47,7 @@ const fetchText = async (
           `Error fetching data from ${baseURL}/${endpoint}:`,
           error.message
         );
+        throw error;
       }
     }
     throw error;

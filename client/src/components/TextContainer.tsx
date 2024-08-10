@@ -100,22 +100,20 @@ function TextContainer() {
 
       if (shouldGlitch) {
         containerRef?.current?.classList.add('glitch');
-        console.log('add glitch');
         // Start a timer to stop the glitch and decide again
         timeoutIDRef.current = setTimeout(() => {
           containerRef?.current?.classList.remove('glitch');
           timeoutIDRef.current = undefined; // Clear the timer
           // Start a new timer for the next decision
           const nextRandomDelay = Math.random() * 4000 + 100;
-          console.log(`Next glitch decision in ${nextRandomDelay}ms`);
           setTimeout(randomGlitch, nextRandomDelay);
         }, 500); // Glitch duration (adjust as needed)
       } else {
         // Start a timer to make the decision again
-        console.log('no glitch');
+
         containerRef?.current?.classList.remove('glitch');
         const nextRandomDelay = Math.random() * 4000 + 100;
-        console.log(`Next glitch decision in ${nextRandomDelay}ms`);
+
         timeoutIDRef.current = setTimeout(() => {
           timeoutIDRef.current = undefined; // Clear the timer
           randomGlitch(); // Decide again
