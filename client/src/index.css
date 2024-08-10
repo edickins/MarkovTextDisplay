@@ -12,7 +12,7 @@
 @layer base {
   body {
     background-color: black;
-    text-shadow: 0 0 5px #c8c8c8;
+    text-shadow: 0 0 10px #c8c8c8;
   }
 
   body:after {
@@ -31,11 +31,59 @@
     );
   }
 
+  /* glitch */
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+    animation: glitch 10s infinite;
+  }
+
+  @keyframes glitch {
+    0% {
+      text-shadow: 0 0 1px #c8c8c8;
+      filter: blur(0);
+    }
+    15% {
+      filter: blur(10);
+    }
+    20% {
+      text-shadow:
+        0 0 2px #c8c8c8,
+        0 0 3px #ff00ff;
+    }
+    40% {
+      text-shadow:
+        0 0 2px #c8c8c8,
+        0 0 1px #ff00ff;
+    }
+    50% {
+      filter: blur(15);
+    }
+    55% {
+      filter: blur(20);
+    }
+    60% {
+      text-shadow:
+        -2px 0 1px #c8c8c8,
+        1px 2px 2px #ff00ff;
+      filter: blur(10);
+    }
+    80% {
+      text-shadow: 0 0 2px #c8c8c8;
+      filter: blur(5);
+    }
+    100% {
+      text-shadow: 0 0 1px #c8c8c8;
+    }
+  }
+
+  /* typing effect css  */
   [data-typing-effect] {
     visibility: hidden;
   }
 
+  /* screen glow */
   .radiantGreenBg {
-    background-image: radial-gradient(rgba(0, 150, 30, 0.75), black 120%);
+    background-image: radial-gradient(rgba(0, 150, 30, 0.55), black 120%);
   }
 }

@@ -10,6 +10,9 @@ function TextContainer() {
   const [isWaitingForAnimation, setIsWaitingForAnimation] =
     useState<boolean>(false);
   const [isTyping, setIsTyping] = useState(false);
+  const timeoutIDRef = useRef<string | number | NodeJS.Timeout | undefined>(
+    undefined
+  );
 
   const { text, getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -88,10 +91,51 @@ function TextContainer() {
     }
   }, [text, getNewText]);
 
+  useEffect(() => {
+    const randomGlitch = () => {
+      if (timeoutIDRef.current) return; // If there's an existing timer, do nothing
+
+      // Randomly decide whether to apply the glitch effect
+      const shouldGlitch = Math.random() < 0.1; // 20% chance to glitch
+
+      if (shouldGlitch) {
+        containerRef?.current?.classList.add('glitch');
+        console.log('add glitch');
+        // Start a timer to stop the glitch and decide again
+        timeoutIDRef.current = setTimeout(() => {
+          containerRef?.current?.classList.remove('glitch');
+          timeoutIDRef.current = undefined; // Clear the timer
+          // Start a new timer for the next decision
+          const nextRandomDelay = Math.random() * 4000 + 100;
+          console.log(`Next glitch decision in ${nextRandomDelay}ms`);
+          setTimeout(randomGlitch, nextRandomDelay);
+        }, 500); // Glitch duration (adjust as needed)
+      } else {
+        // Start a timer to make the decision again
+        console.log('no glitch');
+        containerRef?.current?.classList.remove('glitch');
+        const nextRandomDelay = Math.random() * 4000 + 100;
+        console.log(`Next glitch decision in ${nextRandomDelay}ms`);
+        timeoutIDRef.current = setTimeout(() => {
+          timeoutIDRef.current = undefined; // Clear the timer
+          randomGlitch(); // Decide again
+        }, nextRandomDelay);
+      }
+    };
+
+    // Initial call to start the process
+    randomGlitch();
+
+    return () => {
+      // Cleanup function to clear timeouts if the component unmounts
+      clearTimeout(timeoutIDRef.current);
+    };
+  }, []);
+
   return (
     <div
       id='container-scroller'
-      className='grid overflow-hidden relative max-h-full  p-8 md:p-12'
+      className='grid overflow-hidden relative max-h-full  p-8 md:p-12 glitch-text'
       style={{
         gridAutoRows: 'minmax(0, auto)', // Allow items to size themselves
         gap: '0.5rem', // Add some spacing between rows
