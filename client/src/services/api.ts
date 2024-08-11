@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
+import { RequestConfig } from './RequestConfigObj';
 
 const baseURL = import.meta.env.VITE_API_RESTFUL_API_URL;
 
@@ -23,11 +24,15 @@ function isTextResponse(data: any): data is TextResponse {
 
 const fetchText = async (
   endpoint: string,
-  controller: AbortController
+  controller: AbortController,
+  requestConfigObj: RequestConfig
 ): Promise<string> => {
   try {
     const response = await instance.get<TextResponse>(endpoint, {
-      signal: controller.signal
+      signal: controller.signal,
+      params: {
+        requestConfigObj: JSON.stringify(requestConfigObj)
+      }
     });
     if (isTextResponse(response.data)) {
       return response.data.text;

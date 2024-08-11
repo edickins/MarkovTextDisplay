@@ -3,8 +3,12 @@ import { nanoid } from 'nanoid';
 import typingEffect from 'typing-effect';
 import useGetTerminalText from '../hooks/useGetTerminalText';
 import TerminalText from './TerminalText';
+import RequestConfigObj, { RequestConfig } from '../services/RequestConfigObj';
 
 function TextContainer() {
+  const [requestConfigObj, setRequestConfigObj] = useState<RequestConfig>(
+    new RequestConfigObj()
+  );
   const [terminalTexts, setTerminalTexts] = useState<React.ReactNode[]>([]);
   const [toBeRemovedIndexes, setToBeRemovedIndexes] = useState<number[]>([]);
   const [isWaitingForAnimation, setIsWaitingForAnimation] =
@@ -82,14 +86,14 @@ function TextContainer() {
         reset: true
       }).then(() => {
         setTimeout(() => {
-          getNewText().then(() => {
+          getNewText(requestConfigObj).then(() => {
             setIsTyping(false);
             setIsWaitingForAnimation(false);
           });
         }, 1500);
       });
     }
-  }, [text, getNewText]);
+  }, [text, getNewText, requestConfigObj]);
 
   useEffect(() => {
     const randomGlitch = () => {
