@@ -9,7 +9,10 @@ const useGetTerminalText = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const fetchData = useCallback(
-    async (controller: AbortController, requestConfigObj?: RequestConfig) => {
+    async (
+      controller: AbortController,
+      requestConfigObj?: RequestConfig
+    ): Promise<string> => {
       const configObj = requestConfigObj || new RequestConfigObj();
 
       setLoading(true);
@@ -20,13 +23,15 @@ const useGetTerminalText = () => {
           controller,
           configObj
         );
-        setText(newText);
+        // setText(newText);
+        return newText;
       } catch (err) {
         if (axios.isAxiosError(err)) {
           setError(err.message);
         } else {
           setError('An unexpected error occurred');
         }
+        throw err;
       } finally {
         setLoading(false);
       }
@@ -38,7 +43,9 @@ const useGetTerminalText = () => {
   useEffect(() => {
     const controller = new AbortController();
     // no requestConfig sent
-    fetchData(controller);
+    fetchData(controller).then((newText) => {
+      setText(newText);
+    });
 
     return () => controller.abort();
   }, [fetchData]);
@@ -46,7 +53,13 @@ const useGetTerminalText = () => {
   // exported function that sets 'text'
   const getNewText = async (requestConfigObj: RequestConfig) => {
     const controller = new AbortController();
-    await fetchData(controller, requestConfigObj);
+
+    try {
+      const newText = await fetchData(controller, requestConfigObj);
+      setText(newText);
+    } catch (err) {
+      throw new Error('there was an error fetching text');
+    }
   };
 
   return { text, getNewText, loading, error };
