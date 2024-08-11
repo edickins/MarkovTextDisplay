@@ -42,7 +42,7 @@ const useGetTerminalText = () => {
   // set the initial 'text' value so there is something to return when the hook is used
   useEffect(() => {
     const controller = new AbortController();
-    // no requestConfig sent
+    // fetchData with no requestConfig sent
     fetchData(controller).then((newText) => {
       setText(newText);
     });
@@ -55,6 +55,7 @@ const useGetTerminalText = () => {
     const controller = new AbortController();
 
     try {
+      // fetchData passing the requestConfigObj
       const newText = await fetchData(controller, requestConfigObj);
       setText(newText);
     } catch (err) {
