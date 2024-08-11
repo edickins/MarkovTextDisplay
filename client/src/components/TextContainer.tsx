@@ -93,7 +93,7 @@ function TextContainer() {
 
   useEffect(() => {
     const randomGlitch = () => {
-      if (timeoutIDRef.current) return; // If there's an existing timer, do nothing
+      if (timeoutIDRef.current) return;
 
       // Randomly decide whether to apply the glitch effect
       const shouldGlitch = Math.random() < 0.1; // 20% chance to glitch
@@ -103,7 +103,7 @@ function TextContainer() {
         // Start a timer to stop the glitch and decide again
         timeoutIDRef.current = setTimeout(() => {
           containerRef?.current?.classList.remove('glitch');
-          timeoutIDRef.current = undefined; // Clear the timer
+          timeoutIDRef.current = undefined;
           // Start a new timer for the next decision
           const nextRandomDelay = Math.random() * 4000 + 100;
           setTimeout(randomGlitch, nextRandomDelay);
@@ -115,7 +115,7 @@ function TextContainer() {
         const nextRandomDelay = Math.random() * 4000 + 100;
 
         timeoutIDRef.current = setTimeout(() => {
-          timeoutIDRef.current = undefined; // Clear the timer
+          timeoutIDRef.current = undefined;
           randomGlitch(); // Decide again
         }, nextRandomDelay);
       }
@@ -135,8 +135,8 @@ function TextContainer() {
       id='container-scroller'
       className='grid overflow-hidden relative max-h-full  p-8 md:p-12 glitch-text'
       style={{
-        gridAutoRows: 'minmax(0, auto)', // Allow items to size themselves
-        gap: '0.5rem', // Add some spacing between rows
+        gridAutoRows: 'minmax(0, auto)',
+        gap: '0.5rem',
         alignItems: 'start'
       }}
       ref={containerRef}
