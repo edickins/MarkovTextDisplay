@@ -19,8 +19,8 @@ systemStartupGenerator.init();
 const aiGenerator = new MarkovTextGenerator(['ai']);
 aiGenerator.init();
 
-const funGenerator = new MarkovTextGenerator(['fun']);
-funGenerator.init();
+// const funGenerator = new MarkovTextGenerator(['fun']);
+// funGenerator.init();
 
 const seriousGenerator = new MarkovTextGenerator(['serious']);
 seriousGenerator.init();
@@ -32,10 +32,10 @@ const everythingGenerator = new MarkovTextGenerator(['serious', 'fun', 'ai']);
 everythingGenerator.init();
 
 const generators = [
-  aiGenerator,
   systemStartupGenerator,
-  funSeriousGenerator,
+  aiGenerator,
   seriousGenerator,
+  funSeriousGenerator,
   everythingGenerator
 ];
 

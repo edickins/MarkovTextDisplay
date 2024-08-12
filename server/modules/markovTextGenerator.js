@@ -10,17 +10,20 @@ class MarkovTextGenerator {
     this.MAX_TEXT_LENGTH = 160;
     this.DEFAULT_TEXT_LENGTH = 80;
     this.folderNames = folderNames;
+    this.markovGen = undefined;
   }
 
   // use all files in the folderNames list to train the MarkovText
   async init() {
     // store all Promises returned from MarkovText.trainTxt()
     const trainingPromises = [];
+    let folderFiles = [];
+    let folderFilesAsStrings = [];
 
     for (const folderName of this.folderNames) {
       const dataFolder = path.join(__dirname, '..', 'data', 'text');
       const folderPath = path.join(dataFolder, folderName);
-      const folderFiles = this._readFilesFromFolder(folderPath);
+      folderFiles = this._readFilesFromFolder(folderPath);
 
       trainingPromises.push(
         ...folderFiles.map(file =>
@@ -28,20 +31,22 @@ class MarkovTextGenerator {
         )
       );
 
-      if (folderFiles.length > 0) {
-        const fileContents = fs.readFileSync(
-          path.join(folderPath, folderFiles[0]),
-          'utf-8'
-        );
+      folderFilesAsStrings.push(
+        ...folderFiles.map(filePath =>
+          fs.readFileSync(path.join(folderPath, filePath), 'utf-8')
+        )
+      );
+    }
 
-        let markov = new MarkovGen({
-          input: fileContents.split('\n'),
-          minLength: 15
-        });
+    // new MarkovGen
+    if (folderFiles.length > 0) {
+      const markovInput = [].concat(
+        ...folderFilesAsStrings.map(strings => strings.split('\n'))
+      );
 
-        let sentence = markov.makeChain();
-        console.log(this.folderNames, sentence);
-      }
+      this.markovGen = new MarkovGen({ input: markovInput, minLength: 15 });
+      let sentence = this.markovGen.makeChain();
+      console.log(this.folderNames, sentence);
     }
 
     // resolve all the Promises
@@ -77,6 +82,7 @@ class MarkovTextGenerator {
     maxLength =
       maxLength && !isNaN(maxLength) ? maxLength : this.DEFAULT_TEXT_LENGTH;
     let text = MarkovChain.generate(maxLength);
+    text = this.markovGen.makeChain();
     text = this._cleanText(text);
     return text;
   }
