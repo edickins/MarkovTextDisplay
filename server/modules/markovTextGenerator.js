@@ -47,7 +47,7 @@ class MarkovTextGenerator {
   }
 
   // return an Object with a text generated from the MarkovText
-  async getText(reqQuery) {
+  async getText() {
     if (!this.trainingComplete) {
       await this.init();
     }

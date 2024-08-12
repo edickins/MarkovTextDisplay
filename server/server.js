@@ -5,6 +5,7 @@ var https = require('https');
 const dotenv = require('dotenv');
 const { request } = require('express');
 const colors = require('colors');
+const cors = require('cors');
 const morgan = require('morgan');
 const errorHandler = require('./middleware/error');
 
@@ -16,6 +17,12 @@ const ascii = require('./routes/ascii');
 dotenv.config({ path: './config/config.env' });
 
 const app = express();
+
+app.use(
+  cors({
+    origin: ['http://bleepbloop.net', 'https://bleepbloop.net']
+  })
+);
 
 // dev logging middleware
 if (process.env.NODE_ENV === 'development') {
@@ -63,7 +70,7 @@ if (process.env.NODE_ENV === 'production') {
 
   httpsServer.listen(PORT, () => {
     console.log(
-      `Express server running in production on port ${PORT}`.bold.blue
+      `Express server running in production on port ${PORT}`.bold.red
     );
   });
 }

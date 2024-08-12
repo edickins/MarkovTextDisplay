@@ -1,22 +1,22 @@
 import axios, { AxiosInstance } from 'axios';
 import { RequestConfig } from './RequestConfigObj';
 
+// Get the domain and PORT from environment variables
 const baseURL = import.meta.env.VITE_API_RESTFUL_API_URL;
-
-// Get the protocol and domain from environment variables
 
 const instance: AxiosInstance = axios.create({
   baseURL,
   timeout: 5000
 });
 
-type TextResponse = {
+type ServerResponse = {
   text: string;
+  configObj: RequestConfig;
 };
 
 // Type guard for runtime type checking
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isTextResponse(data: any): data is TextResponse {
+function isServerResponse(data: any): data is ServerResponse {
   return (
     data && typeof data.text === 'string' && typeof data.success === `boolean`
   );
@@ -26,16 +26,20 @@ const fetchText = async (
   endpoint: string,
   controller: AbortController,
   requestConfigObj: RequestConfig
-): Promise<string> => {
+): Promise<{ newText: string; newRequestConfigObj: RequestConfig }> => {
   try {
-    const response = await instance.get<TextResponse>(endpoint, {
+    const response = await instance.get<ServerResponse>(endpoint, {
       signal: controller.signal,
       params: {
-        requestConfigObj: JSON.stringify(requestConfigObj)
+        ...requestConfigObj
       }
     });
-    if (isTextResponse(response.data)) {
-      return response.data.text;
+
+    if (isServerResponse(response.data)) {
+      return {
+        newText: response.data.text,
+        newRequestConfigObj: response.data.configObj
+      };
     }
     throw new Error('Invalid response structure from API');
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -6,6 +6,7 @@ import TerminalText from './TerminalText';
 import RequestConfigObj, { RequestConfig } from '../services/RequestConfigObj';
 
 function TextContainer() {
+  const [text, setText] = useState('');
   const [requestConfigObj, setRequestConfigObj] = useState<RequestConfig>(
     new RequestConfigObj()
   );
@@ -13,32 +14,23 @@ function TextContainer() {
   const [toBeRemovedIndexes, setToBeRemovedIndexes] = useState<number[]>([]);
   const [isWaitingForAnimation, setIsWaitingForAnimation] =
     useState<boolean>(false);
-  const [isTyping, setIsTyping] = useState(false);
+
   const timeoutIDRef = useRef<string | number | NodeJS.Timeout | undefined>(
     undefined
   );
 
-  const { text, getNewText } = useGetTerminalText();
+  const { getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // initial side-effect
   useEffect(() => {
-    if (isTyping) {
-      // Assuming you have an array of <span> elements
-      const spans = document.querySelectorAll('span');
-
-      if (spans && spans.length > 0) {
-        // Get the last <span> (which is the most recently displayed one)
-        const lastSpan = spans[spans.length - 2];
-
-        // Create a pseudo-element for the cursor
-        const cursor = document.createElement('span');
-        cursor.classList.add('cursor'); // You can style this class in your CSS
-
-        // Append the cursor to the last <span>
-        lastSpan.appendChild(cursor);
-      }
+    if (!text) {
+      getNewText(requestConfigObj).then(({ newText, newRequestConfigObj }) => {
+        setText(newText);
+        setRequestConfigObj(newRequestConfigObj);
+      });
     }
-  }, [isTyping]);
+  });
 
   // scroll container to the bottom of the screen
   useEffect(() => {
@@ -80,16 +72,18 @@ function TextContainer() {
   useEffect(() => {
     const textElementToAnimate = document.querySelector('[data-typing-effect]');
     if (textElementToAnimate) {
-      setIsTyping(true);
       typingEffect(textElementToAnimate, {
         speed: 100,
         reset: true
       }).then(() => {
         setTimeout(() => {
-          getNewText(requestConfigObj).then(() => {
-            setIsTyping(false);
-            setIsWaitingForAnimation(false);
-          });
+          getNewText(requestConfigObj).then(
+            ({ newText, newRequestConfigObj }) => {
+              setText(newText);
+              setRequestConfigObj(newRequestConfigObj);
+              setIsWaitingForAnimation(false);
+            }
+          );
         }, 1500);
       });
     }

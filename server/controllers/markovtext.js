@@ -6,6 +6,16 @@ const connectDB = require('../config/db');
 const processFileUploads = require('../modules/processFileUploads');
 const MarkovText = require('../models/MarkovText');
 
+const aiInitialStartupText = [
+  '=========================',
+  'Welcome to bleebloop v1.0',
+  ' ',
+  '[Terminal Boot Sequence]'
+];
+
+const systemStartupGenerator = new MarkovTextGenerator(['system_startup']);
+systemStartupGenerator.init();
+
 const aiGenerator = new MarkovTextGenerator(['ai']);
 aiGenerator.init();
 
@@ -23,13 +33,7 @@ everythingGenerator.init();
 
 const generators = [
   aiGenerator,
-  aiGenerator,
-  aiGenerator,
-  aiGenerator,
-  aiGenerator,
-  aiGenerator,
-  aiGenerator,
-  aiGenerator,
+  systemStartupGenerator,
   funSeriousGenerator,
   seriousGenerator,
   everythingGenerator
@@ -40,14 +44,51 @@ function getRandomGenerator() {
   return generators[generatorIndex];
 }
 
+async function generateTextFromConfigObj(configObj) {
+  if (configObj) {
+    // (specific initial startup text)
+    if (configObj.aiInitialStartupTextCount >= 0) {
+      return {
+        data: aiInitialStartupText[configObj.aiInitialStartupTextCount],
+        configObj: {
+          ...configObj,
+          aiInitialStartupTextCount: configObj.aiInitialStartupTextCount - 1
+        }
+      };
+    }
+    // inform user of system status
+    if (configObj.aiStartupRequestCount >= 0) {
+      const result = await systemStartupGenerator.getText();
+      console.log(`aiStartupRequestCount`, configObj.aiStartupRequestCount);
+      console.log('text:', result.data);
+      return {
+        data: result.data,
+        configObj: {
+          ...configObj,
+          aiStartupRequestCount: configObj.aiStartupRequestCount - 1
+        }
+      };
+    }
+    // Random text generator (no config settings)
+    const result = await getRandomGenerator().getText();
+    return {
+      data: result.data,
+      configObj
+    };
+  }
+}
+
 // @desc    return text generated from the default markov text sources
 // @route   GET /api/v1/markovtext
 // @access  public
 exports.getMarkovText = async (req, res, next) => {
   try {
     const reqQuery = { ...req.query };
-    const result = await getRandomGenerator().getText(reqQuery);
-    res.status(200).json({ success: true, text: result.data });
+    // const result = await getRandomGenerator().getText(reqQuery);
+    const result = await generateTextFromConfigObj(reqQuery);
+    res
+      .status(200)
+      .json({ success: true, text: result.data, configObj: result.configObj });
   } catch (error) {
     res.status(400).json({ success: false });
   }
