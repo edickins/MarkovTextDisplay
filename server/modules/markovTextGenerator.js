@@ -1,4 +1,6 @@
 const MarkovChain = require('markov-chain-nlg');
+const MarkovGen = require('markov-generator');
+
 const fs = require('fs');
 const path = require('path');
 
@@ -25,6 +27,21 @@ class MarkovTextGenerator {
           MarkovChain.trainTxt(path.join(folderPath, file), '\n')
         )
       );
+
+      if (folderFiles.length > 0) {
+        const fileContents = fs.readFileSync(
+          path.join(folderPath, folderFiles[0]),
+          'utf-8'
+        );
+
+        let markov = new MarkovGen({
+          input: fileContents.split('\n'),
+          minLength: 15
+        });
+
+        let sentence = markov.makeChain();
+        console.log(this.folderNames, sentence);
+      }
     }
 
     // resolve all the Promises

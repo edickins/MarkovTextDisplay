@@ -25,6 +25,7 @@
 		"formidable": "^2.0.1",
 		"fs-extra": "^10.1.0",
 		"markov-chain-nlg": "^1.0.3",
+		"markov-generator": "^1.2.3",
 		"mongoose": "^6.6.7",
 		"morgan": "^1.10.0"
 	},
