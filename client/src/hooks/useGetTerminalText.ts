@@ -48,7 +48,6 @@ const useGetTerminalText = () => {
         controller,
         requestConfigObj
       );
-      // setText(newText);
       return { newText, newRequestConfigObj };
     } catch (err) {
       throw new Error('there was an error fetching text');

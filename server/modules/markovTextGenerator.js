@@ -88,7 +88,7 @@ class MarkovTextGenerator {
   _maximiseTextLength(text) {
     let maxCycles = 5;
     let currentCycle = 0;
-    while (text.length <= this.MAX_TEXT_LENGTH && currentCycle < maxCycles) {
+    while (text.length < this.MAX_TEXT_LENGTH && currentCycle < maxCycles) {
       let newText = ' ' + this._generateMarkovText();
       text = this._joinTexts(text, newText);
       currentCycle++;

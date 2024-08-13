@@ -22,16 +22,6 @@ function TextContainer() {
   const { getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // initial side-effect
-  useEffect(() => {
-    if (!text) {
-      getNewText(requestConfigObj).then(({ newText, newRequestConfigObj }) => {
-        setText(newText);
-        setRequestConfigObj(newRequestConfigObj);
-      });
-    }
-  });
-
   // scroll container to the bottom of the screen
   useEffect(() => {
     if (containerRef && containerRef.current) {
@@ -49,7 +39,28 @@ function TextContainer() {
     }
   }, [toBeRemovedIndexes]);
 
+  // initial side-effect to start the routine
+  useEffect(() => {
+    if (!text) {
+      try {
+        // getNewText from the server. returns {text:string, newRequestConfigObj:RequestObj}
+        getNewText(requestConfigObj).then(
+          ({ newText, newRequestConfigObj }) => {
+            setText(newText);
+            setRequestConfigObj((prevConfig) => ({
+              ...prevConfig,
+              ...newRequestConfigObj
+            }));
+          }
+        );
+      } catch (error) {
+        throw new Error('There was an error fetching text.');
+      }
+    }
+  }, [getNewText, requestConfigObj, text]);
+
   // Side effect for when a new text arrives from the API
+  // adds a TerminalText component if there's text and we're not waiting for the animation to finish
   useEffect(() => {
     if (text && !isWaitingForAnimation) {
       setIsWaitingForAnimation(true);
@@ -68,10 +79,11 @@ function TextContainer() {
     }
   }, [text, terminalTexts, isWaitingForAnimation]);
 
-  // Side effect to start typing-effect on the text in the new TerminalText component
+  // Side effect to start typing-effect
+  // if there is an item to animate and the app is waiting for animation to start
   useEffect(() => {
     const textElementToAnimate = document.querySelector('[data-typing-effect]');
-    if (textElementToAnimate) {
+    if (textElementToAnimate && isWaitingForAnimation) {
       typingEffect(textElementToAnimate, {
         speed: 100,
         reset: true
@@ -80,17 +92,19 @@ function TextContainer() {
           getNewText(requestConfigObj).then(
             ({ newText, newRequestConfigObj }) => {
               setText(newText);
-              setRequestConfigObj(newRequestConfigObj);
+              setRequestConfigObj((prevConfig) => ({
+                ...prevConfig,
+                ...newRequestConfigObj
+              }));
               setIsWaitingForAnimation(false);
             }
           );
         }, 1500);
       });
     }
-  }, [text, getNewText, requestConfigObj]);
+  }, [text, getNewText, requestConfigObj, isWaitingForAnimation]);
 
   useEffect(() => {
-    console.log('adding glitch');
     const randomGlitch = () => {
       if (timeoutIDRef.current) return;
 
