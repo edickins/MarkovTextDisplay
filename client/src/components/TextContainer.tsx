@@ -90,22 +90,23 @@ function TextContainer() {
   }, [text, getNewText, requestConfigObj]);
 
   useEffect(() => {
+    console.log('adding glitch');
     const randomGlitch = () => {
       if (timeoutIDRef.current) return;
 
       // Randomly decide whether to apply the glitch effect
-      const shouldGlitch = Math.random() < 0.1; // 20% chance to glitch
+      const shouldGlitch = Math.random() < 0.5; // 20% chance to glitch
 
       if (shouldGlitch) {
-        containerRef?.current?.classList.add('glitch');
+        containerRef?.current?.classList.add('glitch-text');
         // Start a timer to stop the glitch and decide again
         timeoutIDRef.current = setTimeout(() => {
-          containerRef?.current?.classList.remove('glitch');
+          containerRef?.current?.classList.remove('glitch-text');
           timeoutIDRef.current = undefined;
           // Start a new timer for the next decision
           const nextRandomDelay = Math.random() * 4000 + 100;
           setTimeout(randomGlitch, nextRandomDelay);
-        }, 500); // Glitch duration (adjust as needed)
+        }, 10000); // Glitch duration (adjust as needed)
       } else {
         // Start a timer to make the decision again
 
@@ -131,7 +132,7 @@ function TextContainer() {
   return (
     <div
       id='container-scroller'
-      className='grid overflow-hidden relative max-h-full  p-8 md:p-12 glitch-text'
+      className='grid overflow-hidden relative max-h-full  p-8 md:p-12 '
       style={{
         gridAutoRows: 'minmax(0, auto)',
         gap: '0.5rem',

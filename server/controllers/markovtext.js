@@ -49,7 +49,7 @@ function getRandomGenerator() {
 
 async function generateTextFromConfigObj(configObj) {
   if (configObj) {
-    // (specific initial startup text)
+    // (specific initial startup text from a static Array)
     if (configObj.aiInitialStartupTextCount >= 0) {
       return {
         data: aiInitialStartupText[configObj.aiInitialStartupTextCount],
@@ -59,25 +59,48 @@ async function generateTextFromConfigObj(configObj) {
         }
       };
     }
-    // inform user of system status
+    // inform user of system status from the systemStartupGenerator
     if (configObj.aiStartupRequestCount >= 0) {
-      const result = await systemStartupGenerator.getText();
       console.log(`aiStartupRequestCount`, configObj.aiStartupRequestCount);
-      console.log('text:', result.data);
+      try {
+        const result = await systemStartupGenerator.getText();
+        console.log('text:', result.data);
+        return {
+          data: result.data,
+          configObj: {
+            ...configObj,
+            aiStartupRequestCount: configObj.aiStartupRequestCount - 1
+          }
+        };
+      } catch (error) {
+        console.error('Error fetching startup text:', error);
+        return {
+          data: 'error',
+          configObj: {
+            ...configObj,
+            aiStartupRequestCount: configObj.aiStartupRequestCount - 1
+          }
+        };
+      }
+    }
+
+    // Default random text generator (no config settings used)
+    try {
+      const result = await getRandomGenerator().getText();
       return {
         data: result.data,
+        configObj
+      };
+    } catch (error) {
+      console.error('Error fetching startup text:', error);
+      return {
+        data: 'error',
         configObj: {
           ...configObj,
           aiStartupRequestCount: configObj.aiStartupRequestCount - 1
         }
       };
     }
-    // Random text generator (no config settings)
-    const result = await getRandomGenerator().getText();
-    return {
-      data: result.data,
-      configObj
-    };
   }
 }
 
@@ -87,7 +110,6 @@ async function generateTextFromConfigObj(configObj) {
 exports.getMarkovText = async (req, res, next) => {
   try {
     const reqQuery = { ...req.query };
-    // const result = await getRandomGenerator().getText(reqQuery);
     const result = await generateTextFromConfigObj(reqQuery);
     res
       .status(200)

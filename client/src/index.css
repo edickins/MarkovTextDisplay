@@ -12,7 +12,8 @@
 @layer base {
   body {
     background-color: black;
-    text-shadow: 0 0 10px #c8c8c8;
+    text-shadow: 0 0 2px #c8c8c8;
+    filter: blur(0);
   }
 
   body:after {
@@ -43,12 +44,23 @@
       text-shadow: 0 0 1px #c8c8c8;
       filter: blur(0);
     }
+
+    5% {
+      text-shadow: 0 1px 2px #c8c8c8;
+      filter: blur(5);
+    }
+
+    8% {
+      text-shadow: 0 0 2px #c8c8c8;
+      filter: blur(0);
+    }
+
     15% {
       filter: blur(10);
     }
     20% {
       text-shadow:
-        0 0 2px #c8c8c8,
+        -1px 0 2px #c8c8c8,
         0 0 3px #ff00ff;
     }
     40% {
@@ -64,14 +76,20 @@
     }
     60% {
       text-shadow:
-        -2px 0 1px #c8c8c8,
-        1px 2px 2px #ff00ff;
+        -1px 0 1px #c8c8c8,
+        2px 2px 2px #ff00ff;
       filter: blur(10);
     }
     80% {
+      text-shadow: 0 2px 2px #c8c8c8;
+      filter: blur(5);
+    }
+
+    82% {
       text-shadow: 0 0 2px #c8c8c8;
       filter: blur(5);
     }
+
     100% {
       text-shadow: 0 0 1px #c8c8c8;
     }

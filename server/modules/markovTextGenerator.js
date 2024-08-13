@@ -13,7 +13,13 @@ class MarkovTextGenerator {
     this.markovGen = undefined;
   }
 
-  // use all files in the folderNames list to train the MarkovText
+  // Function to read files from a folder
+  _readFilesFromFolder(folderPath) {
+    return fs.readdirSync(folderPath);
+  }
+
+  // use all files in the folderNames list to train the global MarkovText
+  // instance whilst also returning a
   async init() {
     // store all Promises returned from MarkovText.trainTxt()
     const trainingPromises = [];
@@ -45,45 +51,48 @@ class MarkovTextGenerator {
         throw error;
       });
 
-    // new MarkovGen
+    // new MarkovGen code - this generator has local state
     if (folderFiles.length > 0) {
+      // create an array of all the text from all the files in all the folders
       const markovInput = [].concat(
         ...folderFilesAsStrings.map(strings => strings.split('\n'))
       );
 
+      // create a new MarkovGen - minLength values above 15 seem to excede allowed stack limits.
       this.markovGen = new MarkovGen({ input: markovInput, minLength: 6 });
       let sentence = this.markovGen.makeChain();
       console.log(this.folderNames, sentence);
     }
   }
 
-  // Function to read files from a folder
-  _readFilesFromFolder(folderPath) {
-    return fs.readdirSync(folderPath);
-  }
-
-  // Function to select a random file from an array
-  _getRandomFile(filesArray) {
-    const randomIndex = Math.floor(Math.random() * filesArray.length);
-    return filesArray[randomIndex];
-  }
-
-  // return an Object with a text generated from the MarkovText
+  // return an Object with text generated from the MarkovText
   async getText() {
     if (!this.trainingComplete) {
       await this.init();
     }
-    const text = this._getTextToLength(this.MAX_TEXT_LENGTH);
+    let text = this._generateMarkovText();
+    text = this._maximiseTextLength(text);
     return { data: text };
   }
 
   // generate and clean text
-  _generateMarkovText(maxLength) {
-    maxLength =
-      maxLength && !isNaN(maxLength) ? maxLength : this.DEFAULT_TEXT_LENGTH;
-    let text = MarkovChain.generate(maxLength);
-    text = this.markovGen.makeChain();
+  _generateMarkovText() {
+    let text = MarkovChain.generate(this.DEFAULT_TEXT_LENGTH);
+    const tempText = this.markovGen.makeChain();
+    console.log(`tempText in _generateMarkovText : ${tempText}`);
     text = this._cleanText(text);
+    return tempText;
+  }
+
+  // keep adding text until MAX_TEXT_LENGTH is reached
+  _maximiseTextLength(text) {
+    let maxCycles = 5;
+    let currentCycle = 0;
+    while (text.length <= this.MAX_TEXT_LENGTH && currentCycle < maxCycles) {
+      let newText = ' ' + this._generateMarkovText();
+      text = this._joinTexts(text, newText);
+      currentCycle++;
+    }
     return text;
   }
 
@@ -94,24 +103,7 @@ class MarkovTextGenerator {
     return txt;
   }
 
-  // keep adding text until MAX_TEXT_LENGTH is reached
-  _maximiseTextLength(text) {
-    let maxCycles = 5;
-    let currentCycle = 0;
-    while (text.length <= this.MAX_TEXT_LENGTH && currentCycle < maxCycles) {
-      let newText = MarkovChain.generate(100);
-      text = this._joinTexts(text, newText);
-      currentCycle++;
-    }
-    return text;
-  }
-
-  _getTextToLength(textLength) {
-    let text = this._generateMarkovText(textLength);
-    text = this._maximiseTextLength(text);
-    return text;
-  }
-
+  // add two text strings together without exceding MAX allowed length
   _joinTexts(text, newText) {
     let returnText = text;
     if (returnText.length + newText.length <= this.MAX_TEXT_LENGTH) {
