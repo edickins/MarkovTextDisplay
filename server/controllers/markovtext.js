@@ -1,4 +1,5 @@
 const MarkovTextGenerator = require('../modules/MarkovTextGenerator');
+const MarkovChain = require('markov-chain-nlg');
 
 const fsExtra = require('fs-extra');
 const formidable = require('formidable');
@@ -8,9 +9,9 @@ const MarkovText = require('../models/MarkovText');
 
 const aiInitialStartupText = [
   '=========================',
-  'Welcome to bleebloop v1.0',
+  '[Terminal Boot Sequence]',
   ' ',
-  '[Terminal Boot Sequence]'
+  'Welcome to bleebloop v1.0'
 ];
 
 const systemStartupGenerator = new MarkovTextGenerator(['system_startup']);
@@ -49,21 +50,25 @@ function getRandomGenerator() {
 
 async function generateTextFromConfigObj(configObj) {
   if (configObj) {
-    // (specific initial startup text from a static Array)
-    if (configObj.aiInitialStartupTextCount >= 0) {
+    // (get specific initial startup text from a static Array)
+    if (configObj.aiInitialStartupRequestCount >= 0) {
       return {
-        data: aiInitialStartupText[configObj.aiInitialStartupTextCount],
+        data: aiInitialStartupText[configObj.aiInitialStartupRequestCount],
         configObj: {
           ...configObj,
-          aiInitialStartupTextCount: configObj.aiInitialStartupTextCount - 1
+          aiInitialStartupRequestCount:
+            configObj.aiInitialStartupRequestCount - 1
         }
       };
     }
+
+    configObj.isInitialised = true;
+
     // inform user of system status from the systemStartupGenerator
     if (configObj.aiStartupRequestCount >= 0) {
       console.log(`aiStartupRequestCount`, configObj.aiStartupRequestCount);
       try {
-        const result = await systemStartupGenerator.getText();
+        const result = await systemStartupGenerator.getText(0);
         console.log('text:', result.data);
         return {
           data: result.data,
@@ -86,7 +91,7 @@ async function generateTextFromConfigObj(configObj) {
 
     // Default random text generator (no config settings used)
     try {
-      const result = await getRandomGenerator().getText();
+      const result = await everythingGenerator.getText();
       return {
         data: result.data,
         configObj

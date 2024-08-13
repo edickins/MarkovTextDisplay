@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useCallback } from 'react';
 import fetchText from '../services/api';
 import RequestConfigObj, { RequestConfig } from '../services/RequestConfigObj';
+import RequestConfigEnum from '../enums/RequestConfigEnum';
 
 const useGetTerminalText = () => {
   const [error, setError] = useState<string | null>(null);
@@ -13,7 +14,8 @@ const useGetTerminalText = () => {
       requestConfigObj?: RequestConfig
     ): Promise<{ newText: string; newRequestConfigObj: RequestConfig }> => {
       // if no requestConfigObj is passed create a new one to initial AI startup responses
-      const configObj = requestConfigObj || new RequestConfigObj();
+      const configObj =
+        requestConfigObj || new RequestConfigObj(RequestConfigEnum.DEFAULT);
 
       setLoading(true);
       setError(null);

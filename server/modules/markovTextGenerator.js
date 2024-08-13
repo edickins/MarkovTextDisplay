@@ -66,27 +66,28 @@ class MarkovTextGenerator {
   }
 
   // return an Object with text generated from the MarkovText
-  async getText() {
+  async getText(count) {
     if (!this.trainingComplete) {
       await this.init();
     }
     let text = this._generateMarkovText();
-    text = this._maximiseTextLength(text);
+    text = this._maximiseTextLength(text, count);
     return { data: text };
   }
 
   // generate and clean text
   _generateMarkovText() {
-    let text = MarkovChain.generate(this.DEFAULT_TEXT_LENGTH);
-    const tempText = this.markovGen.makeChain();
-    console.log(`tempText in _generateMarkovText : ${tempText}`);
-    text = this._cleanText(text);
-    return tempText;
+    //let text = MarkovChain.generate(this.DEFAULT_TEXT_LENGTH);
+    let text = this.markovGen.makeChain();
+    console.log(text);
+    return this._cleanText(text);
+    t;
   }
 
   // keep adding text until MAX_TEXT_LENGTH is reached
-  _maximiseTextLength(text) {
-    let maxCycles = 5;
+  _maximiseTextLength(text, count) {
+    let maxCycles = count !== undefined ? count : 5;
+
     let currentCycle = 0;
     while (text.length < this.MAX_TEXT_LENGTH && currentCycle < maxCycles) {
       let newText = ' ' + this._generateMarkovText();

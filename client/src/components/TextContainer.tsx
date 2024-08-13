@@ -4,11 +4,12 @@ import typingEffect from 'typing-effect';
 import useGetTerminalText from '../hooks/useGetTerminalText';
 import TerminalText from './TerminalText';
 import RequestConfigObj, { RequestConfig } from '../services/RequestConfigObj';
+import RequestConfigEnum from '../enums/RequestConfigEnum';
 
 function TextContainer() {
   const [text, setText] = useState('');
   const [requestConfigObj, setRequestConfigObj] = useState<RequestConfig>(
-    new RequestConfigObj()
+    new RequestConfigObj(RequestConfigEnum.DEFAULT)
   );
   const [terminalTexts, setTerminalTexts] = useState<React.ReactNode[]>([]);
   const [toBeRemovedIndexes, setToBeRemovedIndexes] = useState<number[]>([]);
@@ -21,6 +22,13 @@ function TextContainer() {
 
   const { getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
+
+  function resetRequestConfigObj(currentConfigObj: RequestConfig) {
+    if (Math.random() > 0.8 && !currentConfigObj.isInitialised) {
+      return new RequestConfigObj(RequestConfigEnum.STARTUP);
+    }
+    return currentConfigObj;
+  }
 
   // scroll container to the bottom of the screen
   useEffect(() => {
@@ -91,12 +99,15 @@ function TextContainer() {
         setTimeout(() => {
           getNewText(requestConfigObj).then(
             ({ newText, newRequestConfigObj }) => {
+              setIsWaitingForAnimation(false);
               setText(newText);
+
+              // reset config obj to display startup text?
+              const configObj = resetRequestConfigObj(newRequestConfigObj);
               setRequestConfigObj((prevConfig) => ({
                 ...prevConfig,
-                ...newRequestConfigObj
+                ...configObj
               }));
-              setIsWaitingForAnimation(false);
             }
           );
         }, 1500);
@@ -104,6 +115,7 @@ function TextContainer() {
     }
   }, [text, getNewText, requestConfigObj, isWaitingForAnimation]);
 
+  // Glitch effect
   useEffect(() => {
     const randomGlitch = () => {
       if (timeoutIDRef.current) return;
