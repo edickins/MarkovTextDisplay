@@ -17,8 +17,8 @@ export default class RequestConfigObj {
 
   constructor() {
     this.aiNameRequestCount = Math.floor(Math.random() * 2);
-    this.aiStatementRequestCount = Math.floor(Math.random() * 3 + 1);
-    this.aiStartupRequestCount = Math.floor(Math.random() * 5 + 3);
+    this.aiStatementRequestCount = Math.floor(Math.random() * 2 + 1);
+    this.aiStartupRequestCount = Math.floor(Math.random() * 1);
     this.aiInitialStartupTextCount = 3;
     this.isInitialised = false;
   }

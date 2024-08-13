@@ -34,6 +34,9 @@ everythingGenerator.init();
 const generators = [
   systemStartupGenerator,
   aiGenerator,
+  aiGenerator,
+  aiGenerator,
+  aiGenerator,
   seriousGenerator,
   funSeriousGenerator,
   everythingGenerator

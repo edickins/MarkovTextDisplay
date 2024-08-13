@@ -38,23 +38,23 @@ class MarkovTextGenerator {
       );
     }
 
-    // new MarkovGen
-    if (folderFiles.length > 0) {
-      const markovInput = [].concat(
-        ...folderFilesAsStrings.map(strings => strings.split('\n'))
-      );
-
-      this.markovGen = new MarkovGen({ input: markovInput, minLength: 15 });
-      let sentence = this.markovGen.makeChain();
-      console.log(this.folderNames, sentence);
-    }
-
     // resolve all the Promises
     Promise.all(trainingPromises)
       .then(() => (this.trainingComplete = true))
       .catch(error => {
         throw error;
       });
+
+    // new MarkovGen
+    if (folderFiles.length > 0) {
+      const markovInput = [].concat(
+        ...folderFilesAsStrings.map(strings => strings.split('\n'))
+      );
+
+      this.markovGen = new MarkovGen({ input: markovInput, minLength: 6 });
+      let sentence = this.markovGen.makeChain();
+      console.log(this.folderNames, sentence);
+    }
   }
 
   // Function to read files from a folder
