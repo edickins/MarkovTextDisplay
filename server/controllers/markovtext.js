@@ -8,20 +8,21 @@ const processFileUploads = require('../modules/processFileUploads');
 const MarkovText = require('../models/MarkovText');
 
 const aiInitialStartupText = [
-  '=========================',
-  '[Terminal Boot Sequence]',
+  'I am your digital assistant, bleepbloop v1.0.',
+  '==================================',
+  '[Terminal Boot Sequence Completed]',
   ' ',
   'Welcome to bleebloop v1.0'
 ];
 
-const systemStartupGenerator = new MarkovTextGenerator(['system_startup']);
-systemStartupGenerator.init();
+const systemStatusGenerator = new MarkovTextGenerator(['system_startup']);
+systemStatusGenerator.init();
 
 const aiGenerator = new MarkovTextGenerator(['ai']);
 aiGenerator.init();
 
-// const funGenerator = new MarkovTextGenerator(['fun']);
-// funGenerator.init();
+const apologyGenerator = new MarkovTextGenerator(['welcome_messages']);
+apologyGenerator.init();
 
 const seriousGenerator = new MarkovTextGenerator(['serious']);
 seriousGenerator.init();
@@ -29,11 +30,17 @@ seriousGenerator.init();
 const funSeriousGenerator = new MarkovTextGenerator(['serious', 'fun']);
 funSeriousGenerator.init();
 
-const everythingGenerator = new MarkovTextGenerator(['serious', 'fun', 'ai']);
+const everythingGenerator = new MarkovTextGenerator([
+  'serious',
+  'fun',
+  'ai',
+  'ai',
+  'ai'
+]);
 everythingGenerator.init();
 
 const generators = [
-  systemStartupGenerator,
+  systemStatusGenerator,
   aiGenerator,
   aiGenerator,
   aiGenerator,
@@ -48,10 +55,51 @@ function getRandomGenerator() {
   return generators[generatorIndex];
 }
 
+async function fetchTextAndUpdateConfig(
+  configObj,
+  configObjProperty,
+  generator,
+  sentenceCount
+) {
+  console.log(configObjProperty, configObj[configObjProperty]);
+  try {
+    const result = await generator.getText(sentenceCount);
+    return {
+      data: result.data,
+      configObj: {
+        ...configObj,
+        [configObjProperty]: configObj[configObjProperty] - 1
+      }
+    };
+  } catch (error) {
+    console.error('Error fetching startup text:', error);
+    return {
+      data: 'error',
+      configObj: {
+        ...configObj,
+        [configObjProperty]: configObj[configObjProperty] - 1
+      }
+    };
+  }
+}
+
 async function generateTextFromConfigObj(configObj) {
   if (configObj) {
-    // (get specific initial startup text from a static Array)
-    if (configObj.aiInitialStartupRequestCount >= 0) {
+    // AI boot process message text
+    if (configObj.aiSystemStatusRequestCount > 0) {
+      const result = await fetchTextAndUpdateConfig(
+        configObj,
+        'aiSystemStatusRequestCount',
+        systemStatusGenerator,
+        0
+      );
+      return result;
+    }
+
+    configObj.isInitialised = true;
+
+    // AI boot process message text
+    if (configObj.aiInitialStartupRequestCount > 0) {
       return {
         data: aiInitialStartupText[configObj.aiInitialStartupRequestCount],
         configObj: {
@@ -62,50 +110,25 @@ async function generateTextFromConfigObj(configObj) {
       };
     }
 
-    configObj.isInitialised = true;
-
     // inform user of system status from the systemStartupGenerator
-    if (configObj.aiStartupRequestCount >= 0) {
-      console.log(`aiStartupRequestCount`, configObj.aiStartupRequestCount);
-      try {
-        const result = await systemStartupGenerator.getText(0);
-        console.log('text:', result.data);
-        return {
-          data: result.data,
-          configObj: {
-            ...configObj,
-            aiStartupRequestCount: configObj.aiStartupRequestCount - 1
-          }
-        };
-      } catch (error) {
-        console.error('Error fetching startup text:', error);
-        return {
-          data: 'error',
-          configObj: {
-            ...configObj,
-            aiStartupRequestCount: configObj.aiStartupRequestCount - 1
-          }
-        };
-      }
+    if (configObj.aiApologyRequestCount > 0) {
+      const result = await fetchTextAndUpdateConfig(
+        configObj,
+        'aiApologyRequestCount',
+        apologyGenerator,
+        0
+      );
+      return result;
     }
 
-    // Default random text generator (no config settings used)
-    try {
-      const result = await everythingGenerator.getText();
-      return {
-        data: result.data,
-        configObj
-      };
-    } catch (error) {
-      console.error('Error fetching startup text:', error);
-      return {
-        data: 'error',
-        configObj: {
-          ...configObj,
-          aiStartupRequestCount: configObj.aiStartupRequestCount - 1
-        }
-      };
-    }
+    // get text from everything generator
+    const result = await fetchTextAndUpdateConfig(
+      configObj,
+      'aiInitialStartupRequestCount',
+      everythingGenerator,
+      undefined
+    );
+    return result;
   }
 }
 

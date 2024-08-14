@@ -1,56 +1,42 @@
 import RequestConfigEnum from '../enums/RequestConfigEnum';
 
-export type RequestConfig = {
-  aiStartupRequestCount: number;
-  aiNameRequestCount: number;
-  aiStatementRequestCount: number;
-  isInitialized: boolean;
-};
-
 export default class RequestConfigObj {
-  aiNameRequestCount: number;
+  aiApologyRequestCount: number;
 
-  aiStatementRequestCount: number;
-
-  aiStartupRequestCount: number;
+  aiSystemStatusRequestCount: number;
 
   aiInitialStartupRequestCount: number;
 
   isInitialised: boolean;
 
   constructor(config: RequestConfigEnum) {
-    let nameRequestCount;
-    let statementRequestCount;
-    let startupRequestCount;
+    let apologyRequestCount;
+    let systemStatusRequestCount;
     let initialStartupRequestCount;
     let isInitialised;
 
     switch (config) {
       case RequestConfigEnum.DEFAULT:
-        nameRequestCount = Math.floor(Math.random() * 2);
-        statementRequestCount = Math.floor(Math.random() * 2 + 1);
-        startupRequestCount = Math.floor(Math.random() * 1 + 1);
-        initialStartupRequestCount = 3;
+        apologyRequestCount = Math.floor(Math.random() * 1 + 2);
+        systemStatusRequestCount = Math.floor(Math.random() * 2 + 1);
+        initialStartupRequestCount = 4;
         isInitialised = false;
         break;
-      case RequestConfigEnum.STARTUP:
-        nameRequestCount = 0;
-        statementRequestCount = 0;
-        startupRequestCount = Math.floor(Math.random() * 1 + 1);
-        initialStartupRequestCount = 0;
+      case RequestConfigEnum.RESTART:
+        apologyRequestCount = Math.floor(Math.random() * 1 + 1);
+        systemStatusRequestCount = 1;
+        initialStartupRequestCount = 2;
         isInitialised = true;
         break;
       default:
-        nameRequestCount = Math.floor(Math.random() * 2);
-        statementRequestCount = Math.floor(Math.random() * 2 + 1);
-        startupRequestCount = Math.floor(Math.random() * 1 + 1);
-        initialStartupRequestCount = 3;
+        apologyRequestCount = Math.floor(Math.random() * 1 + 2);
+        systemStatusRequestCount = Math.floor(Math.random() * 2 + 1);
+        initialStartupRequestCount = 4;
         isInitialised = false;
     }
 
-    this.aiNameRequestCount = nameRequestCount;
-    this.aiStatementRequestCount = statementRequestCount;
-    this.aiStartupRequestCount = startupRequestCount;
+    this.aiApologyRequestCount = apologyRequestCount;
+    this.aiSystemStatusRequestCount = systemStatusRequestCount;
     this.aiInitialStartupRequestCount = initialStartupRequestCount;
     this.isInitialised = isInitialised;
   }

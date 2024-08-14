@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useCallback } from 'react';
 import fetchText from '../services/api';
-import RequestConfigObj, { RequestConfig } from '../services/RequestConfigObj';
+import RequestConfigObj from '../services/RequestConfigObj';
 import RequestConfigEnum from '../enums/RequestConfigEnum';
 
 const useGetTerminalText = () => {
@@ -11,8 +11,8 @@ const useGetTerminalText = () => {
   const fetchData = useCallback(
     async (
       controller: AbortController,
-      requestConfigObj?: RequestConfig
-    ): Promise<{ newText: string; newRequestConfigObj: RequestConfig }> => {
+      requestConfigObj?: RequestConfigObj
+    ): Promise<{ newText: string; newRequestConfigObj: RequestConfigObj }> => {
       // if no requestConfigObj is passed create a new one to initial AI startup responses
       const configObj =
         requestConfigObj || new RequestConfigObj(RequestConfigEnum.DEFAULT);
@@ -41,7 +41,7 @@ const useGetTerminalText = () => {
   );
 
   // exported function that sets 'text'
-  const getNewText = async (requestConfigObj: RequestConfig) => {
+  const getNewText = async (requestConfigObj: RequestConfigObj) => {
     const controller = new AbortController();
 
     try {

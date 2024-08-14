@@ -3,12 +3,12 @@ import { nanoid } from 'nanoid';
 import typingEffect from 'typing-effect';
 import useGetTerminalText from '../hooks/useGetTerminalText';
 import TerminalText from './TerminalText';
-import RequestConfigObj, { RequestConfig } from '../services/RequestConfigObj';
+import RequestConfigObj from '../services/RequestConfigObj';
 import RequestConfigEnum from '../enums/RequestConfigEnum';
 
 function TextContainer() {
   const [text, setText] = useState('');
-  const [requestConfigObj, setRequestConfigObj] = useState<RequestConfig>(
+  const [requestConfigObj, setRequestConfigObj] = useState<RequestConfigObj>(
     new RequestConfigObj(RequestConfigEnum.DEFAULT)
   );
   const [terminalTexts, setTerminalTexts] = useState<React.ReactNode[]>([]);
@@ -23,9 +23,10 @@ function TextContainer() {
   const { getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
 
-  function resetRequestConfigObj(currentConfigObj: RequestConfig) {
-    if (Math.random() > 0.8 && !currentConfigObj.isInitialised) {
-      return new RequestConfigObj(RequestConfigEnum.STARTUP);
+  function resetRequestConfigObj(currentConfigObj: RequestConfigObj) {
+    if (Math.random() > 0.7 && currentConfigObj.isInitialised) {
+      setTerminalTexts([]);
+      return new RequestConfigObj(RequestConfigEnum.RESTART);
     }
     return currentConfigObj;
   }
@@ -99,15 +100,14 @@ function TextContainer() {
         setTimeout(() => {
           getNewText(requestConfigObj).then(
             ({ newText, newRequestConfigObj }) => {
-              setIsWaitingForAnimation(false);
-              setText(newText);
-
               // reset config obj to display startup text?
               const configObj = resetRequestConfigObj(newRequestConfigObj);
               setRequestConfigObj((prevConfig) => ({
                 ...prevConfig,
                 ...configObj
               }));
+              setIsWaitingForAnimation(false);
+              setText(newText);
             }
           );
         }, 1500);
@@ -132,10 +132,9 @@ function TextContainer() {
           // Start a new timer for the next decision
           const nextRandomDelay = Math.random() * 4000 + 100;
           setTimeout(randomGlitch, nextRandomDelay);
-        }, 10000); // Glitch duration (adjust as needed)
+        }, 10000);
       } else {
         // Start a timer to make the decision again
-
         containerRef?.current?.classList.remove('glitch');
         const nextRandomDelay = Math.random() * 4000 + 100;
 

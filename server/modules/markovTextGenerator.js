@@ -60,9 +60,22 @@ class MarkovTextGenerator {
 
       // create a new MarkovGen - minLength values above 15 seem to excede allowed stack limits.
       this.markovGen = new MarkovGen({ input: markovInput, minLength: 6 });
-      let sentence = this.markovGen.makeChain();
-      console.log(this.folderNames, sentence);
+      console.log(this.folderNames);
     }
+  }
+
+  replaceTextWithSpace(textInput) {
+    const rand = Math.floor(Math.random() * 10);
+    if (rand > 9) {
+      let dotCount = Math.floor(Math.random() * 20);
+      let replacementString = '';
+      while (dotCount > 0) {
+        replacementString += '.';
+        dotCount -= 1;
+      }
+      textInput = replacementString;
+    }
+    return textInput;
   }
 
   // return an Object with text generated from the MarkovText
@@ -72,6 +85,13 @@ class MarkovTextGenerator {
     }
     let text = this._generateMarkovText();
     text = this._maximiseTextLength(text, count);
+    text = this.replaceTextWithSpace(text);
+
+    const random = Math.random() * 10;
+    if (random < 1) {
+      text = '';
+    }
+
     return { data: text };
   }
 
@@ -79,7 +99,6 @@ class MarkovTextGenerator {
   _generateMarkovText() {
     //let text = MarkovChain.generate(this.DEFAULT_TEXT_LENGTH);
     let text = this.markovGen.makeChain();
-    console.log(text);
     return this._cleanText(text);
     t;
   }

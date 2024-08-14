@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import { RequestConfig } from './RequestConfigObj';
+import RequestConfigObj from './RequestConfigObj';
 
 // Get the domain and PORT from environment variables
 const baseURL = import.meta.env.VITE_API_RESTFUL_API_URL;
@@ -11,7 +11,7 @@ const instance: AxiosInstance = axios.create({
 
 type ServerResponse = {
   text: string;
-  configObj: RequestConfig;
+  configObj: RequestConfigObj;
 };
 
 // Type guard for runtime type checking
@@ -25,8 +25,8 @@ function isServerResponse(data: any): data is ServerResponse {
 const fetchText = async (
   endpoint: string,
   controller: AbortController,
-  requestConfigObj: RequestConfig
-): Promise<{ newText: string; newRequestConfigObj: RequestConfig }> => {
+  requestConfigObj: RequestConfigObj
+): Promise<{ newText: string; newRequestConfigObj: RequestConfigObj }> => {
   try {
     const response = await instance.get<ServerResponse>(endpoint, {
       signal: controller.signal,
