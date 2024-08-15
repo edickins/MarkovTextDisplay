@@ -89,7 +89,7 @@ class MarkovTextGenerator {
 
     const random = Math.random() * 10;
     if (random < 1) {
-      text = '';
+      text = '+-:..';
     }
 
     return { data: text };

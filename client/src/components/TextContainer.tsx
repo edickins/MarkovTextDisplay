@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { nanoid } from 'nanoid';
 import typingEffect from 'typing-effect';
 import useGetTerminalText from '../hooks/useGetTerminalText';
@@ -15,21 +15,40 @@ function TextContainer() {
   const [toBeRemovedIndexes, setToBeRemovedIndexes] = useState<number[]>([]);
   const [isWaitingForAnimation, setIsWaitingForAnimation] =
     useState<boolean>(false);
+  const [doReset, setDoReset] = useState(false);
 
-  const timeoutIDRef = useRef<string | number | NodeJS.Timeout | undefined>(
-    undefined
-  );
+  const glitchTimeoutIDRef = useRef<
+    string | number | NodeJS.Timeout | undefined
+  >(undefined);
+
+  const restartTimeoutIDRef = useRef<
+    string | number | NodeJS.Timeout | undefined
+  >(undefined);
 
   const { getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
 
-  function resetRequestConfigObj(currentConfigObj: RequestConfigObj) {
-    if (Math.random() > 0.7 && currentConfigObj.isInitialised) {
-      setTerminalTexts([]);
-      return new RequestConfigObj(RequestConfigEnum.RESTART);
-    }
-    return currentConfigObj;
-  }
+  const resetRequestConfigObj = useCallback(
+    (currentConfigObj: RequestConfigObj) => {
+      if (currentConfigObj.isInitialised) {
+        setTerminalTexts([]);
+        setDoReset(false);
+        return new RequestConfigObj(RequestConfigEnum.RESTART);
+      }
+      return currentConfigObj;
+    },
+    []
+  );
+
+  // restart side-effect
+  useEffect(() => {
+    if (doReset) return;
+    const interval = Math.floor(Math.random() * 85000) + 20000;
+    console.log(`interval: ${interval / 1000}s`);
+    restartTimeoutIDRef.current = setTimeout(() => {
+      setDoReset(true);
+    }, interval);
+  }, [doReset]);
 
   // scroll container to the bottom of the screen
   useEffect(() => {
@@ -100,8 +119,11 @@ function TextContainer() {
         setTimeout(() => {
           getNewText(requestConfigObj).then(
             ({ newText, newRequestConfigObj }) => {
+              let configObj = newRequestConfigObj;
               // reset config obj to display startup text?
-              const configObj = resetRequestConfigObj(newRequestConfigObj);
+              if (doReset) {
+                configObj = resetRequestConfigObj(newRequestConfigObj);
+              }
               setRequestConfigObj((prevConfig) => ({
                 ...prevConfig,
                 ...configObj
@@ -113,12 +135,19 @@ function TextContainer() {
         }, 1500);
       });
     }
-  }, [text, getNewText, requestConfigObj, isWaitingForAnimation]);
+  }, [
+    text,
+    getNewText,
+    requestConfigObj,
+    isWaitingForAnimation,
+    resetRequestConfigObj,
+    doReset
+  ]);
 
   // Glitch effect
   useEffect(() => {
     const randomGlitch = () => {
-      if (timeoutIDRef.current) return;
+      if (glitchTimeoutIDRef.current) return;
 
       // Randomly decide whether to apply the glitch effect
       const shouldGlitch = Math.random() < 0.5; // 20% chance to glitch
@@ -126,9 +155,9 @@ function TextContainer() {
       if (shouldGlitch) {
         containerRef?.current?.classList.add('glitch-text');
         // Start a timer to stop the glitch and decide again
-        timeoutIDRef.current = setTimeout(() => {
+        glitchTimeoutIDRef.current = setTimeout(() => {
           containerRef?.current?.classList.remove('glitch-text');
-          timeoutIDRef.current = undefined;
+          glitchTimeoutIDRef.current = undefined;
           // Start a new timer for the next decision
           const nextRandomDelay = Math.random() * 4000 + 100;
           setTimeout(randomGlitch, nextRandomDelay);
@@ -138,8 +167,8 @@ function TextContainer() {
         containerRef?.current?.classList.remove('glitch');
         const nextRandomDelay = Math.random() * 4000 + 100;
 
-        timeoutIDRef.current = setTimeout(() => {
-          timeoutIDRef.current = undefined;
+        glitchTimeoutIDRef.current = setTimeout(() => {
+          glitchTimeoutIDRef.current = undefined;
           randomGlitch(); // Decide again
         }, nextRandomDelay);
       }
@@ -150,7 +179,7 @@ function TextContainer() {
 
     return () => {
       // Cleanup function to clear timeouts if the component unmounts
-      clearTimeout(timeoutIDRef.current);
+      clearTimeout(glitchTimeoutIDRef.current);
     };
   }, []);
 
