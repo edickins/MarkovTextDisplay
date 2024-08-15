@@ -3,17 +3,5 @@
     {
       "path": "."
     }
-  ],
-  "launch": {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "Launch Chrome (PWA)",
-        "type": "chrome",
-        "request": "launch",
-        "url": "http://localhost:5173",
-        "webRoot": "${workspaceFolder}/src"
-      }
-    ]
-  }
+  ]
 }
