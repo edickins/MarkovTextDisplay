@@ -25,6 +25,8 @@ function TextContainer() {
     string | number | NodeJS.Timeout | undefined
   >(undefined);
 
+  const firstRenderRef = useRef(true);
+
   const { getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
 
