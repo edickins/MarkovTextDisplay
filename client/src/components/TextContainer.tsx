@@ -5,6 +5,7 @@ import useGetTerminalText from '../hooks/useGetTerminalText';
 import TerminalText from './TerminalText';
 import RequestConfigObj from '../services/RequestConfigObj';
 import RequestConfigEnum from '../enums/RequestConfigEnum';
+import errorMessages from '../data/errorMessages';
 
 function TextContainer() {
   const [text, setText] = useState('');
@@ -16,6 +17,8 @@ function TextContainer() {
   const [isWaitingForAnimation, setIsWaitingForAnimation] =
     useState<boolean>(false);
   const [doReset, setDoReset] = useState(false);
+  const rebootMessagesRef = useRef<string[]>(errorMessages);
+  const errorMessageRef = useRef<string>('');
 
   const glitchTimeoutIDRef = useRef<
     string | number | NodeJS.Timeout | undefined
@@ -34,8 +37,8 @@ function TextContainer() {
     (currentConfigObj: RequestConfigObj) => {
       if (currentConfigObj.isInitialised) {
         setDoReset(false);
-        setTerminalTexts([]);
-        return new RequestConfigObj(RequestConfigEnum.RESTART);
+        // setTerminalTexts([]);
+        return new RequestConfigObj(RequestConfigEnum.RESET);
       }
       return currentConfigObj;
     },
@@ -55,6 +58,17 @@ function TextContainer() {
       setDoReset(true);
     }, interval);
   }, [doReset, requestConfigObj.isInitialised]);
+
+  useEffect(() => {
+    if (doReset) {
+      if (rebootMessagesRef.current.length === 0) return undefined;
+      const randomIndex = Math.floor(
+        Math.random() * rebootMessagesRef.current.length
+      );
+      errorMessageRef.current = rebootMessagesRef.current[randomIndex];
+    }
+    return undefined;
+  }, [doReset]);
 
   // scroll container to the bottom of the screen
   useEffect(() => {
@@ -111,7 +125,7 @@ function TextContainer() {
         />
       ]);
     }
-  }, [text, terminalTexts, isWaitingForAnimation]);
+  }, [text, terminalTexts, isWaitingForAnimation, requestConfigObj.isReset]);
 
   // Side effect to start typing-effect
   // if there is an item to animate and the app is waiting for animation to start
@@ -126,16 +140,20 @@ function TextContainer() {
           getNewText(requestConfigObj).then(
             ({ newText, newRequestConfigObj }) => {
               let configObj = newRequestConfigObj;
+              let newTerminalText = newText;
               // reset config obj to display startup text?
               if (doReset) {
+                setTerminalTexts([]);
+                newTerminalText = errorMessageRef.current;
                 configObj = resetRequestConfigObj(newRequestConfigObj);
               }
+              // update the requestConfigObj with the one returned from the server
               setRequestConfigObj((prevConfig) => ({
                 ...prevConfig,
                 ...configObj
               }));
               setIsWaitingForAnimation(false);
-              setText(newText);
+              setText(newTerminalText);
             }
           );
         }, 1500);

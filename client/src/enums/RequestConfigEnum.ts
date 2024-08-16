@@ -1,6 +1,6 @@
 enum RequestConfigEnum {
   DEFAULT = 'default',
-  RESTART = 'startup'
+  RESET = 'reset'
 }
 
 export default RequestConfigEnum;

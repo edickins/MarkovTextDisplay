@@ -9,7 +9,7 @@ const MarkovText = require('../models/MarkovText');
 
 const aiInitialStartupText = [
   'I am your digital assistant, bleepbloop v1.0.',
-  '============== || ================',
+  ' ',
   '[Terminal Boot Sequence Completed]',
   ' ',
   'Welcome to bleebloop v1.0'
@@ -23,6 +23,9 @@ aiGenerator.init();
 
 const apologyGenerator = new MarkovTextGenerator(['welcome_messages']);
 apologyGenerator.init();
+
+const errorGenerator = new MarkovTextGenerator(['server_errors']);
+errorGenerator.init();
 
 const seriousGenerator = new MarkovTextGenerator(['serious']);
 seriousGenerator.init();
@@ -64,8 +67,9 @@ async function fetchTextAndUpdateConfig(
   console.log(configObjProperty, configObj[configObjProperty]);
   try {
     const result = await generator.getText(sentenceCount);
+    const errorResult = await errorGenerator.getText(0);
     return {
-      data: result.data,
+      data: { text: result.data, systemErrorText: errorResult.data },
       configObj: {
         ...configObj,
         [configObjProperty]: configObj[configObjProperty] - 1
@@ -100,8 +104,12 @@ async function generateTextFromConfigObj(configObj) {
 
     // AI boot process message text
     if (configObj.aiInitialStartupRequestCount > 0) {
+      const systemErrorText = await errorGenerator.getText(0);
       return {
-        data: aiInitialStartupText[configObj.aiInitialStartupRequestCount],
+        data: {
+          text: aiInitialStartupText[configObj.aiInitialStartupRequestCount],
+          systemErrorText
+        },
         configObj: {
           ...configObj,
           aiInitialStartupRequestCount:
@@ -139,9 +147,12 @@ exports.getMarkovText = async (req, res, next) => {
   try {
     const reqQuery = { ...req.query };
     const result = await generateTextFromConfigObj(reqQuery);
-    res
-      .status(200)
-      .json({ success: true, text: result.data, configObj: result.configObj });
+    res.status(200).json({
+      success: true,
+      text: result.data.text,
+      systemErrorText: result.data.systemErrorText,
+      configObj: result.configObj
+    });
   } catch (error) {
     res.status(400).json({ success: false });
   }
