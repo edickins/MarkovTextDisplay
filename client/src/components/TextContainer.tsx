@@ -25,7 +25,7 @@ function TextContainer() {
     string | number | NodeJS.Timeout | undefined
   >(undefined);
 
-  const firstRenderRef = useRef(true);
+  const firstRenderRef = useRef<boolean>(true);
 
   const { getNewText } = useGetTerminalText();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,8 +33,8 @@ function TextContainer() {
   const resetRequestConfigObj = useCallback(
     (currentConfigObj: RequestConfigObj) => {
       if (currentConfigObj.isInitialised) {
-        setTerminalTexts([]);
         setDoReset(false);
+        setTerminalTexts([]);
         return new RequestConfigObj(RequestConfigEnum.RESTART);
       }
       return currentConfigObj;
@@ -44,13 +44,17 @@ function TextContainer() {
 
   // restart side-effect
   useEffect(() => {
-    if (doReset) return;
+    if (doReset || requestConfigObj.isInitialised === false) return;
+    if (firstRenderRef.current === true) {
+      firstRenderRef.current = false;
+      return; // Skip the initial render
+    }
     const interval = Math.floor(Math.random() * 85000) + 20000;
-    console.log(`interval: ${interval / 1000}s`);
+
     restartTimeoutIDRef.current = setTimeout(() => {
       setDoReset(true);
     }, interval);
-  }, [doReset]);
+  }, [doReset, requestConfigObj.isInitialised]);
 
   // scroll container to the bottom of the screen
   useEffect(() => {

@@ -9,7 +9,7 @@ const MarkovText = require('../models/MarkovText');
 
 const aiInitialStartupText = [
   'I am your digital assistant, bleepbloop v1.0.',
-  '==================================',
+  '============== || ================',
   '[Terminal Boot Sequence Completed]',
   ' ',
   'Welcome to bleebloop v1.0'

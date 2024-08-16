@@ -87,11 +87,6 @@ class MarkovTextGenerator {
     text = this._maximiseTextLength(text, count);
     text = this.replaceTextWithSpace(text);
 
-    const random = Math.random() * 10;
-    if (random < 1) {
-      text = '+-:..';
-    }
-
     return { data: text };
   }
 
