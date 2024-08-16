@@ -12,7 +12,7 @@ function TerminalText({ text, removeMe }: Props) {
     const handleScroll = () => {
       if (localRef.current) {
         const rect = localRef.current.getBoundingClientRect();
-        if (rect.top > window.innerHeight || rect.bottom < 0) {
+        if (rect.top > window.innerHeight || rect.bottom < 20) {
           // Clip is off-screen
           removeMe();
         }

@@ -15,7 +15,7 @@ const aiInitialStartupText = [
   'Welcome to bleebloop v1.0'
 ];
 
-const systemStatusGenerator = new MarkovTextGenerator(['system_startup']);
+const systemStatusGenerator = new MarkovTextGenerator(['system_status']);
 systemStatusGenerator.init();
 
 const aiGenerator = new MarkovTextGenerator(['ai']);
@@ -38,7 +38,9 @@ const everythingGenerator = new MarkovTextGenerator([
   'fun',
   'ai',
   'ai',
-  'ai'
+  'ai',
+  'system_status',
+  'welcome_messages'
 ]);
 everythingGenerator.init();
 
