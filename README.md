@@ -19,19 +19,23 @@ A client-server application that generates text using Markov chains and displays
 ## Installation
 
 1. Clone this repository:
-   git clone https://github.com/edickins/restfulAPI_markovTextGenerator.git
+
+- git clone https://github.com/edickins/restfulAPI_markovTextGenerator.git
 
 2. Install client dependencies:
-   cd client
-   npm install
+
+- cd client
+- npm install
 
 3. Install server dependencies:
-   cd server
-   npm install
+
+- cd server
+- npm install
 
 4. Start the client:
-   cd client
-   npm run dev
+
+- cd client
+- npm run dev
 
 5. Start the server:
    cd server
