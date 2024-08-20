@@ -18,7 +18,9 @@ type ServerResponse = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function isServerResponse(data: any): data is ServerResponse {
   return (
-    data && typeof data.text === 'string' && typeof data.success === `boolean`
+    data &&
+    (typeof data.text === 'string' || typeof data.error === 'string') &&
+    typeof data.success === 'boolean'
   );
 }
 

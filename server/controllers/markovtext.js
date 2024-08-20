@@ -77,13 +77,7 @@ async function fetchTextAndUpdateConfig(
     };
   } catch (error) {
     console.error('Error fetching from Markov Text generator:', error);
-    return {
-      data: 'Error fetching from Markov Text generator.',
-      configObj: {
-        ...configObj,
-        [configObjProperty]: configObj[configObjProperty] - 1
-      }
-    };
+    throw new Error('Text generation failed'); // Throw an error directly
   }
 }
 
@@ -91,52 +85,72 @@ async function generateTextFromConfigObj(configObj) {
   if (configObj) {
     // AI boot process message text
     if (configObj.aiSystemStatusRequestCount > 0) {
-      const result = await fetchTextAndUpdateConfig(
-        configObj,
-        'aiSystemStatusRequestCount',
-        systemStatusGenerator,
-        0
-      );
-      return result;
+      try {
+        const result = await fetchTextAndUpdateConfig(
+          configObj,
+          'aiSystemStatusRequestCount',
+          systemStatusGenerator,
+          0
+        );
+        return result;
+      } catch (error) {
+        console.error('Error fetching from Markov Text generator:', error);
+        throw new Error('Text generation failed'); // Throw an error directly
+      }
     }
 
     configObj.isInitialised = true;
 
     // AI boot process message text
     if (configObj.aiInitialStartupRequestCount > 0) {
-      const systemErrorText = await errorGenerator.getText(0);
-      return {
-        data: {
-          text: aiInitialStartupText[configObj.aiInitialStartupRequestCount],
-          systemErrorText
-        },
-        configObj: {
-          ...configObj,
-          aiInitialStartupRequestCount:
-            configObj.aiInitialStartupRequestCount - 1
-        }
-      };
+      try {
+        const systemErrorText = await errorGenerator.getText(0);
+        return {
+          data: {
+            text: aiInitialStartupText[configObj.aiInitialStartupRequestCount],
+            systemErrorText
+          },
+          configObj: {
+            ...configObj,
+            aiInitialStartupRequestCount:
+              configObj.aiInitialStartupRequestCount - 1
+          }
+        };
+      } catch (error) {
+        console.error('Error fetching from Markov Text generator:', error);
+        throw new Error('Text generation failed'); // Throw an error directly
+      }
     }
 
     // inform user of system status from the systemStartupGenerator
     if (configObj.aiApologyRequestCount > 0) {
-      const result = await fetchTextAndUpdateConfig(
-        configObj,
-        'aiApologyRequestCount',
-        apologyGenerator,
-        0
-      );
-      return result;
+      try {
+        const result = await fetchTextAndUpdateConfig(
+          configObj,
+          'aiApologyRequestCount',
+          apologyGenerator,
+          0
+        );
+        return result;
+      } catch (error) {
+        console.error('Error fetching from Markov Text generator:', error);
+        throw new Error('Text generation failed'); // Throw an error directly
+      }
     }
 
     // get text from everything generator
-    const result = await fetchTextAndUpdateConfig(
-      configObj,
-      'aiInitialStartupRequestCount',
-      everythingGenerator,
-      undefined
-    );
-    return result;
+    try {
+      const result = await fetchTextAndUpdateConfig(
+        configObj,
+        'aiInitialStartupRequestCount',
+        everythingGenerator,
+        undefined
+      );
+      return result;
+    } catch (error) {
+      console.error('Error fetching from Markov Text generator:', error);
+      throw new Error('Text generation failed'); // Throw an error directly
+    }
   }
 }
 
@@ -154,14 +168,10 @@ exports.getMarkovText = async (req, res, next) => {
       configObj: result.configObj
     });
   } catch (error) {
-    res
-      .status(400)
-      .json({
-        success: false,
-        text: result.data.text,
-        systemErrorText: result.data.systemErrorText,
-        configObj: result.configObj
-      });
+    res.status(500).json({
+      success: false,
+      error: 'There was an error on the server.'
+    });
   }
 };
 
