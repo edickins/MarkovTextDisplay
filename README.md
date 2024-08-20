@@ -1,6 +1,7 @@
 # MarkovTextDisplay
 
 A client-server application that generates text using Markov chains and displays it in a faux terminal within a React app.
+<img width="944" alt="Screenshot 2024-08-20 at 19 32 23" src="https://github.com/user-attachments/assets/b7c8747d-721f-4a5f-8faf-12bed9bd72b5">
 
 ## Overview
 
