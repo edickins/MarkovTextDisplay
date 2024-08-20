@@ -37,7 +37,6 @@ function TextContainer() {
     (currentConfigObj: RequestConfigObj) => {
       if (currentConfigObj.isInitialised) {
         setDoReset(false);
-        // setTerminalTexts([]);
         return new RequestConfigObj(RequestConfigEnum.RESET);
       }
       return currentConfigObj;
@@ -90,20 +89,19 @@ function TextContainer() {
   // initial side-effect to start the routine
   useEffect(() => {
     if (!text) {
-      try {
-        // getNewText from the server. returns {text:string, newRequestConfigObj:RequestObj}
-        getNewText(requestConfigObj).then(
-          ({ newText, newRequestConfigObj }) => {
-            setText(newText);
-            setRequestConfigObj((prevConfig) => ({
-              ...prevConfig,
-              ...newRequestConfigObj
-            }));
-          }
-        );
-      } catch (error) {
-        throw new Error('There was an error fetching text.');
-      }
+      // getNewText from the server. returns {text:string, newRequestConfigObj:RequestObj}
+      getNewText(requestConfigObj)
+        .then(({ newText, newRequestConfigObj }) => {
+          setText(newText);
+          setRequestConfigObj((prevConfig) => ({
+            ...prevConfig,
+            ...newRequestConfigObj
+          }));
+        })
+        .catch((err) => {
+          console.error('Error fetching text:', err);
+          setText('Oops, something went wrong. Please try again later.');
+        });
     }
   }, [getNewText, requestConfigObj, text]);
 
@@ -137,8 +135,8 @@ function TextContainer() {
         reset: true
       }).then(() => {
         setTimeout(() => {
-          getNewText(requestConfigObj).then(
-            ({ newText, newRequestConfigObj }) => {
+          getNewText(requestConfigObj)
+            .then(({ newText, newRequestConfigObj }) => {
               let configObj = newRequestConfigObj;
               let newTerminalText = newText;
               // reset config obj to display startup text?
@@ -154,8 +152,12 @@ function TextContainer() {
               }));
               setIsWaitingForAnimation(false);
               setText(newTerminalText);
-            }
-          );
+            })
+            .catch((err) => {
+              console.error('Error fetching text:', err);
+              setIsWaitingForAnimation(false);
+              setText('Oops, something went wrong. Please try again later.');
+            });
         }, 1500);
       });
     }

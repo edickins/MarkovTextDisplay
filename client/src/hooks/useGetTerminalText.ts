@@ -5,7 +5,7 @@ import RequestConfigObj from '../services/RequestConfigObj';
 import RequestConfigEnum from '../enums/RequestConfigEnum';
 
 const useGetTerminalText = () => {
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
   const fetchData = useCallback(
@@ -18,26 +18,27 @@ const useGetTerminalText = () => {
         requestConfigObj || new RequestConfigObj(RequestConfigEnum.DEFAULT);
 
       setLoading(true);
-      setError(null);
+      setError('');
       try {
         const { newText, newRequestConfigObj } = await fetchText(
           'api/v1/markovtext',
           controller,
           configObj
         );
+        setError('');
         return { newText, newRequestConfigObj };
       } catch (err) {
         if (axios.isAxiosError(err)) {
-          setError(err.message);
+          setError('Error fetching text from the API');
         } else {
           setError('An unexpected error occurred');
         }
-        throw err;
+        throw new Error(error);
       } finally {
         setLoading(false);
       }
     },
-    []
+    [error]
   );
 
   // exported function that sets 'text'
@@ -52,7 +53,7 @@ const useGetTerminalText = () => {
       );
       return { newText, newRequestConfigObj };
     } catch (err) {
-      throw new Error('there was an error fetching text');
+      throw new Error('There was an error fetching text');
     }
   };
 

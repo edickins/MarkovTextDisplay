@@ -76,9 +76,9 @@ async function fetchTextAndUpdateConfig(
       }
     };
   } catch (error) {
-    console.error('Error fetching startup text:', error);
+    console.error('Error fetching from Markov Text generator:', error);
     return {
-      data: 'error',
+      data: 'Error fetching from Markov Text generator.',
       configObj: {
         ...configObj,
         [configObjProperty]: configObj[configObjProperty] - 1
@@ -154,7 +154,14 @@ exports.getMarkovText = async (req, res, next) => {
       configObj: result.configObj
     });
   } catch (error) {
-    res.status(400).json({ success: false });
+    res
+      .status(400)
+      .json({
+        success: false,
+        text: result.data.text,
+        systemErrorText: result.data.systemErrorText,
+        configObj: result.configObj
+      });
   }
 };
 
