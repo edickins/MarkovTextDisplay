@@ -19,7 +19,7 @@ A client-server application that generates text using Markov chains and displays
 ## Installation
 
 1. Clone this repository:
-   git clone (https://github.com/edickins/restfulAPI_markovTextGenerator.git)
+   git clone https://github.com/edickins/restfulAPI_markovTextGenerator.git
 
 2. Install client dependencies:
    cd client
