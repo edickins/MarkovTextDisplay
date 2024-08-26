@@ -69,7 +69,7 @@ The default ports are as follows:
 - .env if you are NOT using the express server and you want to use the MSW change VITE_LOCAL_SERVER to false.
 - .env.local contains a VITE ENV varible VITE_API_RESTFUL_API_URL
   this env variable is used by axios to get data from either MSW or an instance of the express server running locally.
-- .env.production.changeme also contains ITE_API_RESTFUL_API_URL but at the moment it is pointing at http://example.com. To use this in production you need to rename this file .env.production and change http:example.com to the name of your server where the express server is running.
+- .env.production.changeme also contains VITE_API_RESTFUL_API_URL but at the moment it is pointing at http://example.com. To use this in production you need to rename this file .env.production and change http:example.com to the name of your server where the express server is running.
 
 find out more about .env files and vite here https://vitejs.dev/guide/env-and-mode
 
